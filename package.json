@@ -1,0 +1,21 @@
+{
+  "name": "vpn-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "node tools/fetch.mjs",
+    "parse": "node tools/parse.mjs",
+    "probe": "node tools/probe.mjs",
+    "verify": "node tools/verify.mjs",
+    "export": "node tools/export.mjs",
+    "build": "node tools/fetch.mjs && node tools/parse.mjs && node tools/probe.mjs && node tools/verify.mjs && node tools/export.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "js-yaml": "^5.5.0",
+    "qrcode": "^1.5.4"
+  }
+}

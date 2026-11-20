@@ -1,0 +1,71 @@
+name: update
+
+on:
+  schedule:
+    - cron: '0 */3 * * *'
+  workflow_dispatch:
+  # 只在工具链/工作流本身变动时跑；机器人提交的产物不触发，避免自激
+  push:
+    branches: [main]
+    paths:
+      - 'tools/**'
+      - '.github/workflows/**'
+      - 'package.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install xray
+        run: |
+          curl -fsSL https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o xray.zip
+          unzip -o xray.zip xray -d /usr/local/bin
+          chmod +x /usr/local/bin/xray
+          xray version
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Fetch
+        run: node tools/fetch.mjs
+        continue-on-error: true
+
+      - name: Parse
+        run: node tools/parse.mjs
+
+      - name: Probe
+        run: node tools/probe.mjs --limit=900
+
+      # 先删旧结果：xray 装不上时不能让上一轮的陈旧数据冒充本轮验证
+      # 验证失败不拖垮整轮；没验证结果时 export 会自动退回 checked.json
+      - name: Verify egress
+        run: rm -f data/verified.json && node tools/verify.mjs --limit=260
+        continue-on-error: true
+
+      - name: Export
+        run: node tools/export.mjs
+
+      - name: Commit
+        run: |
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'no changes'
+            exit 0
+          fi
+          git commit -m "chore: refresh nodes $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
