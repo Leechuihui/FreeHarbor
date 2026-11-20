@@ -1,0 +1,2 @@
+hysteria2://Telegram@179.61.138.145:443?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#HYSTERIA2-125ms-082
+hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?security=tls&obfs=salamander&obfs-password=uw9b2qq5rx&insecure=0&sni=fiproxy1.lockdwn.com#HYSTERIA2-146ms-097
