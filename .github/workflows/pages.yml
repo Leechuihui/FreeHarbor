@@ -35,6 +35,7 @@ jobs:
           mkdir -p _site
           cp index.html _site/
           cp -r qr sub clients _site/
+          cp README.md _site/
 
       # enablement: Pages 还没启用时自动建站（首次发布必走这条），
       # 省掉手动去 Settings → Pages 选 Source 的步骤
