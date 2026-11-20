@@ -1,6 +1,13 @@
-# FreeHarbor 自由港 · 永久免费 VPN 节点订阅
+# 🌊 FreeHarbor 自由港 · 永久免费 VPN 节点订阅
+
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](https://leechuihui.github.io/vpn/)
+[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/vpn/actions)
+[![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
+[![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
 **FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由 GitHub Actions 自动刷新，零服务器成本。
+
+> **English below** ↓ | **英文说明在下方**
 
 **在线页面 / Live page：** https://leechuihui.github.io/vpn/
 
@@ -53,7 +60,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 - 未验证（协议不支持 / 连不通 / 超出验证名额）：**153**
 - 最快延迟：**62 ms**
 - 协议分布：vless 103 · vmess 12 · trojan 25 · ss 57 · hysteria2 3
-- 更新时间：2026-11-20 19:42:13 UTC
+- 更新时间：2026-11-20 23:10:11 UTC
 
 ### 工具
 
@@ -130,7 +137,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 - Unverified (unsupported protocol / unreachable / over the quota): **153**
 - Fastest latency: **62 ms**
 - By protocol: vless 103 · vmess 12 · trojan 25 · ss 57 · hysteria2 3
-- Updated: 2026-11-20 19:42:13 UTC
+- Updated: 2026-11-20 23:10:11 UTC
 
 ### Tooling
 
@@ -153,3 +160,17 @@ To add a source, append one URL per line to `tools/sources.txt`. Plain lists, ba
 Nodes come from public free sources; stability is not guaranteed. A passed verification only means the node worked at that moment. Do not send sensitive data through them.
 
 hysteria2 / tuic / ssr cannot be verified with xray, and Shadowsocks was removed entirely in xray 26. Those are kept as-is and sorted last.
+
+---
+
+## 🌟 Star History / 星标历史
+
+If this project saved you time, consider giving it a star ⭐ — it helps others find free, verified nodes.
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Leechuihui/vpn&type=Date)](https://star-history.com/#Leechuihui/vpn&Date)
+
+## 🔗 Related / 相关项目
+
+- [v2rayNG](https://github.com/2dust/v2rayNG) · [v2rayN](https://github.com/2dust/v2rayN) — the clients this site's subscriptions are tested with
+- [sing-box](https://github.com/SagerNet/sing-box) — universal proxy platform
+- [Xray-core](https://github.com/XTLS/Xray-core) — the verification engine behind egress checks
