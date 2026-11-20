@@ -1,7 +1,7 @@
 # 🌊 FreeHarbor 自由港 · 永久免费 VPN 节点订阅
 
 [![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](%%PAGES%%)
-[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/vpn/actions)
+[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
@@ -165,7 +165,7 @@ hysteria2 / tuic / ssr cannot be verified with xray, and Shadowsocks was removed
 
 If this project saved you time, consider giving it a star ⭐ — it helps others find free, verified nodes.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Leechuihui/vpn&type=Date)](https://star-history.com/#Leechuihui/vpn&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Leechuihui/FreeHarbor&type=Date)](https://star-history.com/#Leechuihui/FreeHarbor&Date)
 
 ## 🔗 Related / 相关项目
 

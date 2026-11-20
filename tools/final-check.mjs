@@ -6,8 +6,8 @@ const T = process.argv[2];
 if (!T) throw new Error('usage: final-check.mjs <TOKEN>');
 
 const headers = { Authorization: 'Bearer ' + T, Accept: 'application/vnd.github+json' };
-const meta = await fetch('https://api.github.com/repos/Leechuihui/vpn/contents/index.html?ref=main', { headers }).then((r) => r.json());
-const blob = await fetch('https://api.github.com/repos/Leechuihui/vpn/git/blobs/' + meta.sha, { headers }).then((r) => r.json());
+const meta = await fetch('https://api.github.com/repos/Leechuihui/FreeHarbor/contents/index.html?ref=main', { headers }).then((r) => r.json());
+const blob = await fetch('https://api.github.com/repos/Leechuihui/FreeHarbor/git/blobs/' + meta.sha, { headers }).then((r) => r.json());
 const html = Buffer.from(blob.content, 'base64').toString('utf8');
 await writeFile('/tmp/final_page.html', html);
 

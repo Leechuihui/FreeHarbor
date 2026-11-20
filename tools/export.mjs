@@ -23,7 +23,7 @@ import * as yaml from 'js-yaml';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OWNER = process.env.REPO_OWNER || 'Leechuihui';
-const REPO = process.env.REPO_NAME || 'vpn';
+const REPO = process.env.REPO_NAME || 'FreeHarbor';
 const PAGES = `https://${OWNER.toLowerCase()}.github.io/${REPO}/`;
 const RAW = `https://raw.githubusercontent.com/${OWNER}/${REPO}/main/`;
 

@@ -1,7 +1,7 @@
 # 🌊 FreeHarbor 自由港 · 永久免费 VPN 节点订阅
 
-[![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](https://leechuihui.github.io/vpn/)
-[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/vpn/actions)
+[![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](https://leechuihui.github.io/FreeHarbor/)
+[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
@@ -9,7 +9,7 @@
 
 > **English below** ↓ | **英文说明在下方**
 
-**在线页面 / Live page：** https://leechuihui.github.io/vpn/
+**在线页面 / Live page：** https://leechuihui.github.io/FreeHarbor/
 
 > 首次使用需在仓库 Settings → Pages 里把 Source 设为 **GitHub Actions**，之后每次刷新会自动发布。
 
@@ -20,19 +20,19 @@
 ### 一键订阅
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/all.txt
 ```
 
 base64 格式（v2rayN / Shadowrocket 兼容更好）：
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.base64.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/all.base64.txt
 ```
 
 只要最快的一批（前 20 条）：
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 ```
 
 ### 使用教程（图文）
@@ -60,7 +60,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 - 未验证（协议不支持 / 连不通 / 超出验证名额）：**165**
 - 最快延迟：**99 ms**
 - 协议分布：vless 110 · vmess 14 · trojan 20 · ss 52 · ssr 1 · hysteria2 3
-- 更新时间：2026-11-20 23:11:49 UTC
+- 更新时间：2026-11-20 23:34:51 UTC
 
 ### 工具
 
@@ -90,26 +90,26 @@ hysteria2 / tuic / ssr 无法用 xray 验证，Shadowsocks 则是 xray 26 起整
 
 **FreeHarbor / The Free Port** — a permanently free, auto-updating VPN node subscription site. Public free nodes are scraped, verified end-to-end through a real connection, sorted by latency, and published as subscriptions and QR codes. GitHub Actions refreshes everything every 3 hours at zero server cost.
 
-**Live page:** https://leechuihui.github.io/vpn/
+**Live page:** https://leechuihui.github.io/FreeHarbor/
 
 > First time only: set Settings → Pages → Source to **GitHub Actions**. Every later refresh publishes itself.
 
 ### One-tap subscription
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/all.txt
 ```
 
 Base64 format (better compatibility with v2rayN / Shadowrocket):
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.base64.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/all.base64.txt
 ```
 
 Fastest 20 only:
 
 ```
-https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
+https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 ```
 
 ### Step-by-step guides
@@ -137,7 +137,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 - Unverified (unsupported protocol / unreachable / over the quota): **165**
 - Fastest latency: **99 ms**
 - By protocol: vless 110 · vmess 14 · trojan 20 · ss 52 · ssr 1 · hysteria2 3
-- Updated: 2026-11-20 23:11:49 UTC
+- Updated: 2026-11-20 23:34:51 UTC
 
 ### Tooling
 
@@ -167,7 +167,7 @@ hysteria2 / tuic / ssr cannot be verified with xray, and Shadowsocks was removed
 
 If this project saved you time, consider giving it a star ⭐ — it helps others find free, verified nodes.
 
-[![Star History Chart](https://api.star-history.com/svg?repos=Leechuihui/vpn&type=Date)](https://star-history.com/#Leechuihui/vpn&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=Leechuihui/FreeHarbor&type=Date)](https://star-history.com/#Leechuihui/FreeHarbor&Date)
 
 ## 🔗 Related / 相关项目
 
