@@ -1,9 +1,9 @@
 name: pages
 
 on:
-  push:
-    branches: [main]
-  # 机器人用 GITHUB_TOKEN 推送不会触发 push，靠 workflow_run 接力
+  # 手动推送时 update（tools/** 变动）也会触发，由它提交产物后经
+  # workflow_run 接力部署最新内容；直接 push 触发的部署只会拿到旧
+  # artifact，与 update 竞争时必失败，故不设 push 触发器
   workflow_run:
     workflows: [update]
     types: [completed]
