@@ -3,17 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>免费 VPN 节点 · Leechuihui</title>
-<meta name="description" content="自动更新的免费 VPN 节点订阅，扫码即连。支持 v2rayN、v2rayNG、Shadowrocket、Clash、Sing-box。">
+<title>FreeHarbor 自由港 · 永久免费 VPN 节点</title>
+<meta name="description" content="FreeHarbor 自由港 — 永久免费的 VPN 节点订阅，自动更新，扫码即连。Free VPN node subscriptions, auto-updated, scan to connect.">
 <style>
   :root { --bg:#0b0e14; --fg:#e6edf3; --dim:#8b949e; --line:#21262d; --acc:#3fb950; --acc2:#58a6ff; }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--fg);
          font:15px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
   .wrap { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
-  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing:-.02em; }
+  h1 { font-size: 30px; margin: 0 0 4px; letter-spacing:-.02em; }
+  h1 .en { color:var(--dim); font-size:19px; font-weight:500; letter-spacing:0; }
   h2 { font-size: 17px; margin: 40px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--line); }
   .sub { color:var(--dim); margin:0 0 24px; font-size:14px; }
+  .badge { display:inline-block; font-size:11px; padding:2px 9px; border-radius:20px;
+           background:#3fb95022; color:var(--acc); border:1px solid #3fb95044; margin-left:8px;
+           vertical-align:middle; font-weight:600; letter-spacing:.03em; }
+  .topbar { display:flex; justify-content:space-between; align-items:flex-start; gap:16px; }
+  .lang { display:flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; flex:none; }
+  .lang button { background:#11161d; color:var(--dim); border:0; padding:7px 14px; font-size:13px;
+                 cursor:pointer; font-family:inherit; }
+  .lang button + button { border-left:1px solid var(--line); }
+  .lang button.on { background:var(--acc2); color:#04121f; font-weight:600; }
   .stat { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
   .stat div { background:#11161d; border:1px solid var(--line); border-radius:8px; padding:10px 14px; font-size:13px; }
   .stat b { color:var(--acc); font-size:18px; display:block; }
@@ -44,44 +54,56 @@
   .steps li { margin:6px 0; }
   .steps b { color:var(--fg); }
   .warn { border-left:3px solid #d29922; padding:8px 14px; color:var(--dim); font-size:13px; background:#d2992211; }
+  .guides { display:grid; gap:18px; margin-top:16px; }
+  .guide { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#11161d; }
+  .guide img { width:100%; display:block; }
   #modal { position:fixed; inset:0; background:#000c; display:none; align-items:center; justify-content:center; padding:20px; z-index:9; }
   #modal.on { display:flex; }
   #modal .box { background:#fff; border-radius:12px; padding:16px; text-align:center; max-width:340px; }
   #modal img { width:100%; }
   footer { margin-top:60px; color:var(--dim); font-size:12px; border-top:1px solid var(--line); padding-top:16px; }
+  [hidden] { display:none !important; }
 </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>免费 VPN 节点</h1>
-  <p class="sub">GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册</p>
+  <div class="topbar">
+    <div>
+      <h1>FreeHarbor<span class="badge" data-i18n="badge">永久免费</span><br><span class="en" data-i18n="brandSub">自由港 · 免费 VPN 节点</span></h1>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="btn-zh" data-lang="zh" class="on">中文</button>
+      <button id="btn-en" data-lang="en">EN</button>
+    </div>
+  </div>
+  <p class="sub" data-i18n="tagline">GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册</p>
 
   <div class="stat">
-    <div><b>41</b>已验证出网</div>
-    <div><b>68 ms</b>最快延迟</div>
-    <div><b>159</b>未验证</div>
-    <div><b>5</b>协议类型</div>
-    <div><b>2026-11-20 18:35 UTC</b>更新时间</div>
+    <div><b>41</b><span data-i18n="statOk">已验证出网</span></div>
+    <div><b>68 ms</b><span data-i18n="statFast">最快延迟</span></div>
+    <div data-skip-card ><b>159</b><span data-i18n="statSkip">未验证</span></div>
+    <div><b>5</b><span data-i18n="statProto">协议类型</span></div>
+    <div><b>2026-11-20 19:30</b><span data-i18n="statTime">更新时间</span></div>
   </div>
 
-  <h2>① 一键订阅（推荐）</h2>
-  <p class="sub">在客户端里「添加订阅」后填下面地址，节点自动同步，不用手动换。</p>
+  <h2 data-i18n="h1sub">① 一键订阅（推荐）</h2>
+  <p class="sub" data-i18n="subHint">在客户端里「添加订阅」后填下面地址，节点自动同步，不用手动换。</p>
   <div class="qrgrid">
     <div class="qrcard">
-      <img src="qr/subscribe-all.png" alt="订阅二维码">
-      <p>扫码导入订阅</p><small>v2rayN / v2rayNG / Shadowrocket</small>
+      <img src="qr/subscribe-all.png" alt="subscription QR">
+      <p data-i18n="qrAll">扫码导入订阅</p><small data-i18n="qrAllHint">v2rayN / v2rayNG / Shadowrocket</small>
     </div>
     <div class="qrcard">
-      <img src="qr/subscribe-base64.png" alt="base64 订阅二维码">
-      <p>Base64 订阅</p><small>兼容性更好的导入格式</small>
+      <img src="qr/subscribe-base64.png" alt="base64 subscription QR">
+      <p data-i18n="qrB64">Base64 订阅</p><small data-i18n="qrB64Hint">兼容性更好的导入格式</small>
     </div>
     <div class="qrcard">
-      <img src="qr/subscribe-best.png" alt="精选订阅二维码">
-      <p>只取前 20 条</p><small>延迟最低的一批，列表更短</small>
+      <img src="qr/subscribe-best.png" alt="best subscription QR">
+      <p data-i18n="qrBest">只取前 20 条</p><small data-i18n="qrBestHint">延迟最低的一批，列表更短</small>
     </div>
     <div class="qrcard">
-      <img src="qr/pages.png" alt="本页二维码">
-      <p>本页地址</p><small>手机扫码打开，直接复制订阅</small>
+      <img src="qr/pages.png" alt="this page QR">
+      <p data-i18n="qrPage">本页地址</p><small data-i18n="qrPageHint">手机扫码打开，直接复制订阅</small>
     </div>
   </div>
   <p style="margin-top:14px"></p>
@@ -91,17 +113,17 @@
   <p style="margin-top:10px"></p>
   <div class="url">https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt</div>
 
-  <h2>② 直接扫节点（不装订阅）</h2>
-  <p class="sub">扫一条连一条。前 60 条按延迟从低到高排列。</p>
+  <h2 data-i18n="h2direct">② 直接扫节点（不装订阅）</h2>
+  <p class="sub" data-i18n="directHint">扫一条连一条。前 60 条按延迟从低到高排列。</p>
   <table>
-    <thead><tr><th>#</th><th>协议</th><th>地址</th><th>延迟</th><th>状态</th><th></th></tr></thead>
+    <thead><tr><th>#</th><th data-i18n="thProto">协议</th><th data-i18n="thAddr">地址</th><th data-i18n="thLat">延迟</th><th data-i18n="thStatus">状态</th><th></th></tr></thead>
     <tbody>
         <tr>
           <td class="idx">001</td>
           <td><span class="tag vless">vless</span></td>
           <td class="host">15.204.97.197:23576</td>
           <td class="lat">68 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-001.png">二维码</button></td>
         </tr>
         <tr>
@@ -109,7 +131,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">198.247.127.131:443</td>
           <td class="lat">128 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-002.png">二维码</button></td>
         </tr>
         <tr>
@@ -117,7 +139,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">179.254.92.134:443</td>
           <td class="lat">166 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-003.png">二维码</button></td>
         </tr>
         <tr>
@@ -125,7 +147,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">167.88.61.20:443</td>
           <td class="lat">170 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-004.png">二维码</button></td>
         </tr>
         <tr>
@@ -133,7 +155,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">66.163.112.13:443</td>
           <td class="lat">181 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-005.png">二维码</button></td>
         </tr>
         <tr>
@@ -141,7 +163,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">216.152.155.23:443</td>
           <td class="lat">247 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-006.png">二维码</button></td>
         </tr>
         <tr>
@@ -149,7 +171,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">66.163.112.147:443</td>
           <td class="lat">305 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-007.png">二维码</button></td>
         </tr>
         <tr>
@@ -157,7 +179,7 @@
           <td><span class="tag vmess">vmess</span></td>
           <td class="host">158.51.121.246:1270</td>
           <td class="lat">329 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-008.png">二维码</button></td>
         </tr>
         <tr>
@@ -165,7 +187,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">169.40.42.89:443</td>
           <td class="lat">403 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-009.png">二维码</button></td>
         </tr>
         <tr>
@@ -173,7 +195,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">170.101.101.237:443</td>
           <td class="lat">425 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-010.png">二维码</button></td>
         </tr>
         <tr>
@@ -181,7 +203,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">216.152.156.65:443</td>
           <td class="lat">493 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-011.png">二维码</button></td>
         </tr>
         <tr>
@@ -189,7 +211,7 @@
           <td><span class="tag vmess">vmess</span></td>
           <td class="host">38.91.106.182:1270</td>
           <td class="lat">515 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-012.png">二维码</button></td>
         </tr>
         <tr>
@@ -197,7 +219,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">45.144.112.55:443</td>
           <td class="lat">565 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-013.png">二维码</button></td>
         </tr>
         <tr>
@@ -205,7 +227,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">45.61.186.3:443</td>
           <td class="lat">610 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-014.png">二维码</button></td>
         </tr>
         <tr>
@@ -213,7 +235,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">51.15.16.68:2053</td>
           <td class="lat">614 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-015.png">二维码</button></td>
         </tr>
         <tr>
@@ -221,7 +243,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">51.158.206.12:23576</td>
           <td class="lat">616 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-016.png">二维码</button></td>
         </tr>
         <tr>
@@ -229,7 +251,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">9.247.23.209:443</td>
           <td class="lat">620 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-017.png">二维码</button></td>
         </tr>
         <tr>
@@ -237,7 +259,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">51.158.206.96:23576</td>
           <td class="lat">649 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-018.png">二维码</button></td>
         </tr>
         <tr>
@@ -245,7 +267,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">62.210.91.2:23576</td>
           <td class="lat">652 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-019.png">二维码</button></td>
         </tr>
         <tr>
@@ -253,7 +275,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">193.160.208.240:443</td>
           <td class="lat">872 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-020.png">二维码</button></td>
         </tr>
         <tr>
@@ -261,7 +283,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">170.101.101.53:443</td>
           <td class="lat">895 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-021.png">二维码</button></td>
         </tr>
         <tr>
@@ -269,7 +291,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">216.152.156.81:443</td>
           <td class="lat">898 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-022.png">二维码</button></td>
         </tr>
         <tr>
@@ -277,7 +299,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">45.63.30.142:443</td>
           <td class="lat">929 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-023.png">二维码</button></td>
         </tr>
         <tr>
@@ -285,7 +307,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">169.40.42.35:443</td>
           <td class="lat">1033 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-024.png">二维码</button></td>
         </tr>
         <tr>
@@ -293,7 +315,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">169.197.140.169:443</td>
           <td class="lat">1049 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-025.png">二维码</button></td>
         </tr>
         <tr>
@@ -301,7 +323,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">83.136.210.129:45546</td>
           <td class="lat">1050 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-026.png">二维码</button></td>
         </tr>
         <tr>
@@ -309,7 +331,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">94.183.164.176:443</td>
           <td class="lat">1208 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-027.png">二维码</button></td>
         </tr>
         <tr>
@@ -317,7 +339,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">169.40.42.202:443</td>
           <td class="lat">1228 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-028.png">二维码</button></td>
         </tr>
         <tr>
@@ -325,7 +347,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">147.45.175.81:443</td>
           <td class="lat">1312 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-029.png">二维码</button></td>
         </tr>
         <tr>
@@ -333,7 +355,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">201.51.12.98:443</td>
           <td class="lat">1380 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-030.png">二维码</button></td>
         </tr>
         <tr>
@@ -341,7 +363,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">104.21.70.228:443</td>
           <td class="lat">1668 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-031.png">二维码</button></td>
         </tr>
         <tr>
@@ -349,7 +371,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">66.163.122.113:443</td>
           <td class="lat">1762 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-032.png">二维码</button></td>
         </tr>
         <tr>
@@ -357,7 +379,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">104.18.138.67:443</td>
           <td class="lat">5888 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-033.png">二维码</button></td>
         </tr>
         <tr>
@@ -365,7 +387,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">153.52.85.198:443</td>
           <td class="lat">6917 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-034.png">二维码</button></td>
         </tr>
         <tr>
@@ -373,7 +395,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">38.207.178.173:2087</td>
           <td class="lat">7351 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-035.png">二维码</button></td>
         </tr>
         <tr>
@@ -381,7 +403,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">208.69.78.158:443</td>
           <td class="lat">8419 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-036.png">二维码</button></td>
         </tr>
         <tr>
@@ -389,7 +411,7 @@
           <td><span class="tag vmess">vmess</span></td>
           <td class="host">67.220.95.3:18000</td>
           <td class="lat">8663 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-037.png">二维码</button></td>
         </tr>
         <tr>
@@ -397,7 +419,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">206.238.239.20:2083</td>
           <td class="lat">8726 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-038.png">二维码</button></td>
         </tr>
         <tr>
@@ -405,7 +427,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">208.69.78.33:443</td>
           <td class="lat">11419 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-039.png">二维码</button></td>
         </tr>
         <tr>
@@ -413,7 +435,7 @@
           <td><span class="tag trojan">trojan</span></td>
           <td class="host">66.163.118.166:443</td>
           <td class="lat">12592 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-040.png">二维码</button></td>
         </tr>
         <tr>
@@ -421,7 +443,7 @@
           <td><span class="tag vless">vless</span></td>
           <td class="host">37.221.76.116:2090</td>
           <td class="lat">12847 ms</td>
-          <td><span class="ok">已出网</span></td>
+          <td data-status="ok"><span class="ok">已出网</span></td>
           <td><button class="qr-btn" data-qr="qr/node-041.png">二维码</button></td>
         </tr>
         <tr>
@@ -429,7 +451,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">185.188.105.10:443</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-042.png">二维码</button></td>
         </tr>
         <tr>
@@ -437,7 +459,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">173.244.56.9:443</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-043.png">二维码</button></td>
         </tr>
         <tr>
@@ -445,7 +467,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">216.106.178.169:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-044.png">二维码</button></td>
         </tr>
         <tr>
@@ -453,7 +475,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">156.146.38.163:443</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-045.png">二维码</button></td>
         </tr>
         <tr>
@@ -461,7 +483,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">167.88.62.203:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-046.png">二维码</button></td>
         </tr>
         <tr>
@@ -469,7 +491,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">172.111.36.123:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-047.png">二维码</button></td>
         </tr>
         <tr>
@@ -477,7 +499,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">15.204.233.41:8882</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-048.png">二维码</button></td>
         </tr>
         <tr>
@@ -485,7 +507,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">51.222.136.236:8882</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-049.png">二维码</button></td>
         </tr>
         <tr>
@@ -493,7 +515,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">15.204.246.107:8888</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-050.png">二维码</button></td>
         </tr>
         <tr>
@@ -501,7 +523,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">51.222.155.113:5601</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-051.png">二维码</button></td>
         </tr>
         <tr>
@@ -509,7 +531,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">15.204.246.111:5498</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-052.png">二维码</button></td>
         </tr>
         <tr>
@@ -517,7 +539,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">149.40.57.134:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-053.png">二维码</button></td>
         </tr>
         <tr>
@@ -525,7 +547,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">185.230.230.18:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-054.png">二维码</button></td>
         </tr>
         <tr>
@@ -533,7 +555,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">37.19.198.236:443</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-055.png">二维码</button></td>
         </tr>
         <tr>
@@ -541,7 +563,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">136.148.77.250:8388</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-056.png">二维码</button></td>
         </tr>
         <tr>
@@ -549,7 +571,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">193.151.160.18:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-057.png">二维码</button></td>
         </tr>
         <tr>
@@ -557,7 +579,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">209.248.57.105:8388</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-058.png">二维码</button></td>
         </tr>
         <tr>
@@ -565,7 +587,7 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">144.21.35.158:45819</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-059.png">二维码</button></td>
         </tr>
         <tr>
@@ -573,44 +595,141 @@
           <td><span class="tag ss">ss</span></td>
           <td class="host">193.108.119.3:19999</td>
           <td class="lat">—</td>
-          <td><span class="skip">未验证</span></td>
+          <td data-status="skip"><span class="skip">未验证</span></td>
           <td><button class="qr-btn" data-qr="qr/node-060.png">二维码</button></td>
         </tr>
     </tbody>
   </table>
 
-  <h2>③ 客户端下载</h2>
-  <ul class="steps">
-    <li><b>Android</b> — <a href="https://github.com/2dust/v2rayNG/releases/latest">v2rayNG</a>，装好后点右上角 ＋ → 从剪贴板导入 / 扫二维码</li>
-    <li><b>Windows</b> — <a href="https://github.com/2dust/v2rayN/releases/latest">v2rayN</a>，解压运行，订阅 → 订阅设置 → 添加</li>
-    <li><b>iOS / macOS</b> — <a href="https://apps.apple.com/app/shadowrocket/id932747118">Shadowrocket</a>（美区 App Store，付费 ¥18），扫码即加</li>
-    <li><b>macOS / Windows / Linux 图形界面</b> — <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/latest">Clash Verge Rev</a>，配置 → 导入</li>
-    <li><b>全平台命令行</b> — <a href="https://github.com/SagerNet/sing-box/releases/latest">sing-box</a>，用本仓库 <a href="clients/singbox.json">singbox.json</a></li>
-  </ul>
-  <p class="sub">仓库内已备好 <a href="clients/clash.yaml">Clash 配置</a> 和 <a href="clients/singbox.json">Sing-box 配置</a>，下载后直接导入。</p>
+  <h2 data-i18n="h3guide">③ 图文教程</h2>
+  <p class="sub" data-i18n="guideHint">按平台分四份，跟着点即可。切换语言时教程同步切换。</p>
+  <div class="guides">
+    <div class="guide"><img class="guide-img" data-zh="assets/guide-android-zh.png" data-en="assets/guide-android-en.png" src="assets/guide-android-zh.png" alt="Android guide"></div>
+    <div class="guide"><img class="guide-img" data-zh="assets/guide-ios-zh.png" data-en="assets/guide-ios-en.png" src="assets/guide-ios-zh.png" alt="iPhone guide"></div>
+    <div class="guide"><img class="guide-img" data-zh="assets/guide-windows-zh.png" data-en="assets/guide-windows-en.png" src="assets/guide-windows-zh.png" alt="Windows guide"></div>
+    <div class="guide"><img class="guide-img" data-zh="assets/guide-mac-zh.png" data-en="assets/guide-mac-en.png" src="assets/guide-mac-zh.png" alt="macOS guide"></div>
+  </div>
 
-  <h2>说明</h2>
-  <p class="warn">节点来自公开免费源，稳定性不由本项目保证。连不上就换一条，或者等下次刷新。别拿它传敏感数据。</p>
+  <h2 data-i18n="h4client">④ 客户端下载</h2>
   <ul class="steps">
-    <li>节点已用本地 xray 内核真实出网验证（经节点请求 <code>generate_204</code> 返回 204 才算可用），不是只看端口通不通</li>
-    <li>Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾</li>
-    <li>自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本</li>
-    <li>同一 host 最多保留 2 条，避免整页节点挤在一个机房</li>
+    <li><b>Android</b> — <a href="https://github.com/2dust/v2rayNG/releases/latest">v2rayNG</a><span data-i18n="cAndroid">，装好后点右上角 ＋ → 从剪贴板导入 / 扫二维码</span></li>
+    <li><b>Windows</b> — <a href="https://github.com/2dust/v2rayN/releases/latest">v2rayN</a><span data-i18n="cWindows">，解压运行，订阅 → 订阅设置 → 添加</span></li>
+    <li><b>iOS / macOS</b> — <a href="https://apps.apple.com/app/shadowrocket/id932747118">Shadowrocket</a><span data-i18n="cIOS">（美区 App Store，付费 ¥18），扫码即加</span></li>
+    <li><b>macOS / Windows / Linux 图形界面</b> — <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/latest">Clash Verge Rev</a><span data-i18n="cClash">，配置 → 导入</span></li>
+    <li><b data-i18n="cCli">全平台命令行</b> — <a href="https://github.com/SagerNet/sing-box/releases/latest">sing-box</a><span data-i18n="cSingbox">，用本仓库 </span><a href="clients/singbox.json">singbox.json</a></li>
+  </ul>
+  <p class="sub" data-i18n="clientFiles">仓库内已备好 Clash 配置和 Sing-box 配置，下载后直接导入。</p>
+
+  <h2 data-i18n="h5note">说明</h2>
+  <p class="warn" data-i18n="warn">节点来自公开免费源，稳定性不由本项目保证。连不上就换一条，或者等下次刷新。别拿它传敏感数据。</p>
+  <ul class="steps">
+    <li data-i18n="noteVerify" >节点已用本地 xray 内核真实出网验证（经节点请求 generate_204 返回 204 才算可用），不是只看端口通不通</li>
+    <li data-i18n="noteSkip" >Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾</li>
+    <li data-i18n="noteNoVerify" hidden>本轮没有跑出网验证，仅按 TCP 探测结果排序；能连上不等于一定能出网</li>
+    <li data-i18n="noteAuto">自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本</li>
+    <li data-i18n="noteHost">同一 host 最多保留 2 条，避免整页节点挤在一个机房</li>
   </ul>
 
   <footer>
-    Leechuihui · <a href="https://github.com/Leechuihui/vpn">仓库源码</a> · <a href="https://leechuihui.github.io/vpn/">https://leechuihui.github.io/vpn/</a> · 节点解析、探测、二维码全部本地生成，无第三方 API
+    <span data-i18n="footLeft">节点解析、探测、二维码全部本地生成，无第三方 API · </span><a href="https://github.com/Leechuihui/vpn" data-i18n="footRepo">仓库源码</a>
   </footer>
 </div>
 
-<div id="modal"><div class="box"><img id="modal-img" alt=""><p style="color:#111;font-size:12px;margin-top:8px">用客户端扫码添加</p></div></div>
+<div id="modal"><div class="box"><img id="modal-img" alt=""><p style="color:#111;font-size:12px;margin-top:8px" data-i18n="modalHint">用客户端扫码添加</p></div></div>
 <script>
-  const modal = document.getElementById('modal');
-  const img = document.getElementById('modal-img');
-  document.querySelectorAll('.qr-btn').forEach((b) => {
-    b.onclick = () => { img.src = b.dataset.qr; modal.classList.add('on'); };
+  var I18N = {
+    zh: {
+      badge: '永久免费', brandSub: '自由港 · 免费 VPN 节点',
+      tagline: 'GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册',
+      statOk: '已验证出网', statNodes: '节点', statFast: '最快延迟', statSkip: '未验证', statProto: '协议类型', statTime: '更新时间',
+      h1sub: '① 一键订阅（推荐）', subHint: '在客户端里「添加订阅」后填下面地址，节点自动同步，不用手动换。',
+      qrAll: '扫码导入订阅', qrAllHint: 'v2rayN / v2rayNG / Shadowrocket',
+      qrB64: 'Base64 订阅', qrB64Hint: '兼容性更好的导入格式',
+      qrBest: '只取前 20 条', qrBestHint: '延迟最低的一批，列表更短',
+      qrPage: '本页地址', qrPageHint: '手机扫码打开，直接复制订阅',
+      h2direct: '② 直接扫节点（不装订阅）', directHint: '扫一条连一条。按延迟从低到高排列。',
+      thProto: '协议', thAddr: '地址', thLat: '延迟', thStatus: '状态',
+      h3guide: '③ 图文教程', guideHint: '按平台分四份，跟着点即可。切换语言时教程同步切换。',
+      h4client: '④ 客户端下载',
+      cAndroid: '，装好后点右上角 ＋ → 从剪贴板导入 / 扫二维码',
+      cWindows: '，解压运行，订阅 → 订阅设置 → 添加',
+      cIOS: '（美区 App Store，付费 ¥18），扫码即加',
+      cClash: '，配置 → 导入', cCli: '全平台命令行', cSingbox: '，用本仓库 ',
+      clientFiles: '仓库内已备好 Clash 配置和 Sing-box 配置，下载后直接导入。',
+      h5note: '说明', warn: '节点来自公开免费源，稳定性不由本项目保证。连不上就换一条，或者等下次刷新。别拿它传敏感数据。',
+      noteVerify: '节点已用本地 xray 内核真实出网验证（经节点请求 generate_204 返回 204 才算可用），不是只看端口通不通',
+      noteSkip: 'Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾',
+      noteNoVerify: '本轮没有跑出网验证，仅按 TCP 探测结果排序；能连上不等于一定能出网',
+      noteAuto: '自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本',
+      noteHost: '同一 host 最多保留 2 条，避免整页节点挤在一个机房',
+      footLeft: '节点解析、探测、二维码全部本地生成，无第三方 API · ', footRepo: '仓库源码',
+      modalHint: '用客户端扫码添加', qrBtn: '二维码'
+    },
+    en: {
+      badge: 'ALWAYS FREE', brandSub: 'The Free Port · Free VPN nodes',
+      tagline: 'Auto-scraped on GitHub · refreshed every 3 hours · scan and connect, no signup',
+      statOk: 'Verified online', statNodes: 'Nodes', statFast: 'Fastest latency', statSkip: 'Unverified', statProto: 'Protocols', statTime: 'Updated',
+      h1sub: '1. One-tap subscription (recommended)', subHint: 'Add a subscription in your client and paste the URL below. Nodes sync automatically.',
+      qrAll: 'Scan to import', qrAllHint: 'v2rayN / v2rayNG / Shadowrocket',
+      qrB64: 'Base64 subscription', qrB64Hint: 'Better import compatibility',
+      qrBest: 'Fastest 20 only', qrBestHint: 'Lowest latency, shorter list',
+      qrPage: 'This page', qrPageHint: 'Scan on your phone and copy the URL',
+      h2direct: '2. Scan nodes directly (no subscription)', directHint: 'Scan one and connect. Sorted by latency, lowest first.',
+      thProto: 'Protocol', thAddr: 'Address', thLat: 'Latency', thStatus: 'Status',
+      h3guide: '3. Step-by-step guides', guideHint: 'Four platforms, just follow along. Guides switch with the language.',
+      h4client: '4. Download a client',
+      cAndroid: '. Then tap + at the top right and import from clipboard or scan the QR.',
+      cWindows: '. Unzip, run it, then Subscription, Sub settings, Add.',
+      cIOS: ' (US App Store, paid), scan to add instantly.',
+      cClash: '. Profiles, then Import.', cCli: 'CLI, all platforms', cSingbox: '. Use this repo\u2019s ',
+      clientFiles: 'Ready-made Clash and Sing-box configs are in this repo. Download and import directly.',
+      h5note: 'Notes', warn: 'Nodes come from public free sources. Stability is not guaranteed. Switch nodes if one fails, or wait for the next refresh. Do not send sensitive data through them.',
+      noteVerify: 'Every node was verified end-to-end through a local xray core (204 from generate_204), not just a port check',
+      noteSkip: 'Shadowsocks was removed in xray 26, so it plus hysteria2, tuic and ssr cannot be verified. They are kept as-is and sorted last',
+      noteNoVerify: 'No egress verification ran this round; results are TCP probes only. Reachable does not mean usable',
+      noteAuto: 'Auto-refresh runs on GitHub Actions every 3 hours at zero server cost',
+      noteHost: 'At most 2 nodes per host, so one data centre cannot fill the page',
+      footLeft: 'Parsing, probing and QR generation all run locally, no third-party API · ', footRepo: 'Source',
+      modalHint: 'Scan with your client to add', qrBtn: 'QR'
+    }
+  };
+
+  var STATUS = { ok: { zh: '已出网', en: 'Online' }, skip: { zh: '未验证', en: 'Unverified' } };
+
+  function applyLang(lang) {
+    var dict = I18N[lang] || I18N.zh;
+    document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var v = dict[el.getAttribute('data-i18n')];
+      if (v !== undefined) el.textContent = v;
+    });
+    document.querySelectorAll('td[data-status]').forEach(function (td) {
+      td.textContent = STATUS[td.getAttribute('data-status')][lang];
+    });
+    document.querySelectorAll('.guide-img').forEach(function (img) {
+      img.src = lang === 'en' ? img.dataset.en : img.dataset.zh;
+    });
+    document.querySelectorAll('.lang button').forEach(function (b) {
+      b.classList.toggle('on', b.dataset.lang === lang);
+    });
+    try { localStorage.setItem('fh-lang', lang); } catch (e) {}
+  }
+
+  document.querySelectorAll('.lang button').forEach(function (b) {
+    b.onclick = function () { applyLang(b.dataset.lang); };
   });
-  modal.onclick = () => modal.classList.remove('on');
+
+  var saved = null;
+  try { saved = localStorage.getItem('fh-lang'); } catch (e) {}
+  var initial = saved || ((navigator.language || 'zh').toLowerCase().indexOf('zh') === 0 ? 'zh' : 'en');
+  applyLang(initial);
+
+  var modal = document.getElementById('modal');
+  var img = document.getElementById('modal-img');
+  document.querySelectorAll('.qr-btn').forEach(function (b) {
+    b.onclick = function () { img.src = b.dataset.qr; modal.classList.add('on'); };
+  });
+  modal.onclick = function () { modal.classList.remove('on'); };
 </script>
 </body>
 </html>

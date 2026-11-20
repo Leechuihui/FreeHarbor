@@ -295,220 +295,59 @@ const rows = nodes.slice(0, QR_N).map(
           <td><span class="tag ${n.proto}">${n.proto}</span></td>
           <td class="host">${n.host}:${n.port}</td>
           <td class="lat">${n.verified === 'ok' ? `${n.latency} ms` : '—'}</td>
-          <td>${n.verified === 'ok' ? '<span class="ok">已出网</span>' : '<span class="skip">未验证</span>'}</td>
+          <td data-status="${n.verified === 'ok' ? 'ok' : 'skip'}"><span class="${n.verified === 'ok' ? 'ok' : 'skip'}">${n.verified === 'ok' ? '已出网' : '未验证'}</span></td>
           <td><button class="qr-btn" data-qr="qr/node-${String(i + 1).padStart(3, '0')}.png">二维码</button></td>
         </tr>`
 ).join('\n');
 
-const html = `<!doctype html>
-<html lang="zh-CN">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>免费 VPN 节点 · ${OWNER}</title>
-<meta name="description" content="自动更新的免费 VPN 节点订阅，扫码即连。支持 v2rayN、v2rayNG、Shadowrocket、Clash、Sing-box。">
-<style>
-  :root { --bg:#0b0e14; --fg:#e6edf3; --dim:#8b949e; --line:#21262d; --acc:#3fb950; --acc2:#58a6ff; }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--fg);
-         font:15px/1.6 -apple-system,"PingFang SC","Microsoft YaHei",system-ui,sans-serif; }
-  .wrap { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
-  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing:-.02em; }
-  h2 { font-size: 17px; margin: 40px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--line); }
-  .sub { color:var(--dim); margin:0 0 24px; font-size:14px; }
-  .stat { display:flex; gap:10px; flex-wrap:wrap; margin:20px 0; }
-  .stat div { background:#11161d; border:1px solid var(--line); border-radius:8px; padding:10px 14px; font-size:13px; }
-  .stat b { color:var(--acc); font-size:18px; display:block; }
-  .qrgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; }
-  .qrcard { background:#fff; border-radius:10px; padding:14px; text-align:center; }
-  .qrcard img { width:100%; height:auto; image-rendering:pixelated; }
-  .qrcard p { color:#111; font-size:12px; margin:8px 0 0; font-weight:600; }
-  .qrcard small { color:#555; font-size:11px; display:block; }
-  .url { background:#11161d; border:1px solid var(--line); border-radius:6px; padding:10px 12px;
-         font-family:ui-monospace,Menlo,monospace; font-size:12px; word-break:break-all; color:var(--acc2); }
-  a { color:var(--acc2); }
-  table { width:100%; border-collapse:collapse; font-size:13px; }
-  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); }
-  th { color:var(--dim); font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:.05em; }
-  .idx { color:var(--dim); font-family:ui-monospace,monospace; }
-  .host { font-family:ui-monospace,monospace; font-size:12px; color:var(--dim); }
-  .lat { color:var(--acc); font-variant-numeric:tabular-nums; }
-  .tag { font-size:11px; padding:1px 7px; border-radius:20px; background:#1f6feb22; color:var(--acc2); text-transform:uppercase; }
-  .tag.ss { background:#3fb95022; color:var(--acc); }
-  .tag.trojan { background:#db6d2822; color:#db6d28; }
-  .tag.hysteria2 { background:#a371f722; color:#a371f7; }
-  .ok { color:var(--acc); font-size:11px; }
-  .skip { color:#d29922; font-size:11px; }
-  .qr-btn { background:#21262d; color:var(--fg); border:1px solid var(--line); border-radius:6px;
-            padding:4px 10px; font-size:12px; cursor:pointer; }
-  .qr-btn:hover { background:#30363d; }
-  .steps { padding-left:20px; color:var(--dim); }
-  .steps li { margin:6px 0; }
-  .steps b { color:var(--fg); }
-  .warn { border-left:3px solid #d29922; padding:8px 14px; color:var(--dim); font-size:13px; background:#d2992211; }
-  #modal { position:fixed; inset:0; background:#000c; display:none; align-items:center; justify-content:center; padding:20px; z-index:9; }
-  #modal.on { display:flex; }
-  #modal .box { background:#fff; border-radius:12px; padding:16px; text-align:center; max-width:340px; }
-  #modal img { width:100%; }
-  footer { margin-top:60px; color:var(--dim); font-size:12px; border-top:1px solid var(--line); padding-top:16px; }
-</style>
-</head>
-<body>
-<div class="wrap">
-  <h1>免费 VPN 节点</h1>
-  <p class="sub">GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册</p>
+// ---------- 页面 / README（模板在 tools/_page.part.html 与 tools/_readme.part.md）----------
+// 部件文件是纯文本 + %%占位符%%，改双语文案直接编辑部件，不用碰本文件。
+const htmlTpl = await readFile(join(ROOT, 'tools', '_page.part.html'), 'utf8');
+const readmeTpl = await readFile(join(ROOT, 'tools', '_readme.part.md'), 'utf8');
 
-  <div class="stat">
-    <div><b>${okCount}</b>${hasVerify ? '已验证出网' : '节点'}</div>
-    <div><b>${fastest.latency} ms</b>最快延迟</div>
-    ${hasVerify ? `<div><b>${skipCount}</b>未验证</div>` : ''}
-    <div><b>${protos.length}</b>协议类型</div>
-    <div><b>${new Date().toISOString().slice(0, 16).replace('T', ' ')} UTC</b>更新时间</div>
-  </div>
+const rowsQ = new Map();
+for (const n of nodes) rowsQ.set(n.raw.split('#')[0], n);
 
-  <h2>① 一键订阅（推荐）</h2>
-  <p class="sub">在客户端里「添加订阅」后填下面地址，节点自动同步，不用手动换。</p>
-  <div class="qrgrid">
-    <div class="qrcard">
-      <img src="qr/subscribe-all.png" alt="订阅二维码">
-      <p>扫码导入订阅</p><small>v2rayN / v2rayNG / Shadowrocket</small>
-    </div>
-    <div class="qrcard">
-      <img src="qr/subscribe-base64.png" alt="base64 订阅二维码">
-      <p>Base64 订阅</p><small>兼容性更好的导入格式</small>
-    </div>
-    <div class="qrcard">
-      <img src="qr/subscribe-best.png" alt="精选订阅二维码">
-      <p>只取前 20 条</p><small>延迟最低的一批，列表更短</small>
-    </div>
-    <div class="qrcard">
-      <img src="qr/pages.png" alt="本页二维码">
-      <p>本页地址</p><small>手机扫码打开，直接复制订阅</small>
-    </div>
-  </div>
-  <p style="margin-top:14px"></p>
-  <div class="url">${RAW}sub/all.txt</div>
-  <p style="margin-top:10px"></p>
-  <div class="url">${RAW}sub/all.base64.txt</div>
-  <p style="margin-top:10px"></p>
-  <div class="url">${RAW}sub/best.txt</div>
+const okText = hasVerify ? '已验证出网' : '节点';
+const subs = {
+  OK_COUNT: okCount,
+  STAT_OK_KEY: hasVerify ? 'statOk' : 'statNodes',
+  STAT_OK_TEXT: okText,
+  FASTEST: fastest.latency,
+  SKIP_COUNT: skipCount,
+  SKIP_HIDDEN: hasVerify ? '' : 'hidden',
+  HIDE_WHEN_NO_VERIFY: hasVerify ? '' : 'hidden',
+  HIDE_WHEN_VERIFY: hasVerify ? 'hidden' : '',
+  PROTO_COUNT: protos.length,
+  NOW_UTC: new Date().toISOString().slice(0, 16).replace('T', ' '),
+  QR_N: Math.min(QR_N, nodes.length),
+  RAW,
+  OWNER,
+  REPO,
+  PAGES,
+  OK_LINE_EN: hasVerify
+    ? '- Verified online: **' + okCount + '**\n- Unverified (unsupported protocol / unreachable / over the quota): **' + skipCount + '**'
+    : '- Nodes: **' + okCount + '**',
+  PROTO_LINE_EN: protos.map((p) => p + ' ' + nodes.filter((n) => n.proto === p).length).join(' · '),
+};
 
-  <h2>② 直接扫节点（不装订阅）</h2>
-  <p class="sub">扫一条连一条。前 ${Math.min(QR_N, nodes.length)} 条按延迟从低到高排列。</p>
-  <table>
-    <thead><tr><th>#</th><th>协议</th><th>地址</th><th>延迟</th><th>状态</th><th></th></tr></thead>
-    <tbody>
-${rows}
-    </tbody>
-  </table>
+function fill(tpl) {
+  let out = tpl;
+  for (const [k, v] of Object.entries(subs)) out = out.replaceAll('%%' + k + '%%', v);
+  return out;
+}
 
-  <h2>③ 客户端下载</h2>
-  <ul class="steps">
-    <li><b>Android</b> — <a href="https://github.com/2dust/v2rayNG/releases/latest">v2rayNG</a>，装好后点右上角 ＋ → 从剪贴板导入 / 扫二维码</li>
-    <li><b>Windows</b> — <a href="https://github.com/2dust/v2rayN/releases/latest">v2rayN</a>，解压运行，订阅 → 订阅设置 → 添加</li>
-    <li><b>iOS / macOS</b> — <a href="https://apps.apple.com/app/shadowrocket/id932747118">Shadowrocket</a>（美区 App Store，付费 ¥18），扫码即加</li>
-    <li><b>macOS / Windows / Linux 图形界面</b> — <a href="https://github.com/clash-verge-rev/clash-verge-rev/releases/latest">Clash Verge Rev</a>，配置 → 导入</li>
-    <li><b>全平台命令行</b> — <a href="https://github.com/SagerNet/sing-box/releases/latest">sing-box</a>，用本仓库 <a href="clients/singbox.json">singbox.json</a></li>
-  </ul>
-  <p class="sub">仓库内已备好 <a href="clients/clash.yaml">Clash 配置</a> 和 <a href="clients/singbox.json">Sing-box 配置</a>，下载后直接导入。</p>
-
-  <h2>说明</h2>
-  <p class="warn">节点来自公开免费源，稳定性不由本项目保证。连不上就换一条，或者等下次刷新。别拿它传敏感数据。</p>
-  <ul class="steps">
-    ${hasVerify ? `<li>节点已用本地 xray 内核真实出网验证（经节点请求 <code>generate_204</code> 返回 204 才算可用），不是只看端口通不通</li>
-    <li>Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾</li>` : '<li>本轮没有跑出网验证，仅按 TCP 探测结果排序；能连上不等于一定能出网</li>'}
-    <li>自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本</li>
-    <li>同一 host 最多保留 2 条，避免整页节点挤在一个机房</li>
-  </ul>
-
-  <footer>
-    ${OWNER} · <a href="https://github.com/${OWNER}/${REPO}">仓库源码</a> · <a href="${PAGES}">${PAGES}</a> · 节点解析、探测、二维码全部本地生成，无第三方 API
-  </footer>
-</div>
-
-<div id="modal"><div class="box"><img id="modal-img" alt=""><p style="color:#111;font-size:12px;margin-top:8px">用客户端扫码添加</p></div></div>
-<script>
-  const modal = document.getElementById('modal');
-  const img = document.getElementById('modal-img');
-  document.querySelectorAll('.qr-btn').forEach((b) => {
-    b.onclick = () => { img.src = b.dataset.qr; modal.classList.add('on'); };
-  });
-  modal.onclick = () => modal.classList.remove('on');
-</script>
-</body>
-</html>
-`;
+const html = fill(htmlTpl).replaceAll('%%ROWS%%', rows);
 await writeFile(join(ROOT, 'index.html'), html);
 
 // ---------- README ----------
-const readme = `# 免费 VPN 节点
-
-自动抓取公开免费节点，探测存活，按延迟排序，生成订阅和二维码。每 3 小时由 GitHub Actions 刷新一次。
-
-**在线页面：** ${PAGES}
-
-> 首次使用需在仓库 Settings → Pages 里把 Source 设为 **GitHub Actions**，之后每次刷新会自动发布。
-
-## 一键订阅
-
-\`\`\`
-${RAW}sub/all.txt
-\`\`\`
-
-base64 格式（v2rayN / Shadowrocket 兼容更好）：
-
-\`\`\`
-${RAW}sub/all.base64.txt
-\`\`\`
-
-只要最快的一批（前 20 条）：
-
-\`\`\`
-${RAW}sub/best.txt
-\`\`\`
-
-<p align="center">
-  <img src="qr/subscribe-all.png" width="240" alt="订阅二维码">
-</p>
-
-## 客户端
-
-| 平台 | 客户端 | 方式 |
-|---|---|---|
-| Android | [v2rayNG](https://github.com/2dust/v2rayNG/releases/latest) | 扫码 / 订阅 |
-| Windows | [v2rayN](https://github.com/2dust/v2rayN/releases/latest) | 订阅 |
-| iOS / macOS | [Shadowrocket](https://apps.apple.com/app/shadowrocket/id932747118) | 扫码 |
-| 桌面 GUI | [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev/releases/latest) | 导入 [clash.yaml](clients/clash.yaml) |
-| 全平台 CLI | [sing-box](https://github.com/SagerNet/sing-box/releases/latest) | 导入 [singbox.json](clients/singbox.json) |
-
-## 当前节点
-
-${hasVerify ? `- 已验证出网：**${okCount}**\n- 未验证（协议不支持 / 连不通 / 超出验证名额）：**${skipCount}**` : `- 节点数：**${okCount}**`}
-- 最快延迟：**${fastest.latency} ms**
-- 协议分布：${protos.map((p) => `${p} ${nodes.filter((n) => n.proto === p).length}`).join(' · ')}
-- 更新时间：${new Date().toISOString().replace('T', ' ').slice(0, 19)} UTC
-
-## 工具
-
-五个脚本，纯 Node 标准库 + \`qrcode\`，无第三方 API：
-
-\`\`\`bash
-npm install
-node tools/fetch.mjs      # 抓取 tools/sources.txt 里的上游源 → data/raw/
-node tools/parse.mjs      # 解析、去重、过滤私网/坏端口 → data/nodes.json
-node tools/probe.mjs      # TCP 探测存活 → data/checked.json
-node tools/verify.mjs     # 经每个节点真实出网 → data/verified.json
-node tools/export.mjs     # 生成订阅、二维码、客户端配置、页面、README
-\`\`\`
-
-要加自己的源，往 \`tools/sources.txt\` 追加一行 URL 就行，支持明文列表、base64 订阅、Clash YAML 三种格式。
-
-## 说明
-
-节点来自公开免费源，稳定性不保证。通过验证只代表当下这一刻能出网。别拿它传敏感数据。
-
-hysteria2 / tuic / ssr 无法用 xray 验证，Shadowsocks 则是 xray 26 起整个移除，这几类原样保留并排在末尾。
-`;
+const readme = fill(readmeTpl)
+  .replaceAll('%%OK_LINE%%', hasVerify
+    ? '- 已验证出网：**' + okCount + '**\n- 未验证（协议不支持 / 连不通 / 超出验证名额）：**' + skipCount + '**'
+    : '- 节点数：**' + okCount + '**')
+  .replaceAll('%%FASTEST%%', fastest.latency)
+  .replaceAll('%%PROTO_LINE%%', protos.map((p) => p + ' ' + nodes.filter((n) => n.proto === p).length).join(' · '))
+  .replaceAll('%%NOW%%', new Date().toISOString().replace('T', ' ').slice(0, 19));
 await writeFile(join(ROOT, 'README.md'), readme);
 
 console.log(`exported ${nodes.length} nodes (source: ${source}), ${protos.length} protocols, QR ${Math.min(QR_N, nodes.length)}`);
