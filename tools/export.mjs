@@ -441,6 +441,8 @@ const readme = `# 免费 VPN 节点
 
 **在线页面：** ${PAGES}
 
+> 首次使用需在仓库 Settings → Pages 里把 Source 设为 **GitHub Actions**，之后每次刷新会自动发布。
+
 ## 一键订阅
 
 \`\`\`

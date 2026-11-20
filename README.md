@@ -4,6 +4,8 @@
 
 **在线页面：** https://leechuihui.github.io/vpn/
 
+> 首次使用需在仓库 Settings → Pages 里把 Source 设为 **GitHub Actions**，之后每次刷新会自动发布。
+
 ## 一键订阅
 
 ```
@@ -42,7 +44,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 - 未验证（协议不支持）：**40**
 - 最快延迟：**546 ms**
 - 协议分布：vless 26 · trojan 13 · vmess 4 · ss 37 · hysteria2 3
-- 更新时间：2026-11-20 17:47:23 UTC
+- 更新时间：2026-11-20 17:48:54 UTC
 
 ## 工具
 
