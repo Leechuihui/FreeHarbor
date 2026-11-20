@@ -56,11 +56,11 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 
 ### 当前节点
 
-- 已验证出网：**47**
-- 未验证（协议不支持 / 连不通 / 超出验证名额）：**153**
-- 最快延迟：**62 ms**
-- 协议分布：vless 103 · vmess 12 · trojan 25 · ss 57 · hysteria2 3
-- 更新时间：2026-11-20 23:10:11 UTC
+- 已验证出网：**35**
+- 未验证（协议不支持 / 连不通 / 超出验证名额）：**165**
+- 最快延迟：**99 ms**
+- 协议分布：vless 110 · vmess 14 · trojan 20 · ss 52 · ssr 1 · hysteria2 3
+- 更新时间：2026-11-20 23:11:49 UTC
 
 ### 工具
 
@@ -133,11 +133,11 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 
 ### Current nodes
 
-- Verified online: **47**
-- Unverified (unsupported protocol / unreachable / over the quota): **153**
-- Fastest latency: **62 ms**
-- By protocol: vless 103 · vmess 12 · trojan 25 · ss 57 · hysteria2 3
-- Updated: 2026-11-20 23:10:11 UTC
+- Verified online: **35**
+- Unverified (unsupported protocol / unreachable / over the quota): **165**
+- Fastest latency: **99 ms**
+- By protocol: vless 110 · vmess 14 · trojan 20 · ss 52 · ssr 1 · hysteria2 3
+- Updated: 2026-11-20 23:11:49 UTC
 
 ### Tooling
 
