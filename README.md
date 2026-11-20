@@ -40,11 +40,11 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
 
 ## 当前节点
 
-- 已验证出网：**46**
-- 未验证（协议不支持 / 连不通 / 超出验证名额）：**154**
-- 最快延迟：**158 ms**
-- 协议分布：vmess 16 · vless 101 · trojan 23 · ss 58 · hysteria2 2
-- 更新时间：2026-11-20 18:23:28 UTC
+- 已验证出网：**36**
+- 未验证（协议不支持 / 连不通 / 超出验证名额）：**164**
+- 最快延迟：**165 ms**
+- 协议分布：vmess 10 · vless 125 · trojan 15 · ss 50
+- 更新时间：2026-11-20 18:27:57 UTC
 
 ## 工具
 
