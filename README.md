@@ -16,6 +16,12 @@ base64 格式（v2rayN / Shadowrocket 兼容更好）：
 https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.base64.txt
 ```
 
+只要最快的一批（前 20 条）：
+
+```
+https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/best.txt
+```
+
 <p align="center">
   <img src="qr/subscribe-all.png" width="240" alt="订阅二维码">
 </p>
@@ -36,7 +42,7 @@ https://raw.githubusercontent.com/Leechuihui/vpn/main/sub/all.base64.txt
 - 未验证（协议不支持）：**40**
 - 最快延迟：**546 ms**
 - 协议分布：vless 26 · trojan 13 · vmess 4 · ss 37 · hysteria2 3
-- 更新时间：2026-11-20 17:45:18 UTC
+- 更新时间：2026-11-20 17:47:23 UTC
 
 ## 工具
 

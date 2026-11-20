@@ -372,6 +372,10 @@ const html = `<!doctype html>
       <p>Base64 订阅</p><small>兼容性更好的导入格式</small>
     </div>
     <div class="qrcard">
+      <img src="qr/subscribe-best.png" alt="精选订阅二维码">
+      <p>只取前 20 条</p><small>延迟最低的一批，列表更短</small>
+    </div>
+    <div class="qrcard">
       <img src="qr/pages.png" alt="本页二维码">
       <p>本页地址</p><small>手机扫码打开，直接复制订阅</small>
     </div>
@@ -380,6 +384,8 @@ const html = `<!doctype html>
   <div class="url">${RAW}sub/all.txt</div>
   <p style="margin-top:10px"></p>
   <div class="url">${RAW}sub/all.base64.txt</div>
+  <p style="margin-top:10px"></p>
+  <div class="url">${RAW}sub/best.txt</div>
 
   <h2>② 直接扫节点（不装订阅）</h2>
   <p class="sub">扫一条连一条。前 ${Math.min(QR_N, nodes.length)} 条按延迟从低到高排列。</p>
@@ -445,6 +451,12 @@ base64 格式（v2rayN / Shadowrocket 兼容更好）：
 
 \`\`\`
 ${RAW}sub/all.base64.txt
+\`\`\`
+
+只要最快的一批（前 20 条）：
+
+\`\`\`
+${RAW}sub/best.txt
 \`\`\`
 
 <p align="center">
