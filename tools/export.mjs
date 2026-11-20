@@ -42,15 +42,19 @@ try {
 // verified.json 里 ok 的排前面（已按延迟升序），skip 的垫底
 checked.sort((a, b) => (a.verified === 'ok' ? 0 : 1) - (b.verified === 'ok' ? 0 : 1));
 
-// 同一 host 只留最快的两条，避免整页节点全在同一个机房
+// 已验证出网的全量保留；未验证的才受 TOP_N 名额和同 host 两条的限制，
+// 免得名额先被垫底的未验证节点占满
+const picked = checked.filter((n) => n.verified === 'ok');
 const perHost = new Map();
-const picked = [];
+for (const n of picked) perHost.set(n.host, (perHost.get(n.host) || 0) + 1);
+
 for (const n of checked) {
+  if (n.verified === 'ok') continue;
+  if (picked.length >= TOP_N) break;
   const c = perHost.get(n.host) || 0;
   if (c >= 2) continue;
   perHost.set(n.host, c + 1);
   picked.push(n);
-  if (picked.length >= TOP_N) break;
 }
 
 if (!picked.length) {
@@ -60,7 +64,9 @@ if (!picked.length) {
 
 /** 重命名：协议-延迟ms-序号，并重建 URI 的 #fragment */
 function rename(node, i) {
-  const name = `${node.proto.toUpperCase()}-${node.latency}ms-${String(i + 1).padStart(3, '0')}`;
+  // 未验证 / 连不通的节点没有 latency，别拼出 undefinedms
+  const lat = node.latency === undefined ? '-' : `${node.latency}ms`;
+  const name = `${node.proto.toUpperCase()}-${lat}-${String(i + 1).padStart(3, '0')}`;
   const raw = node.raw.includes('#') ? node.raw.slice(0, node.raw.indexOf('#')) : node.raw;
   return { ...node, name, uri: `${raw}#${encodeURIComponent(name)}` };
 }
@@ -477,7 +483,7 @@ ${RAW}sub/best.txt
 
 ## 当前节点
 
-${hasVerify ? `- 已验证出网：**${okCount}**\n- 未验证（协议不支持）：**${skipCount}**` : `- 节点数：**${okCount}**`}
+${hasVerify ? `- 已验证出网：**${okCount}**\n- 未验证（协议不支持 / 连不通 / 超出验证名额）：**${skipCount}**` : `- 节点数：**${okCount}**`}
 - 最快延迟：**${fastest.latency} ms**
 - 协议分布：${protos.map((p) => `${p} ${nodes.filter((n) => n.proto === p).length}`).join(' · ')}
 - 更新时间：${new Date().toISOString().replace('T', ' ').slice(0, 19)} UTC

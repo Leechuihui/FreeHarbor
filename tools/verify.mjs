@@ -36,8 +36,13 @@ const LIMIT = limitArg ? Number(limitArg.split('=')[1]) : 260;
 const checked = JSON.parse(await readFile(IN, 'utf8'));
 // ss 在 xray 26 里已整个移除（unknown config id: ss），只能跳过
 const supported = ['vless', 'vmess', 'trojan'];
-const candidates = checked.filter((n) => supported.includes(n.proto)).slice(0, LIMIT);
-const skipped = checked.filter((n) => !supported.includes(n.proto));
+const supportedNodes = checked.filter((n) => supported.includes(n.proto));
+const candidates = supportedNodes.slice(0, LIMIT);
+// 超出 limit 的受支持节点也算未验证，别让它们凭空消失
+const skipped = [
+  ...checked.filter((n) => !supported.includes(n.proto)),
+  ...supportedNodes.slice(LIMIT),
+];
 
 function q(raw) {
   try {
@@ -285,6 +290,7 @@ async function testOne(node) {
 }
 
 const verified = [];
+const dead = []; // 连不通的也留着，归入未验证，别从产出里消失
 let cursor = 0;
 let doneCount = 0;
 
@@ -295,6 +301,7 @@ async function worker() {
     doneCount++;
     if (doneCount % 25 === 0) process.stderr.write(`  ${doneCount}/${usable.length}\n`);
     if (latency !== null) verified.push({ ...node, latency });
+    else dead.push({ ...node, verified: 'skip' });
   }
 }
 
@@ -305,10 +312,11 @@ await rm(workDir, { recursive: true, force: true });
 
 verified.sort((a, b) => a.latency - b.latency);
 
-// 未验证的协议原样并入，标 skip，避免白白丢掉
+// 未验证的（协议不支持 / 超限 / 连不通）原样并入，标 skip，避免白白丢掉
 const merged = [
   ...verified.map((n) => ({ ...n, verified: 'ok' })),
   ...skipped.map((n) => ({ ...n, verified: 'skip' })),
+  ...dead,
 ];
 
 await writeFile(OUT, JSON.stringify(merged, null, 0));
