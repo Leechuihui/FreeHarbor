@@ -3,11 +3,11 @@
 # 🌊 FreeHarbor 自由港 · 永久免费 VPN 节点订阅
 
 [![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](https://leechuihui.github.io/FreeHarbor/)
-[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
+[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_5h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#工具)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#说明)
 
-**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由 GitHub Actions 自动刷新，零服务器成本。
+**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 5 小时由 GitHub Actions 自动刷新，零服务器成本。
 
 **在线页面：** https://leechuihui.github.io/FreeHarbor/
 

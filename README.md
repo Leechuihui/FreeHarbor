@@ -1,11 +1,11 @@
 # 🌊 FreeHarbor 自由港 · 永久免费 VPN 节点订阅
 
 [![Live Site](https://img.shields.io/badge/🌐_Live_Site-leechuihui.github.io%2Fvpn-3fb950?style=for-the-badge)](https://leechuihui.github.io/FreeHarbor/)
-[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_3h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
+[![Auto Update](https://img.shields.io/badge/🔄_Auto_Update-every_5h-58a6ff?style=for-the-badge)](https://github.com/Leechuihui/FreeHarbor/actions)
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
-**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由 GitHub Actions 自动刷新，零服务器成本。
+**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 5 小时由 GitHub Actions 自动刷新，零服务器成本。
 
 > **English below** ↓ | **英文说明在下方**
 
@@ -59,7 +59,7 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 - 节点数：**200**
 - 最快延迟：**5 ms**
 - 协议分布：vless 130 · vmess 30 · trojan 17 · ss 23
-- 更新时间：2026-11-21 11:17:33 UTC
+- 更新时间：2026-11-21 16:45:04 UTC
 
 ### 工具
 
@@ -87,7 +87,7 @@ hysteria2 / tuic / ssr 无法用 xray 验证，Shadowsocks 则是 xray 26 起整
 
 ## English
 
-**FreeHarbor / The Free Port** — a permanently free, auto-updating VPN node subscription site. Public free nodes are scraped, verified end-to-end through a real connection, sorted by latency, and published as subscriptions and QR codes. GitHub Actions refreshes everything every 3 hours at zero server cost.
+**FreeHarbor / The Free Port** — a permanently free, auto-updating VPN node subscription site. Public free nodes are scraped, verified end-to-end through a real connection, sorted by latency, and published as subscriptions and QR codes. GitHub Actions refreshes everything every 5 hours at zero server cost.
 
 **Live page:** https://leechuihui.github.io/FreeHarbor/
 
@@ -135,7 +135,7 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 - Nodes: **200**
 - Fastest latency: **5 ms**
 - By protocol: vless 130 · vmess 30 · trojan 17 · ss 23
-- Updated: 2026-11-21 11:17:33 UTC
+- Updated: 2026-11-21 16:45:04 UTC
 
 ### Tooling
 

@@ -76,14 +76,14 @@
       <button id="btn-en" data-lang="en">EN</button>
     </div>
   </div>
-  <p class="sub" data-i18n="tagline">GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册</p>
+  <p class="sub" data-i18n="tagline">GitHub 自动抓取 · 每 5 小时刷新 · 扫码即连，无需注册</p>
 
   <div class="stat">
     <div><b>200</b><span data-i18n="statNodes">节点</span></div>
     <div><b>5 ms</b><span data-i18n="statFast">最快延迟</span></div>
     <div data-skip-card hidden><b>0</b><span data-i18n="statSkip">未验证</span></div>
     <div><b>4</b><span data-i18n="statProto">协议类型</span></div>
-    <div><b>2026-11-21 11:17</b><span data-i18n="statTime">更新时间</span></div>
+    <div><b>2026-11-21 16:45</b><span data-i18n="statTime">更新时间</span></div>
   </div>
 
   <h2 data-i18n="h1sub">① 一键订阅（推荐）</h2>
@@ -626,7 +626,7 @@
     <li data-i18n="noteVerify" hidden>节点已用本地 xray 内核真实出网验证（经节点请求 generate_204 返回 204 才算可用），不是只看端口通不通</li>
     <li data-i18n="noteSkip" hidden>Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾</li>
     <li data-i18n="noteNoVerify" >本轮没有跑出网验证，仅按 TCP 探测结果排序；能连上不等于一定能出网</li>
-    <li data-i18n="noteAuto">自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本</li>
+    <li data-i18n="noteAuto">自动更新由 GitHub Actions 每 5 小时跑一次，无服务器成本</li>
     <li data-i18n="noteHost">同一 host 最多保留 2 条，避免整页节点挤在一个机房</li>
   </ul>
 
@@ -640,7 +640,7 @@
   var I18N = {
     zh: {
       badge: '永久免费', brandSub: '自由港 · 免费 VPN 节点',
-      tagline: 'GitHub 自动抓取 · 每 3 小时刷新 · 扫码即连，无需注册',
+      tagline: 'GitHub 自动抓取 · 每 5 小时刷新 · 扫码即连，无需注册',
       statOk: '已验证出网', statNodes: '节点', statFast: '最快延迟', statSkip: '未验证', statProto: '协议类型', statTime: '更新时间',
       h1sub: '① 一键订阅（推荐）', subHint: '在客户端里「添加订阅」后填下面地址，节点自动同步，不用手动换。',
       qrAll: '扫码导入订阅', qrAllHint: 'v2rayN / v2rayNG / Shadowrocket',
@@ -660,14 +660,14 @@
       noteVerify: '节点已用本地 xray 内核真实出网验证（经节点请求 generate_204 返回 204 才算可用），不是只看端口通不通',
       noteSkip: 'Shadowsocks 自 xray 26 起整个移除，连同 hysteria2 / tuic / ssr 无法验证，原样保留并排在列表末尾',
       noteNoVerify: '本轮没有跑出网验证，仅按 TCP 探测结果排序；能连上不等于一定能出网',
-      noteAuto: '自动更新由 GitHub Actions 每 3 小时跑一次，无服务器成本',
+      noteAuto: '自动更新由 GitHub Actions 每 5 小时跑一次，无服务器成本',
       noteHost: '同一 host 最多保留 2 条，避免整页节点挤在一个机房',
       footLeft: '节点解析、探测、二维码全部本地生成，无第三方 API · ', footRepo: '仓库源码',
       modalHint: '用客户端扫码添加', qrBtn: '二维码'
     },
     en: {
       badge: 'ALWAYS FREE', brandSub: 'The Free Port · Free VPN nodes',
-      tagline: 'Auto-scraped on GitHub · refreshed every 3 hours · scan and connect, no signup',
+      tagline: 'Auto-scraped on GitHub · refreshed every 5 hours · scan and connect, no signup',
       statOk: 'Verified online', statNodes: 'Nodes', statFast: 'Fastest latency', statSkip: 'Unverified', statProto: 'Protocols', statTime: 'Updated',
       h1sub: '1. One-tap subscription (recommended)', subHint: 'Add a subscription in your client and paste the URL below. Nodes sync automatically.',
       qrAll: 'Scan to import', qrAllHint: 'v2rayN / v2rayNG / Shadowrocket',
@@ -687,7 +687,7 @@
       noteVerify: 'Every node was verified end-to-end through a local xray core (204 from generate_204), not just a port check',
       noteSkip: 'Shadowsocks was removed in xray 26, so it plus hysteria2, tuic and ssr cannot be verified. They are kept as-is and sorted last',
       noteNoVerify: 'No egress verification ran this round; results are TCP probes only. Reachable does not mean usable',
-      noteAuto: 'Auto-refresh runs on GitHub Actions every 3 hours at zero server cost',
+      noteAuto: 'Auto-refresh runs on GitHub Actions every 5 hours at zero server cost',
       noteHost: 'At most 2 nodes per host, so one data centre cannot fill the page',
       footLeft: 'Parsing, probing and QR generation all run locally, no third-party API · ', footRepo: 'Source',
       modalHint: 'Scan with your client to add', qrBtn: 'QR'

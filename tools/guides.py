@@ -104,7 +104,7 @@ ZH = {
             ("选择节点", "回到列表，挑一个延迟最低的，点右下角圆形按钮连接。"),
             ("授权并上网", "首次连接会弹出 VPN 授权，点「确定」即可。"),
         ],
-        "连不上就换一条节点，或等 3 小时后的自动刷新。别用它传敏感数据。",
+        "连不上就换一条节点，或等 5 小时后的自动刷新。别用它传敏感数据。",
     ),
     "ios": (
         "iPhone / iPad 使用教程",
@@ -151,7 +151,7 @@ EN = {
             ("Pick a node", "Return to the list, choose the lowest latency, tap the round button to connect."),
             ("Allow the VPN", "Approve the VPN prompt on first connect."),
         ],
-        "If it fails, switch nodes or wait for the 3-hour refresh. Do not send sensitive data through it.",
+        "If it fails, switch nodes or wait for the 5-hour refresh. Do not send sensitive data through it.",
     ),
     "ios": (
         "iPhone / iPad Guide",

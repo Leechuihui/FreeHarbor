@@ -2,7 +2,7 @@ name: update
 
 on:
   schedule:
-    - cron: '0 */3 * * *'
+    - cron: '0 */5 * * *'
   workflow_dispatch:
   # 只在工具链/工作流本身变动时跑；机器人提交的产物不触发，避免自激
   push:
