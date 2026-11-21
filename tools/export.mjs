@@ -20,6 +20,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import QRCode from 'qrcode';
 import * as yaml from 'js-yaml';
+import { usernameOf } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OWNER = process.env.REPO_OWNER || 'Leechuihui';
@@ -161,15 +162,13 @@ const clashProxies = nodes.map((n) => {
       return {
         ...base,
         type: 'trojan',
-        password: decodeURIComponent(new URL(n.raw).username),
+        password: usernameOf(n.raw),
         sni: sni || n.host,
         skipCertVerify: true,
         udp: true,
       };
-    case 'hysteria2': {
-      const u = new URL(n.raw.replace(/^hy2:\/\//, 'hysteria2://'));
-      return { ...base, type: 'hysteria2', password: decodeURIComponent(u.username || ''), sni: sni || n.host, skipCertVerify: true };
-    }
+    case 'hysteria2':
+      return { ...base, type: 'hysteria2', password: usernameOf(n.raw), sni: sni || n.host, skipCertVerify: true };
     default:
       return null;
   }
@@ -261,17 +260,15 @@ const singbox = {
         case 'trojan':
           return {
             type: 'trojan', tag: n.name, server: n.host, server_port: Number(n.port),
-            password: decodeURIComponent(new URL(n.raw).username),
+            password: usernameOf(n.raw),
             tls: { enabled: true, server_name: sni || n.host, insecure: true },
           };
-        case 'hysteria2': {
-          const u = new URL(n.raw.replace(/^hy2:\/\//, 'hysteria2://'));
+        case 'hysteria2':
           return {
             type: 'hysteria2', tag: n.name, server: n.host, server_port: Number(n.port),
-            password: decodeURIComponent(u.username || ''),
+            password: usernameOf(n.raw),
             tls: { enabled: true, server_name: sni || n.host, insecure: true },
           };
-        }
         case 'ss':
           return {
             type: 'shadowsocks', tag: n.name, server: n.host, server_port: Number(n.port),

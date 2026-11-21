@@ -11,10 +11,12 @@
 import { readFile, writeFile, readdir, mkdir } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { dec, fragmentOf } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const RAW = join(ROOT, 'data', 'raw');
-const OUT = join(ROOT, 'data', 'nodes.json');
+// 可被覆盖，方便测试拿 fixture 驱动
+const RAW = process.env.PARSE_RAW_DIR || join(ROOT, 'data', 'raw');
+const OUT = process.env.PARSE_OUT || join(ROOT, 'data', 'nodes.json');
 
 const PROTO_OK = new Set(['ss', 'ssr', 'vmess', 'vless', 'trojan', 'hysteria2', 'hy2', 'tuic']);
 const PRIVATE_RE =
@@ -213,7 +215,8 @@ for (const file of files) {
       stats.dup++;
       continue;
     }
-    const hash = raw.includes('#') ? decodeURIComponent(raw.slice(raw.indexOf('#') + 1)) : '';
+    // 上游 fragment 常带坏转义（#%V2raySaman），dec 解不动就退回原文
+    const hash = dec(fragmentOf(raw));
     node.name = cleanName(hash, `${node.host}:${node.port}`);
     node.raw = raw;
     seen.set(node.id, node);

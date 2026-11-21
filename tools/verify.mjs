@@ -19,6 +19,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tmpdir } from 'node:os';
 import net from 'node:net';
+import { usernameOf } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const IN = join(ROOT, 'data', 'checked.json');
@@ -138,7 +139,7 @@ function outboundOf(n, tag) {
     if (n.proto === 'trojan') {
       return {
         ...base,
-        settings: { servers: [{ address: n.host, port, password: decodeURIComponent(new URL(n.raw).username) }] },
+        settings: { servers: [{ address: n.host, port, password: usernameOf(n.raw) }] },
       };
     }
   } catch {
