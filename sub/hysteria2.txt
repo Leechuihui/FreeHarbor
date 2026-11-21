@@ -1,2 +1,5 @@
-hysteria2://ca60984f-b1f0-4073-bd33-4c75168f749a@45.137.201.211:443?sni=wwe.fantoff.online#HYSTERIA2-161ms-111
-hysteria2://b006650f-8771-0001-b7fa-e18fc6e80ef1@168.113.254.247:443?insecure=1&alpn=h3&sni=vcerx-ru-67sb.my-fade.cloud#HYSTERIA2-164ms-113
+hysteria2://7e68e32f-8015-4f37-9082-70e8b0b58043@15.165.75.243:443?insecure=1&sni=www.bing.com&pinSHA256=89:61:86:FE:B2:0C:B7:40:31:87:A4:5F:F3:BD:5D:DC:8B:FB:DD:41:9D:77:9D:55:D7:86:18:9D:36:73:1A:69#HYSTERIA2-132ms-074
+hysteria2://ca60984f-b1f0-4073-bd33-4c75168f749a@31.58.117.133:443?insecure=0&sni=kraw-pl-5.fantoff.online&obfs=&obfs-password=#HYSTERIA2-157ms-093
+hysteria2://b006650f-8771-0001-b7fa-e18fc6e80ef1@168.113.254.247:443?insecure=1&sni=vcerx-ru-67sb.my-fade.cloud#HYSTERIA2-179ms-108
+hysteria2://HowdyHysteria2023w0W@hysteria.udpgw.com:8443/?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=sni-here.com#HYSTERIA2-1131ms-109
+hysteria2://9a9f167d-b461-466f-be50-f0ffd598a6f8@germanyafterpool.fun:443?insecure=1&sni=germanyafterpool.fun#HYSTERIA2-1706ms-112
