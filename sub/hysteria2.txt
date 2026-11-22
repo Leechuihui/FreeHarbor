@@ -1,1 +1,1 @@
-hysteria2://fce629d692a7b1ad71a17dae29d8b3c6@172.87.24.53:8443/?insecure=1&sni=hy2k2p.local#HYSTERIA2-52ms-164
+hysteria2://hAUdd15a7YGHUSgiPOUz@43.103.2.53:443?insecure=1&sni=&obfs=salamander&obfs-password=9veAh9pTbrAfDwM1fIYI#HYSTERIA2-141ms-065
