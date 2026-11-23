@@ -1,5 +1,5 @@
 # 由 tools/export.mjs 自动生成，勿手改
-# 节点数：200　更新：2026-11-22T17:29:10.609Z
+# 节点数：200　更新：2026-11-23T00:31:32.436Z
 # 订阅地址：https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/all.txt
 
 mixed-port: 7890
@@ -8,21 +8,1525 @@ mode: rule
 log-level: info
 ipv6: false
 proxies:
-  - name: VLESS-71ms-001
-    server: 169.40.42.168
+  - name: VMESS-6ms-001
+    server: 104.21.69.44
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt4.ir
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: a.prapt4.ir
+    udp: true
+  - name: VLESS-6ms-002
+    server: 104.17.54.188
+    port: 2096
+    type: vless
+    uuid: 7327168e-4da6-4104-82ab-d52dd7128c47
+    tls: true
+    servername: nova-mango-cloud-c883.nova-5dd64d.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-003
+    server: 172.64.152.23
     port: 443
     type: vless
-    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
+    uuid: bb8c74a1-abc1-4511-b100-9876e30cb65c
     tls: true
-    servername: yahoo.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
-      short-id: c39cc7310a
+    servername: xfjd79v2tjscrm6jqo.zjde5.de5.net
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-004
+    server: 104.24.219.162
+    port: 80
+    type: vless
+    uuid: d4e672e0-bc04-45c1-b710-df097fa41d23
+    tls: false
+    servername: jolly-fog-9e08-ppal03.revog68198.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-005
+    server: 172.67.74.177
+    port: 443
+    type: vless
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    tls: true
+    servername: fs.qicai99.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-006
+    server: 5.10.247.142
+    port: 2087
+    type: vless
+    uuid: probabblynot-ch
+    tls: true
+    servername: probabblynot.fazelextremeisreal.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-007
+    server: 108.162.195.58
+    port: 443
+    type: vless
+    uuid: 29ca503d-e6b8-4509-b666-48133f450857
+    tls: true
+    servername: learn00.evany.de5.net
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-008
+    server: 104.18.46.234
+    port: 2086
+    type: vless
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    tls: false
+    servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-009
+    server: 104.19.140.106
+    port: 443
+    type: vless
+    uuid: d6971cc4-a506-49f6-8ebb-f911317763d8
+    tls: true
+    servername: afrcloud1.c01.kr
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-6ms-010
+    server: 172.67.167.78
+    port: 8443
+    type: vmess
+    uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: v2ray1.dozapp.xyz
+    network: ws
+    ws-opts:
+      path: /lMnsZUN4/
+      headers:
+        Host: v2ray1.dozapp.xyz
+    udp: true
+  - name: VMESS-6ms-011
+    server: 104.21.234.72
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt1.ir
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: a.prapt1.ir
+    udp: true
+  - name: VLESS-6ms-012
+    server: 172.64.88.168
+    port: 8880
+    type: vless
+    uuid: 6f876b28-1b3e-4088-85c0-d299e56bfccd
+    tls: false
+    servername: throbbing-haze-fbde.388-6c4.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-013
+    server: 104.21.18.141
+    port: 443
+    type: vless
+    uuid: 0050dd81-65fb-439c-abf6-c4c609205c44
+    tls: true
+    servername: f2AU50vwMiGE9OFTDa.NEtiZO14.WORkERs.DEv
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-014
+    server: 104.21.71.238
+    port: 443
+    type: vless
+    uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575
+    tls: true
+    servername: rubifen.adaspoloandco.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-6ms-015
+    server: 188.114.97.6
+    port: 443
+    type: vless
+    uuid: 94498f1a-26c1-4d86-a38c-fb33e0eb1ded
+    tls: true
+    servername: amiiiin.yas-nowin.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-016
+    server: 104.21.89.181
+    port: 8880
+    type: vless
+    uuid: ba746959-18e7-471c-b00f-fa5cdd930abf
+    tls: false
+    servername: crimson-bread-c38e.295.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-017
+    server: 104.18.12.149
+    port: 8880
+    type: vless
+    uuid: 556d2515-b565-4519-9ad0-9ad6f792b6c1
+    tls: false
+    servername: prossh.octarpmta.ir
+    client-fingerprint: chrome
+    network: httpupgrade
+    udp: true
+  - name: VLESS-7ms-018
+    server: 104.21.63.28
+    port: 443
+    type: vless
+    uuid: 44eae030-290b-4083-8102-6f8bab05701b
+    tls: true
+    servername: cfvvv-ev1.pages.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-019
+    server: 104.21.0.1
+    port: 8443
+    type: vmess
+    uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: v2ray1.dozapp.xyz
+    network: ws
+    ws-opts:
+      path: /lMnsZUN4/
+      headers:
+        Host: v2ray1.dozapp.xyz
+    udp: true
+  - name: VLESS-7ms-020
+    server: 104.17.108.69
+    port: 443
+    type: vless
+    uuid: 74a0d4f2-8eaa-4a4f-8b63-48880a8522ad
+    tls: true
+    servername: gamingss.xorilo.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-021
+    server: 188.114.98.0
+    port: 443
+    type: vless
+    uuid: e6df2095-a73c-4043-8693-8d5a03686870
+    tls: true
+    servername: lucasjow.us.ci
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-022
+    server: 104.24.66.98
+    port: 80
+    type: vless
+    uuid: 9e81276e-5d48-4238-b725-5ed2feec5f51
+    tls: false
+    servername: muddy-sun-f05e-ppal03.nakojof452.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-023
+    server: 89.116.250.6
+    port: 2083
+    type: vless
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-024
+    server: 154.197.64.252
+    port: 443
+    type: vless
+    uuid: 20b436fc-2c54-4248-b70d-14b8d6916d41
+    tls: true
+    servername: worker3.harijo3330.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-025
+    server: 199.232.78.150
+    port: 443
+    type: vless
+    uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
+    tls: true
+    servername: global.fastly.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VLESS-7ms-026
+    server: 188.114.97.8
+    port: 8443
+    type: vless
+    uuid: 2fad05d3-9fab-45a0-addc-3fc229673c5e
+    tls: true
+    servername: dl1.rahetejarat.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VMESS-7ms-027
+    server: 104.21.51.208
+    port: 443
+    type: vmess
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: nina.bond
+    network: ws
+    ws-opts:
+      path: /linkvws
+      headers:
+        Host: nina.bond
+    udp: true
+  - name: VLESS-7ms-028
+    server: 188.114.97.6
+    port: 8080
+    type: vless
+    uuid: b69b43d1-091d-4d7c-90b2-7a8bbad9d6a9
+    tls: false
+    servername: BItter-CreDIT-61b8.b76EbA0aBb.wORkerS.dEv
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-029
+    server: 104.21.224.23
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt4.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048&Telegram🇨🇳
+      headers:
+        Host: a.prapt4.ir
+    udp: true
+  - name: VLESS-7ms-030
+    server: 104.26.3.138
+    port: 443
+    type: vless
+    uuid: 506e4a91-1d05-5683-b84c-2113f673cb19
+    tls: true
+    servername: vltj.qzz.io
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-031
+    server: 216.24.57.1
+    port: 2095
+    type: vless
+    uuid: 517c786d-84cd-4401-b638-d3c63c739a2b
+    tls: false
+    servername: WR-MtRzB4.mAnIyAdG7sHaRd.iR
+    client-fingerprint: chrome
+    network: httpupgrade
+    udp: true
+  - name: VMESS-7ms-032
+    server: 104.21.221.215
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt1.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        Host: a.prapt1.ir
+    udp: true
+  - name: VLESS-7ms-033
+    server: 188.114.98.0
+    port: 2083
+    type: vless
+    uuid: 273e9057-8167-4d17-8de3-d44c82037cda
+    tls: true
+    servername: old-sky-2b90.seyowkclient.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-034
+    server: 104.16.233.169
+    port: 80
+    type: vless
+    uuid: 94b0cde3-a305-4d89-a192-575339220c7f
+    tls: false
+    servername: flat-rain-e26e-ppal03.cigoyob991.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-035
+    server: 104.21.8.201
+    port: 2096
+    type: vless
+    uuid: 214bf4c5-045a-4ddb-944b-e2eef9b33338
+    tls: true
+    servername: cdn-fr.skyvora.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-036
+    server: 172.67.182.80
+    port: 443
+    type: vless
+    uuid: 0050dd81-65fb-439c-abf6-c4c609205c44
+    tls: false
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-80ms-002
+  - name: VLESS-7ms-037
+    server: 181.214.1.242
+    port: 2053
+    type: vless
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-038
+    server: 146.75.57.111
+    port: 443
+    type: vless
+    uuid: 0632a4e7-d55a-4d17-a47b-9958b471be90
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VLESS-7ms-039
+    server: 104.24.223.66
+    port: 8080
+    type: vless
+    uuid: 2b59f595-bc0e-4642-a542-e8e0fc8926b6
+    tls: false
+    servername: join-to.vmessorg.Community.
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-040
+    server: 188.114.97.2
+    port: 80
+    type: vmess
+    uuid: c53b8706-7a23-486c-89c5-4dac1209ef11
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: Be2.vmess.site.
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: Be2.vmess.site.
+    udp: true
+  - name: VLESS-7ms-041
+    server: 104.21.80.1
+    port: 80
+    type: vless
+    uuid: 81caa837-c213-4731-a02e-662380ad1e2f
+    tls: false
+    servername: cxrolvpn.freev2-edb.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-042
+    server: 104.21.228.41
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt1.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048&Telegram🇨🇳
+      headers:
+        Host: a.prapt1.ir
+    udp: true
+  - name: VLESS-7ms-043
+    server: 188.114.96.9
+    port: 443
+    type: vless
+    uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+    tls: true
+    servername: IdB8ONMVbntuYT5t7t6cEJfw8vLrb.paGEs.DeV
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-044
+    server: 199.232.78.159
+    port: 443
+    type: vless
+    uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51
+    tls: true
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-045
+    server: 199.232.78.160
+    port: 443
+    type: vless
+    uuid: XpnTeam-70
+    tls: true
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-046
+    server: 104.18.138.67
+    port: 443
+    type: vless
+    uuid: 0280c276-641b-49af-b699-4931c30ac137
+    tls: true
+    servername: norway.xn--nlqaa425dbaab446bbabd698meae.online.
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VLESS-7ms-047
+    server: 188.114.99.160
+    port: 8443
+    type: vless
+    uuid: 0525f54a-568b-4f0b-89e5-c2666e800d83
+    tls: true
+    servername: matoride.adaspoloandco.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-048
+    server: 23.235.33.98
+    port: 80
+    type: vless
+    uuid: b742d8e7-ed7d-4f7d-bb16-bf49bdb4cb44
+    tls: false
+    servername: tr-sgood-wopd-butnorwa-butter.global.ssl.fastly.net
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VLESS-7ms-049
+    server: 104.18.4.138
+    port: 2096
+    type: vless
+    uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
+    tls: true
+    servername: f53d749fda28cb85.hozheen.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-050
+    server: 104.21.16.1
+    port: 443
+    type: vless
+    uuid: 81caa837-c213-4731-a02e-662380ad1e2f
+    tls: true
+    servername: cxrolvpn.freev2-edb.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-051
+    server: 199.232.77.215
+    port: 443
+    type: vless
+    uuid: 1cbf2f56-926e-4a69-a325-d2794a22d411
+    tls: true
+    servername: global.fastly.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VMESS-7ms-052
+    server: 104.16.67.38
+    port: 80
+    type: vmess
+    uuid: f8c92b3b-5447-44a5-9e54-23cdc269cb93
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: aq.daozhang.link
+    network: ws
+    ws-opts:
+      path: f8c92b3b
+      headers:
+        Host: aq.daozhang.link
+    udp: true
+  - name: VLESS-7ms-053
+    server: 94.247.142.245
+    port: 8443
+    type: vless
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-054
+    server: 172.67.171.43
+    port: 80
+    type: vmess
+    uuid: b79a6959-6feb-43ba-b3c7-f1afae9ea32c
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: Uk2.vmess.site.
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: Uk2.vmess.site.
+    udp: true
+  - name: VLESS-7ms-055
+    server: 104.27.66.214
+    port: 8443
+    type: vless
+    uuid: be5851ff-9af5-45ea-b874-a0a035714114
+    tls: true
+    servername: ratatouille.adaspoloandco.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-056
+    server: 188.114.97.3
+    port: 80
+    type: vless
+    uuid: 4d6d8e9b-0738-43c6-994f-ab475a7b3381
+    tls: false
+    servername: cxrolvpn.vipserver4.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-057
+    server: 104.18.63.135
+    port: 2083
+    type: vless
+    uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+    tls: true
+    servername: vipfree.dr-ping.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-058
+    server: 172.64.86.167
+    port: 80
+    type: vless
+    uuid: 7ee0cedb-1f06-4be9-8444-51f289a4bf12
+    tls: false
+    servername: morning-sound-6fa2-ppal03.tinemo7285.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-059
+    server: 199.232.78.160
+    port: 443
+    type: vless
+    uuid: XpnTeam-6
+    tls: true
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-7ms-060
+    server: 104.16.72.70
+    port: 443
+    type: trojan
+    password: mitivpn
+    sni: gamingdll.ir
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-7ms-061
+    server: 104.21.64.1
+    port: 8080
+    type: vless
+    uuid: 1737df47-a4b2-4096-9fc3-1d869aa50c08
+    tls: false
+    servername: cxrolvpn.freev2-edb.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-062
+    server: 104.21.94.203
+    port: 443
+    type: vless
+    uuid: 364D2D52-E61E-4E52-80EC-2BC6BDF15349
+    tls: false
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-7ms-063
+    server: 104.18.37.228
+    port: 443
+    type: vless
+    uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b
+    tls: true
+    servername: hhlfy.twiladaphne.ndjp.net
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-7ms-064
+    server: 104.16.26.10
+    port: 443
+    type: trojan
+    password: 1vkFHbQX_gN1U8V8jVc
+    sni: mhpanel.kigaping.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-7ms-065
+    server: 146.75.59.186
+    port: 443
+    type: vless
+    uuid: b566e589-1c53-4c6f-ba99-5633c552cdb5
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-066
+    server: 104.16.203.166
+    port: 80
+    type: vless
+    uuid: 592bac53-90ec-44b5-811b-01f6adf28f41
+    tls: false
+    servername: wild-glade-236b-ppal03.xawego3471.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-067
+    server: 104.19.141.129
+    port: 443
+    type: vless
+    uuid: bcce095a-9f98-4e23-a68c-8bbecb785dcd
+    tls: true
+    servername: afrcloud1.c01.kr
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-068
+    server: 104.21.229.26
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt4.ir
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: a.prapt4.ir
+    udp: true
+  - name: VLESS-7ms-069
+    server: 172.67.204.84
+    port: 2053
+    type: vless
+    uuid: 4045c6b7-1d53-4574-98cd-df21db40b0dc
+    tls: true
+    servername: itcenteriran.blog
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-070
+    server: 172.67.148.163
+    port: 443
+    type: vless
+    uuid: 682d30e4-3dfc-49f2-a017-9049119e3497
+    tls: true
+    servername: free.server7peekconfig.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-7ms-071
+    server: 167.82.76.7
+    port: 443
+    type: trojan
+    password: MITIVPN
+    sni: ssl.fastly.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-7ms-072
+    server: 140.248.186.54
+    port: 443
+    type: vless
+    uuid: 93cdb4e7-ab65-44fa-91c8-f46e80806bca
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-7ms-073
+    server: 45.135.235.255
+    port: 443
+    type: vless
+    uuid: 0b7337bf-dcff-432b-9ec6-b4fb6d22fc92
+    tls: true
+    servername: worker3.fivon81984.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-074
+    server: 167.82.64.7
+    port: 443
+    type: vless
+    uuid: XpnTeam-128
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VLESS-7ms-075
+    server: 185.18.250.245
+    port: 443
+    type: vless
+    uuid: 17540a16-a0dd-5694-7e1e-14e281ccc032
+    tls: true
+    servername: crm.lotussec.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-076
+    server: 172.67.158.89
+    port: 8443
+    type: vless
+    uuid: 2fad05d3-9fab-45a0-addc-3fc229673c5e
+    tls: true
+    servername: dl1.rahetejarat.com
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: VMESS-7ms-077
+    server: 104.21.221.95
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt1.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048
+      headers:
+        Host: a.prapt1.ir
+    udp: true
+  - name: VLESS-7ms-078
+    server: 104.18.28.234
+    port: 443
+    type: vless
+    uuid: 615d9f74-4d51-bad3-f240-2a8400000001
+    tls: true
+    servername: main.packetloss-com.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-079
+    server: 172.64.152.23
+    port: 443
+    type: vless
+    uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc
+    tls: true
+    servername: pages.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-080
+    server: 104.21.80.209
+    port: 443
+    type: vless
+    uuid: cf63446e-f6b7-4d34-b7ed-d8648eeed0f7
+    tls: true
+    servername: vps.181110.xyz
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-081
+    server: 104.21.54.252
+    port: 8080
+    type: vmess
+    uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: www.velvetmountain.shop
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: www.velvetmountain.shop
+    udp: true
+  - name: VLESS-7ms-082
+    server: 146.75.59.186
+    port: 443
+    type: vless
+    uuid: c1a3a6ee-34d3-4fcd-8763-c2231adabed6
+    tls: true
+    servername: firefox.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-083
+    server: 104.24.189.102
+    port: 80
+    type: vless
+    uuid: 1853d1d2-1ccf-48e6-ae05-0c0bb285a8c4
+    tls: false
+    servername: winter-bush-f08c-ppal03.himigaw787.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-7ms-084
+    server: 203.30.191.5
+    port: 443
+    type: vmess
+    uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: oplg1.cfcdn2.xyz
+    network: ws
+    ws-opts:
+      path: /AUIKN8AU
+      headers:
+        Host: oplg1.cfcdn2.xyz
+    udp: true
+  - name: VLESS-7ms-085
+    server: 199.232.78.120
+    port: 443
+    type: vless
+    uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38
+    tls: true
+    servername: cdn.akamai.steamstatic.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-7ms-086
+    server: 27.50.48.222
+    port: 443
+    type: vless
+    uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+    tls: true
+    servername: juzibaipiao.5112233.xyz
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-087
+    server: 104.24.248.204
+    port: 80
+    type: vless
+    uuid: 2370f4d8-6694-4e51-8c72-b2782ae96a59
+    tls: false
+    servername: withered-wave-ee0b-ppal03.faxip46069.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-088
+    server: 15.204.97.214
+    port: 23576
+    type: vless
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+    tls: true
+    servername: fuck.rkn
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: '01'
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-8ms-089
+    server: 172.64.153.105
+    port: 443
+    type: vless
+    uuid: 6fc36cfc-561f-4544-9a0e-7c732c478501
+    tls: true
+    servername: us.vipserver14.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-090
+    server: 154.197.64.30
+    port: 8880
+    type: vless
+    uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
+    tls: false
+    servername: vms.lifetime36.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-091
+    server: 199.232.78.159
+    port: 443
+    type: vless
+    uuid: a8a35938-7ed6-4237-9e91-9ad4af0c8257
+    tls: true
+    servername: firefox.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-092
+    server: 151.101.69.223
+    port: 443
+    type: vless
+    uuid: 5f65c1ae-9e7a-48ea-8ecf-6822365cd177
+    tls: true
+    servername: sp…</div>
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-8ms-093
+    server: 167.82.64.7
+    port: 443
+    type: trojan
+    password: mitivpn
+    sni: 167.82.64.7
+    skipCertVerify: true
+    udp: true
+  - name: VMESS-8ms-094
+    server: 104.21.237.65
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt4.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048&Telegram🇨🇳 @WangCai_8
+      headers:
+        Host: a.prapt4.ir
+    udp: true
+  - name: VLESS-8ms-095
+    server: 185.146.173.58
+    port: 80
+    type: vless
+    uuid: Telegram-ipV2Ray-cep
+    tls: false
+    servername: 15.ftp.debian.org.www.speedtest.net.免费上网69.Site.
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-8ms-096
+    server: 167.82.76.7
+    port: 443
+    type: trojan
+    password: mitivpn
+    sni: ssl.fastly.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-8ms-097
+    server: 104.18.26.90
+    port: 2087
+    type: vless
+    uuid: dca945d2-6d9b-434f-8754-3626a6a75e21
+    tls: true
+    servername: aza002.vaslbash.site
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-098
+    server: 188.114.99.160
+    port: 8443
+    type: vless
+    uuid: 5acc4610-f2d7-44c9-bbe6-c0ee6a058aac
+    tls: true
+    servername: maple.adaspoloandco.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-099
+    server: 104.24.0.184
+    port: 443
+    type: vless
+    uuid: 44eae030-290b-4083-8102-6f8bab05701b
+    tls: true
+    servername: cfvvv-ev1.pages.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-100
+    server: 104.26.13.54
+    port: 443
+    type: vless
+    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+    tls: true
+    servername: fs.qicai99.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-101
+    server: 104.17.145.145
+    port: 2083
+    type: vless
+    uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+    tls: true
+    servername: vipfree.dr-ping.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-8ms-102
+    server: 15.204.97.206
+    port: 23576
+    type: vless
+    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
+    tls: true
+    servername: fuck.rkn
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
+      short-id: '01'
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VMESS-9ms-103
+    server: 198.41.203.1
+    port: 443
+    type: vmess
+    uuid: 267a9f38-40d8-4ed6-ab58-cafc67e9c933
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: lg1.cfcdn2.xyz
+    network: ws
+    ws-opts:
+      path: /VHONOFZ3
+      headers:
+        Host: lg1.cfcdn2.xyz
+    udp: true
+  - name: VLESS-9ms-104
+    server: 172.64.153.100
+    port: 443
+    type: vless
+    uuid: 6fc36cfc-561f-4544-9a0e-7c732c478500
+    tls: true
+    servername: us.vipserver14.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-9ms-105
+    server: 104.21.15.36
+    port: 443
+    type: vmess
+    uuid: edbb1059-1633-4271-b66e-ed4fba47a1bf
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: linde06.indiavideo.sbs
+    network: ws
+    ws-opts:
+      path: /linkws
+      headers:
+        Host: linde06.indiavideo.sbs
+    udp: true
+  - name: VLESS-9ms-106
+    server: 104.16.150.108
+    port: 2087
+    type: vless
+    uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+    tls: true
+    servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-9ms-107
+    server: 104.21.224.129
+    port: 80
+    type: vmess
+    uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: a.prapt1.ir
+    network: ws
+    ws-opts:
+      path: /?ed=2048&Telegram🇨🇳@WangCai_8
+      headers:
+        Host: a.prapt1.ir
+    udp: true
+  - name: VLESS-9ms-108
+    server: 108.162.198.178
+    port: 8080
+    type: vless
+    uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+    tls: false
+    servername: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-9ms-109
+    server: 185.146.173.59
+    port: 80
+    type: vless
+    uuid: -DIGiV2RAY
+    tls: false
+    servername: digi--v2raycncfs.RadioTeHran.oRG.
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-10ms-110
+    server: 172.64.159.64
+    port: 80
+    type: vless
+    uuid: 977bac99-33d4-408a-91f5-0ce737793a50
+    tls: false
+    servername: britain.vipserver14.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: TROJAN-11ms-111
+    server: 167.82.101.159
+    port: 443
+    type: trojan
+    password: 2223970e6a0b8ad289d3c43dd85dd2c9
+    sni: ssl.fastly.com
+    skipCertVerify: true
+    udp: true
+  - name: VMESS-13ms-112
+    server: 104.21.82.39
+    port: 2052
+    type: vmess
+    uuid: 7a737f41-b792-4260-94ff-3d864da67b80
+    alterId: 0
+    cipher: auto
+    tls: false
+    servername: mahilu.site
+    network: ws
+    ws-opts:
+      path: /
+      headers:
+        Host: mahilu.site
+    udp: true
+  - name: VLESS-14ms-113
+    server: 151.101.1.57
+    port: 80
+    type: vless
+    uuid: InternetAzadRobot
+    tls: false
+    servername: tignaltofan.global.ssl.fastly.net
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: TROJAN-20ms-114
+    server: 66.33.22.242
+    port: 30797
+    type: trojan
+    password: TgTrWOUNeU
+    sni: is1-ssl.mzstatic.com
+    skipCertVerify: true
+    udp: true
+  - name: VMESS-23ms-115
+    server: 47.88.79.34
+    port: 443
+    type: vmess
+    uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: rib9jxayoqjgn2kw.v.3dns.vip
+    network: ws
+    ws-opts:
+      path: /ws-vmess
+      headers:
+        Host: rib9jxayoqjgn2kw.v.3dns.vip
+    udp: true
+  - name: VLESS-25ms-116
+    server: 89.18.60.230
+    port: 443
+    type: vless
+    uuid: bc93a03d-13b5-0006-8ee7-d50c11459dab
+    tls: true
+    servername: diffoscope.com
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+      short-id: 1c3e8241a8743df9
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-26ms-117
+    server: 69.46.46.122
+    port: 443
+    type: vless
+    uuid: Default
+    tls: true
+    servername: ezaccess1-slv-ezaccess1-e0f2.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-26ms-118
+    server: 69.46.46.144
+    port: 443
+    type: vless
+    uuid: 10c3b62f-59da-55cb-b24f-2072ecb4348c
+    tls: true
+    servername: sys-ydfsy32ygh-yeg75tyjsv-ue7y-e1f02a-production.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-26ms-119
+    server: 43.110.39.161
+    port: 443
+    type: vless
+    uuid: da39704f-79b2-460e-b77f-8d12397b3112
+    tls: true
+    servername: www.apple.com
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: OsXk2qNUNsQsjMHAx6z6GdVflb0gD5AI8izM5W_J_00
+      short-id: db9af76e455811d0
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VMESS-26ms-120
+    server: 216.152.152.187
+    port: 22324
+    type: vmess
+    uuid: 04621bae-ab36-11ec-b909-0242ac120002
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: tcp
+    udp: true
+  - name: VLESS-27ms-121
+    server: 69.46.46.123
+    port: 443
+    type: vless
+    uuid: 18758b47-442c-ce87-982f-95da64c3228b
+    tls: true
+    servername: sr-production-c685.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-27ms-122
+    server: 69.46.46.142
+    port: 443
+    type: vless
+    uuid: 10c3b62f-59da-55cb-b24f-2072ecb4348c
+    tls: true
+    servername: app-rtfch5546fx-fdt5-ftyyfg64-f9788a-production.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-28ms-123
+    server: 69.46.46.71
+    port: 443
+    type: vless
+    uuid: 2fbd22b4b4f53632cdb1ce8aeeae8b5c
+    tls: true
+    servername: srv-16eb07-23a65a-production.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-28ms-124
+    server: 95.129.236.252
+    port: 443
+    type: vless
+    uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060
+    tls: true
+    servername: azs.benz.ink
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-28ms-125
+    server: 69.46.46.109
+    port: 443
+    type: vless
+    uuid: 10c3b62f-59da-55cb-b24f-2072ecb4348c
+    tls: true
+    servername: srv-59626b-f0a855-production.up.railway.app
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-30ms-126
+    server: 185.143.233.238
+    port: 2086
+    type: vless
+    uuid: 1ee1f28d-4975-4d7c-95c7-76172c20eed5
+    tls: false
+    servername: parsi.parsi.sbs
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-31ms-127
+    server: 154.40.36.220
+    port: 443
+    type: vless
+    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
+    tls: true
+    servername: jp3.yohototo.top
+    client-fingerprint: unsafe
+    network: ws
+    udp: true
+  - name: VLESS-32ms-128
+    server: 216.106.185.158
+    port: 443
+    type: vless
+    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+    tls: true
+    servername: kuruish.org
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-35ms-129
+    server: 185.143.233.5
+    port: 80
+    type: vless
+    uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67
+    tls: false
+    servername: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-40ms-130
+    server: 129.146.143.80
+    port: 48111
+    type: vmess
+    uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: raw
+    udp: true
+  - name: VLESS-45ms-131
+    server: 195.211.98.43
+    port: 443
+    type: vless
+    uuid: 1b4b11d5-4c2d-4533-9a55-636757cdee94
+    tls: true
+    servername: www.cloudflare.com
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: xPnpkXu5qfwIArlHKvJsqKJnGdGbJK1tT2GzWMyLohA
+      short-id: 9c56fddf237e8eaf
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-50ms-132
+    server: www.speedtest.net
+    port: 80
+    type: vless
+    uuid: 1737df47-a4b2-4096-9fc3-1d869aa50c08
+    tls: false
+    servername: cxrolvpn.freev2-edb.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-50ms-133
+    server: 87.120.252.67
+    port: 443
+    type: vless
+    uuid: a5446e31-6370-42cc-b6d4-44698f57acf5
+    tls: true
+    servername: game.worldoftanks.com
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4
+      short-id: ''
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: TROJAN-52ms-134
+    server: 170.101.101.53
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: www.explorecreativejobsandenhanceyourcareerportfolio.com
+    skipCertVerify: true
+    udp: true
+  - name: TROJAN-52ms-135
+    server: 170.101.101.19
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: learn.explorecreativejobsandenhanceyourcareerportfolio.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-55ms-136
+    server: 172.64.78.198
+    port: 80
+    type: vless
+    uuid: 2370f4d8-6694-4e51-8c72-b2782ae96a59
+    tls: false
+    servername: withered-wave-ee0b-ppal03.faxip46069.workers.dev
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VMESS-56ms-137
+    server: 134.195.196.211
+    port: 18000
+    type: vmess
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: tcp
+    udp: true
+  - name: SS-56ms-138
+    server: 38.64.138.135
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    udp: true
+  - name: SS-57ms-139
+    server: 38.128.66.32
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    udp: true
+  - name: TROJAN-58ms-140
+    server: 216.152.147.201
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: resources.connectingpeoplewithgreatjobs.com
+    skipCertVerify: true
+    udp: true
+  - name: SS-59ms-141
+    server: 66.23.203.19
+    port: 19690
+    type: ss
+    cipher: aes-128-gcm
+    password: 4e501338a6c03d7626f2fa0e09ed66d6
+    udp: true
+  - name: VLESS-61ms-142
+    server: 146.75.57.238
+    port: 443
+    type: vless
+    uuid: 69eb5502-0090-47be-a602-2c61c2074d93
+    tls: true
+    servername: firefox.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-61ms-143
     server: 169.40.42.202
     port: 443
     type: vless
@@ -36,202 +1540,16 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VMESS-88ms-003
-    server: 23.162.200.198
-    port: 18000
-    type: vmess
-    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-    alterId: 0
-    cipher: auto
-    tls: false
-    servername: /?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET
-    network: tcp
-    udp: true
-  - name: VLESS-274ms-004
-    server: 199.7.140.201
-    port: 443
-    type: vless
-    uuid: a52ac672-0f5f-4070-b8fd-6b5685fc8004
-    tls: true
-    servername: www.cloudflare.com
-    reality-opts:
-      public-key: LRAkgKlj5BPtVAGEIZfO5LvDZ5Eg91X0CBKIYhBC1jE
-      short-id: ''
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VMESS-278ms-005
-    server: 162.251.62.35
-    port: 1270
-    type: vmess
-    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: xmfhlpy.com
-    network: tcp
-    udp: true
-  - name: TROJAN-316ms-006
-    server: 167.88.61.20
+  - name: TROJAN-61ms-144
+    server: 216.152.156.159
     port: 443
     type: trojan
     password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: api.browseseniorrolesandenhanceyourcareertoday.com
+    sni: resources.healthcarejobshubenhancemedicalprofessionalskillstoday.com
     skipCertVerify: true
     udp: true
-  - name: TROJAN-320ms-007
-    server: 167.88.61.52
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: courses.browseseniorrolesandenhanceyourcareertoday.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-354ms-008
-    server: 205.186.112.19
-    port: 443
-    type: vless
-    uuid: f1a04d4c-56b3-4f93-a4ec-91a5039a48bd
-    tls: true
-    servername: www.amazon.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: cwao9PnlNhUTd19WxIKAOdAjkaqVJihY0d2WOR8I2WY
-      short-id: cce23a6bce3bc925
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VMESS-386ms-009
-    server: 188.166.81.135
-    port: 1270
-    type: vmess
-    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: xmfhlpy.com
-    network: tcp
-    udp: true
-  - name: VLESS-404ms-010
-    server: 51.158.206.103
-    port: 23576
-    type: vless
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-    tls: true
-    servername: fuck.rkn
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: '01'
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-417ms-011
-    server: 51.158.206.96
-    port: 23576
-    type: vless
-    uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5
-    tls: true
-    servername: fuck.rkn
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s
-      short-id: '01'
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-439ms-012
-    server: 178.17.52.31
-    port: 2087
-    type: vless
-    uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-    tls: true
-    servername: maps.blog-forme.ru
-    reality-opts:
-      public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
-      short-id: 3258252d44113e23
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-471ms-013
-    server: 157.180.98.124
-    port: 49659
-    type: vless
-    uuid: 88a558b1-9645-42f3-89e5-341570d8486d
-    tls: true
-    servername: apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: bBVqro8tG6swTNoAkjwUzcu4Ew4N4VcyDHzADcGviCs
-      short-id: 81959fce
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-503ms-014
-    server: 31.59.154.82
-    port: 8459
-    type: vless
-    uuid: 11f48e58-bdd8-4251-ba00-ad05d05d9dcf
-    tls: true
-    servername: nl-edge.airlinesvpn.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: mTSn98b4yZG3im3ITn-kNLPbT8ljc9ILvAqiT4jyKXk
-      short-id: 0f0e381ec0c4690d
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-555ms-015
-    server: 179.253.80.175
-    port: 4443
-    type: vless
-    uuid: a35c508f-4d5d-4531-842e-6e9d43c762c0
-    tls: true
-    servername: swo2.nexfile.net
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-604ms-016
-    server: 152.228.139.33
-    port: 51671
-    type: vless
-    uuid: 75cc7568-abb0-46a8-88be-8137d3c647d4
-    tls: true
-    servername: www.sony.com
-    reality-opts:
-      public-key: -5PowNUY37Pi01YKO9fjRTrum1m_9n6XauaPDpmOJzU
-      short-id: 2fed44d8c59f7e71
-    client-fingerprint: chrome
-    network: grpc
-    udp: true
-  - name: VLESS-608ms-017
-    server: 195.201.120.42
-    port: 1152
-    type: vless
-    uuid: e18f77f3-e518-4c8c-b230-c79e3708c7f4
-    tls: true
-    servername: in.tradingview.com
-    reality-opts:
-      public-key: Fmhl6wGywDftzMcxYFyzGrlHvP-XCwujzo_ULibHfHE
-      short-id: ead6bdba606219a2
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-665ms-018
-    server: 31.77.144.255
-    port: 8444
-    type: vless
-    uuid: 95580a09-cce7-4b62-af74-a514083ba9e4
-    tls: true
-    servername: www.amd.com
-    reality-opts:
-      public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ
-      short-id: 635a76c25a4b1820
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-686ms-019
-    server: 82.39.171.12
+  - name: VLESS-61ms-145
+    server: 169.40.42.163
     port: 443
     type: vless
     uuid: d65cc14c-f53f-4fe2-b262-97856601319c
@@ -244,1187 +1562,107 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VMESS-1071ms-020
-    server: 54.37.131.126
-    port: 80
-    type: vmess
-    uuid: 1e55beca-3c69-4fa7-fb1f-15c1b767435f
-    alterId: 0
-    cipher: auto
-    tls: false
-    servername: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    udp: true
-  - name: TROJAN-1124ms-021
-    server: 66.163.127.107
+  - name: VLESS-62ms-146
+    server: 169.40.42.89
     port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: blog.indyourperfectremotetechjobfromthecomfortofhome.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-1215ms-022
-    server: 146.103.43.70
-    port: 9543
     type: vless
-    uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
     tls: true
-    servername: storage.yandexcloud.net
+    servername: yahoo.com
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-      short-id: 123abcdf
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-1245ms-023
-    server: 193.233.89.130
-    port: 8443
-    type: vless
-    uuid: 7bd7c4aa-52c4-482c-bdcc-e7380fa6b5fe
-    tls: true
-    servername: g.play2go.gay
-    reality-opts:
-      public-key: xx8KWdR4HbVmvqPb0wRPAstBHGN2Uk99m7AF794_E3c
-      short-id: ''
-    client-fingerprint: chrome
-    network: grpc
-    udp: true
-  - name: TROJAN-2118ms-024
-    server: 216.152.155.176
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: blog.nextjobopportunityandclaimyouridealrole.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-2349ms-025
-    server: 51.15.16.68
-    port: 2053
-    type: vless
-    uuid: 2e7c6265-6933-4a91-bd43-b4fd2e9566c8
-    tls: true
-    servername: www.apple.com
-    reality-opts:
-      public-key: nyBUWOwOLHOrVSomGfHaPjt-lgbSGk-XSv89voR6T3o
-      short-id: e9272cf492b43a48
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-2636ms-026
-    server: 150.251.141.246
-    port: 443
-    type: vless
-    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-    tls: true
-    servername: 38917fx.es1.h1clayd.click
-    reality-opts:
-      public-key: 4mgkA2kT_Im0rkGi-fVSUU5CyF5xvMVcjA6MXBSEDAA
-      short-id: d5501b156391e01d
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-2677ms-027
-    server: 9.247.54.228
-    port: 443
-    type: vless
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-    tls: true
-    servername: fc82dfx.nl8.h1clayd.click
-    reality-opts:
-      public-key: dtO7khFLUkpFDQOtNzo4Th4hJKLoPSY2VtD_9k4Hgiw
-      short-id: 7b2b1a14a6e0630d
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VMESS-2823ms-028
-    server: 151.241.19.44
+  - name: VMESS-62ms-147
+    server: 172.111.36.123
     port: 1270
     type: vmess
     uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
     alterId: 0
     cipher: auto
     tls: true
-    servername: xmfhlpy.com
+    servername: <nil>
     network: tcp
     udp: true
-  - name: TROJAN-3065ms-029
-    server: 216.152.155.50
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: cdn.nextjobopportunityandclaimyouridealrole.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-3125ms-030
-    server: 79.182.39.131
+  - name: VLESS-62ms-148
+    server: 169.40.42.231
     port: 443
     type: vless
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
+    uuid: d65cc14c-f53f-4fe2-b262-97856601319c
     tls: true
-    servername: 717252g.nl8.h1clayd.click
-    reality-opts:
-      public-key: PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU
-      short-id: d3bd772514c87d28
-    client-fingerprint: chrome
-    network: grpc
-    udp: true
-  - name: VLESS-3729ms-031
-    server: 45.86.61.133
-    port: 443
-    type: vless
-    uuid: e2f3ddd0-10f1-421f-b684-4c943986da65
-    tls: true
-    servername: deepl.com
+    servername: yahoo.com
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: GwjzHvbNB5Wn6Jj7E3WSc5pc32bjeJCvv9yf0ibDnRs
-      short-id: 15affa0af66dfc79
+      public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg
+      short-id: c39cc7310a
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-4551ms-032
-    server: 153.56.229.218
-    port: 443
-    type: vless
-    uuid: 26843758-24de-4f76-b5d0-624038e353c4
-    tls: true
-    servername: 71b840t.de7.h1clayd.click
-    reality-opts:
-      public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE
-      short-id: e572b6579ea525d4
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-5272ms-033
-    server: 37.221.76.116
-    port: 2090
-    type: vless
-    uuid: f131d292-d3c2-42b3-bcea-f9712c31b303
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-      short-id: bb472a184677af64
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: TROJAN-5292ms-034
-    server: 216.152.147.79
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: blog.connectingpeoplewithgreatjobs.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-5566ms-035
-    server: 107.181.151.128
-    port: 443
-    type: vless
-    uuid: 88742d38-3f5c-4b9c-b256-7df5db8257ec
-    tls: true
-    servername: www.mozilla.org
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-      short-id: 8f79726c5002
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: TROJAN-6702ms-036
-    server: 208.69.78.33
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: courses.yourultimateprofessionalcareerhub.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-7748ms-037
-    server: 150.251.143.253
-    port: 443
-    type: vless
-    uuid: 4201786b-d99b-4147-a5f0-20d47acddb81
-    tls: true
-    servername: 4935e4t.de25.h1clayd.click
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw
-      short-id: 6976d670818644cc
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-8359ms-038
-    server: 45.138.100.248
-    port: 10444
-    type: vless
-    uuid: ae908ff5-f749-402c-af25-e6e9aef4d6bb
-    tls: true
-    servername: ads.x5.ru
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
-      short-id: 8debcf36f1cc69ff
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: TROJAN-13642ms-039
-    server: 66.163.118.244
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: api.discovergreatjobsandadvanceyourcareer.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-14697ms-040
-    server: 146.103.43.82
-    port: 9543
-    type: vless
-    uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6
-    tls: true
-    servername: storage.yandexcloud.net
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-      short-id: 123abcdf
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: SS-2ms-041
-    server: 45.86.51.18
+  - name: SS-63ms-149
+    server: 172.111.38.72
     port: 19999
     type: ss
     cipher: aes-256-gcm
     password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     udp: true
-  - name: SS-3ms-042
-    server: 15.204.247.124
-    port: 2375
-    type: ss
-    cipher: aes-256-gcm
-    password: faBAoD54k87UJG7
-    udp: true
-  - name: SS-7ms-043
-    server: 37.19.198.160
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: SS-8ms-044
-    server: 200.102.179.179
-    port: 8388
-    type: ss
-    cipher: aes-256-gcm
-    password: itzvpn@321
-    udp: true
-  - name: SS-16ms-045
-    server: 198.100.154.175
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: 9dtksxhydjbjkg0w
-    udp: true
-  - name: SS-16ms-046
-    server: 51.79.64.198
-    port: 8119
-    type: ss
-    cipher: aes-256-gcm
-    password: cdBIDV42DCwnfIN
-    udp: true
-  - name: SS-16ms-047
-    server: 51.222.141.125
-    port: 445
-    type: ss
-    cipher: aes-256-gcm
-    password: zDNVedRFPQexG9v
-    udp: true
-  - name: SS-17ms-048
-    server: 38.121.43.18
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-18ms-049
-    server: 185.215.132.9
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-19ms-050
-    server: 167.88.63.99
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-20ms-051
-    server: 137.184.174.93
-    port: 8080
-    type: ss
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-    udp: true
-  - name: SS-22ms-052
-    server: 162.251.62.31
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-32ms-053
-    server: 167.88.62.56
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-57ms-054
-    server: 173.244.56.9
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: SS-57ms-055
-    server: 23.150.152.38
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-69ms-056
-    server: 169.197.142.68
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-81ms-057
-    server: 146.70.61.37
-    port: 8080
-    type: ss
-    cipher: rc4-md5
-    password: 14fFPrbezE3HDZzsMOr6
-    udp: true
-  - name: SS-81ms-058
-    server: 82.38.31.213
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: k1dBOmOB4oqi7Ump37a1bQ
-    udp: true
-  - name: SS-81ms-059
-    server: 167.17.64.175
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-83ms-060
-    server: 51.38.71.51
-    port: 2083
-    type: ss
-    cipher: 2022-blake3-aes-256-gcm
-    password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:2tFqykGqZ101XW11f6iRiERnPycFAjjYq0y2zUYhKho=
-    udp: true
-  - name: SS-84ms-061
-    server: 193.29.139.235
+  - name: SS-66ms-150
+    server: 134.195.198.163
     port: 443
     type: ss
     cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
+    password: PmCqK98WqhSC
     udp: true
-  - name: SS-86ms-062
-    server: 38.14.254.139
-    port: 8100
-    type: ss
-    cipher: 2022-blake3-aes-128-gcm
-    password: u7VfX8mD2zK4R9sW1w8YQA==:4DqqB3HH0OW+/uuBcsXJDA==
-    udp: true
-  - name: SS-86ms-063
-    server: 82.38.31.218
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: k1dBOmOB4oqi7Ump37a1bQ
-    udp: true
-  - name: SS-87ms-064
-    server: 66.163.118.103
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-88ms-065
-    server: 82.38.31.184
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: k1dBOmOB4oqi7Ump37a1bQ
-    udp: true
-  - name: SS-88ms-066
-    server: 151.241.19.29
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-89ms-067
-    server: 193.29.139.168
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: QCXDxuDlTTMD7jtgHUjIoj
-    udp: true
-  - name: SS-89ms-068
-    server: 178.83.185.156
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-    udp: true
-  - name: SS-89ms-069
-    server: 82.38.31.198
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: k1dBOmOB4oqi7Ump37a1bQ
-    udp: true
-  - name: SS-89ms-070
-    server: 79.137.99.183
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-89ms-071
-    server: 193.108.119.83
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-89ms-072
-    server: 82.38.31.156
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-    udp: true
-  - name: SS-90ms-073
-    server: 158.173.20.171
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: SS-91ms-074
-    server: 151.241.19.36
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-92ms-075
-    server: 82.38.31.48
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-    udp: true
-  - name: SS-93ms-076
-    server: 185.226.172.8
-    port: 8008
-    type: ss
-    cipher: aes-256-gcm
-    password: XKFKl2rULjIp74
-    udp: true
-  - name: SS-93ms-077
-    server: 82.38.31.47
-    port: 8080
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: oZIoA69Q8yhcQV8ka3Pa3A
-    udp: true
-  - name: SS-95ms-078
-    server: 109.201.152.181
-    port: 443
-    type: ss
-    cipher: aes-128-cfb
-    password: shadowsocks
-    udp: true
-  - name: SS-95ms-079
-    server: 152.53.1.57
-    port: 8388
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx
-    udp: true
-  - name: SS-97ms-080
-    server: 213.202.208.199
-    port: 7001
-    type: ss
-    cipher: aes-256-gcm
-    password: RexnBgU7EV5ADxG
-    udp: true
-  - name: SS-98ms-081
-    server: 8.209.72.224
-    port: 443
-    type: ss
-    cipher: 2022-blake3-chacha20-poly1305
-    password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-    udp: true
-  - name: SS-104ms-082
-    server: 202.50.253.45
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-106ms-083
-    server: 202.50.253.63
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-108ms-084
-    server: 186.190.215.251
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-109ms-085
-    server: 47.245.173.25
-    port: 443
-    type: ss
-    cipher: 2022-blake3-chacha20-poly1305
-    password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
-    udp: true
-  - name: SS-109ms-086
-    server: 217.30.10.44
-    port: 9095
-    type: ss
-    cipher: aes-256-cfb
-    password: N7j3pdTYkKmsy8CR
-    udp: true
-  - name: SS-116ms-087
-    server: 130.49.189.158
-    port: 43558
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: yZiPrr484OdSYcivDUv+UIygwvyW+HQYytKsIgTw9tU=
-    udp: true
-  - name: SS-121ms-088
-    server: 54.36.174.140
-    port: 443
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: ytw2awn
-    udp: true
-  - name: SS-126ms-089
-    server: 82.152.132.211
-    port: 8044
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: dCamglzrORaopqbpBlptzbt9QdiH4CSN
-    udp: true
-  - name: SS-126ms-090
-    server: 195.238.126.20
-    port: 9068
-    type: ss
-    cipher: aes-256-cfb
-    password: mwgRg9hRq3b4Qnwb
-    udp: true
-  - name: SS-157ms-091
-    server: 149.22.87.241
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: SS-163ms-092
-    server: 168.138.205.100
-    port: 53758
-    type: ss
-    cipher: aes-128-gcm
-    password: Bwlqh7GcFB
-    udp: true
-  - name: SS-164ms-093
-    server: 149.22.87.204
-    port: 443
-    type: ss
-    cipher: aes-128-gcm
-    password: shadowsocks
-    udp: true
-  - name: SS-190ms-094
-    server: 84.247.155.196
-    port: 80
-    type: ss
-    cipher: aes-256-gcm
-    password: "3eOFeNssde7PYYMv\r��"
-    udp: true
-  - name: SS-233ms-095
-    server: 149.88.107.74
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-234ms-096
-    server: 149.88.107.47
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-235ms-097
-    server: 149.88.106.73
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-1281ms-098
-    server: leviko-ch4066.shopingggg.ir
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-1376ms-099
-    server: dns22.m3hrzd.ir
-    port: 1348
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: ZdU3CR6tfRBrhLD3VJDnlvdypoJrUf4x
-    udp: true
-  - name: SS-1449ms-100
-    server: location15.cpanel-host16.ir
-    port: 56137
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: uvKNudV-N8AUCrykPiyznA
-    udp: true
-  - name: SS-1759ms-101
-    server: leviko-ch7557.shopingggg.ir
-    port: 19999
-    type: ss
-    cipher: aes-256-gcm
-    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-    udp: true
-  - name: SS-2279ms-102
-    server: static.28.210.29.2.clients.your-server.de
-    port: 25565
-    type: ss
-    cipher: chacha20-ietf-poly1305
-    password: C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc
-    udp: true
-  - name: SS-3200ms-103
-    server: leviko-it7954.shopingggg.ir
-    port: 8388
-    type: ss
-    cipher: aes-256-gcm
-    password: itzvpn@321
-    udp: true
-  - name: VMESS-128ms-104
-    server: 103.14.27.207
-    port: 1270
-    type: vmess
-    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: xmfhlpy.com
-    network: tcp
-    udp: true
-  - name: VLESS-128ms-105
-    server: 85.90.197.158
-    port: 443
-    type: vless
-    uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
-    tls: true
-    servername: fs.qicai99.com
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-129ms-106
-    server: 78.159.250.83
-    port: 443
-    type: vless
-    uuid: f656c4b9-54dc-44cc-a142-e242ce687e56
-    tls: true
-    servername: dualarrow.net
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-129ms-107
-    server: 45.81.33.217
-    port: 443
-    type: vless
-    uuid: 97672c17-4b8d-496b-b9b5-c7adc978a8a5
-    tls: true
-    servername: exton.xanka.best
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: sW6eP36wnIB0Q_e6Djmu7_RQ2zUyPzbupAtlg0fKdHQ
-      short-id: 8b15da3a
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-131ms-108
-    server: 200.165.231.209
-    port: 443
-    type: vless
-    uuid: ff0b6ba8-bed0-4c4d-bbc9-23af47582615
-    tls: true
-    servername: wstg.datasynctrue.online
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-131ms-109
-    server: 78.159.250.155
-    port: 8443
-    type: vless
-    uuid: 37af0181-5598-4aad-a040-d926bcb65757
-    tls: true
-    servername: plaindune.com
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-134ms-110
-    server: 176.98.176.86
-    port: 9543
-    type: vless
-    uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa
-    tls: true
-    servername: storage.yandexcloud.net
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc
-      short-id: 123abcdf
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-134ms-111
-    server: 201.24.116.192
-    port: 443
-    type: vless
-    uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e
-    tls: true
-    servername: vps3.nemnogogo.com
-    client-fingerprint: chrome
-    network: grpc
-    udp: true
-  - name: VLESS-136ms-112
-    server: 87.120.106.21
-    port: 443
-    type: vless
-    uuid: 3dfc0554-e264-424c-8836-d35fc7b5e731
-    tls: true
-    servername: lockheart.info
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 6dc3iKXilOQpA_JFrKlk5-CsFjSmOm_5p0kSQcO9qi4
-      short-id: ''
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-138ms-113
-    server: 212.98.224.35
-    port: 443
-    type: vless
-    uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
-    tls: true
-    servername: tr1.gofizzin.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 9_UhwEt_9pf8WahM1K9O6-_0vAK6q0uiNGFoHBO7s3A
-      short-id: 0e3e4d96
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-142ms-114
-    server: 31.76.91.98
-    port: 443
-    type: vless
-    uuid: 7072eeba-94fd-4fb3-92f2-a4506dd84cd8
-    tls: true
-    servername: fuji.etherhub.cc
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: ejx56dFtS4LK_Th6HSLFFdm7v7zqRpv8KfjrWAw4Sjg
-      short-id: bd6f67b6b2152b45
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-149ms-115
-    server: 195.123.209.159
-    port: 8443
-    type: vless
-    uuid: 9a597d68-6688-4046-bf24-a5a541e115e0
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU
-      short-id: f8d0271b4b5f9efc
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-154ms-116
-    server: 93.183.127.54
-    port: 24447
-    type: vless
-    uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-    tls: true
-    servername: lakes.blog-forme.ru
-    reality-opts:
-      public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
-      short-id: 3258252d44113e23
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-156ms-117
-    server: 89.106.88.23
-    port: 24443
-    type: vless
-    uuid: 0ed9418b-e687-4c2d-8869-7e368c44887e
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: lFAcvEGy50KHahvVt5uWfGcOk7p2_yRUklSllkOTnTQ
-      short-id: 758cac321d150ad8
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-156ms-118
-    server: 136.234.9.19
-    port: 443
-    type: vless
-    uuid: d92038b6-b470-4267-9c69-2c649bf3f4a4
-    tls: true
-    servername: 8ba6c3t.nl2.h1clayd.click
-    reality-opts:
-      public-key: 43bHrvqzL5Sw8lvtDSE3LAlp_0WbixVc7nYcAf17bhg
-      short-id: 16b6715de8577aaa
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-159ms-119
-    server: 188.225.45.152
-    port: 443
-    type: vless
-    uuid: 238e492b-bc20-4380-92b6-135d39112ca4
-    tls: true
-    servername: api8.eaglors.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: Nb9IwEEhUHEbHSc6e5uYTjxDgN4ZExhDckM3OgYhj2o
-      short-id: 52ccb3687fe0b7ec
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-160ms-120
-    server: 178.172.227.124
-    port: 10443
-    type: vless
-    uuid: 1af36694-b548-4b18-89a0-bc076eab4ed7
-    tls: false
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-161ms-121
-    server: 93.183.127.54
-    port: 24446
-    type: vless
-    uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
-    tls: true
-    servername: tgnl2.blog-forme.ru
-    reality-opts:
-      public-key: 31_G-lTr8GVS33I-ySfmMOXJ7SzpS48Ela7xXeT9D1Y
-      short-id: 29f834cf893710f9
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-167ms-122
-    server: 45.76.222.108
-    port: 443
-    type: vless
-    uuid: bd95a04e-e3e1-460e-b89d-e9a693d393e0
-    tls: true
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: -_YzpVlKrn08il_kQdHxHTvJyWYAdetWN_IFRtvPgmE
-      short-id: b5c85d2d
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-172ms-123
-    server: 131.143.214.224
-    port: 443
-    type: vless
-    uuid: 4e4f1f70-5e56-4a76-bb9d-db087f4690c4
-    tls: false
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VMESS-174ms-124
-    server: 54.37.131.126
-    port: 80
-    type: vmess
-    uuid: 059fda3e-5ca9-4fbd-dd89-01cc6d4bb5dd
-    alterId: 0
-    cipher: auto
-    tls: false
-    servername: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: google.whatsapp.snapp.torob.basalam.hesanid8.ir.
-    udp: true
-  - name: VMESS-180ms-125
-    server: 151.242.165.160
-    port: 6233
-    type: vmess
-    uuid: c3d17f1d-9201-4644-b184-6cd1414c6cc5
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: v47.emnode.top
-    network: ws
-    ws-opts:
-      path: /
-      headers:
-        Host: v47.emnode.top
-    udp: true
-  - name: TROJAN-211ms-126
-    server: 47.242.93.89
-    port: 12012
-    type: trojan
-    password: '12012'
-    sni: ali-hk.b-gfw.cfd
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-212ms-127
-    server: 45.133.73.167
-    port: 443
-    type: vless
-    uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
-    tls: true
-    servername: zmxoo.de5.net
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-232ms-128
-    server: 207.148.124.12
-    port: 8443
-    type: vless
-    uuid: bcdb425f-80bc-4ec8-92a5-8edf53639c01
-    tls: true
-    servername: www.bing.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VMESS-234ms-129
-    server: 47.250.135.244
-    port: 10000
-    type: vmess
-    uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: tcp
-    udp: true
-  - name: VLESS-236ms-130
-    server: 149.104.5.141
-    port: 443
-    type: vless
-    uuid: 0c492b73-98de-4ad2-bbe9-eb25661d17ac
-    tls: false
-    servername: byyzz.pages.dev
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-238ms-131
-    server: 139.180.221.53
-    port: 443
-    type: vless
-    uuid: 2b30d0df-6ebe-4aed-9bad-b7c554e35e1d
-    tls: true
-    servername: itunes.apple.com
-    reality-opts:
-      public-key: plfXwkb-ewI6iibJBTRmPnf8eqPId1BfdArMIm3_mB4
-      short-id: 2f6f6f87
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-261ms-132
-    server: 185.71.216.177
-    port: 2092
-    type: vless
-    uuid: ca21222b-caf1-4418-b404-345ea713daa4
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: zeyIqmHylDrPbbtdG9BleBt0-fqKCHpZ0OZ9OY2_WUI
-      short-id: 716b7eba38125f3a
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-263ms-133
-    server: 196.196.148.85
-    port: 443
-    type: vless
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-    tls: true
-    servername: 5d0319t.nl7.h1clayd.click
-    reality-opts:
-      public-key: l-GzBDuNuhnjxoRlZqKvT7jAt_sbVAxhGFsAttO5kXs
-      short-id: 361d0dd59c70516f
-    client-fingerprint: firefox
-    network: tcp
-    udp: true
-  - name: VLESS-264ms-134
-    server: 185.71.216.94
-    port: 2194
-    type: vless
-    uuid: 128bd8ad-4f6c-4d70-af13-15a2cec331d2
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs
-      short-id: 55986a94e2228791
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-271ms-135
-    server: 185.71.216.95
-    port: 2194
-    type: vless
-    uuid: 128bd8ad-4f6c-4d70-af13-15a2cec331d2
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs
-      short-id: 5596a94e2228791
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-283ms-136
-    server: 185.71.216.94
-    port: 2195
-    type: vless
-    uuid: 9654f1a9-8dbc-4897-85ea-c077a52b3857
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
-      short-id: 3869d49a9a79e06a
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-289ms-137
-    server: 39.109.111.23
-    port: 48158
-    type: vless
-    uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: 7GvJVbR6BRhtrc8-rcZvB8qTFUF1LPeM_MmoZ04mBxo
-      short-id: 54cca3c1c1c7
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: TROJAN-370ms-138
-    server: 15.235.184.127
-    port: 443
-    type: trojan
-    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-    sni: exploredigitaljobplatformandfindonlinework.com
-    skipCertVerify: true
-    udp: true
-  - name: VLESS-375ms-139
-    server: 45.144.214.102
+  - name: VLESS-67ms-151
+    server: 23.155.44.105
     port: 443
     type: vless
     uuid: 128ce9ab-63bc-48dc-92ca-1b5426a9eb46
     tls: true
-    servername: tr.trustsvpn.com
+    servername: app.flyprotect.ca
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: W_6kEDko_-O5JHaIigz6YqXJTm4SLrS0_3lCp5B4CWE
-      short-id: aa2cd28cccee4f45
+      public-key: HE1CGzI0QBqhMRUsHqq_9v4Mj3M5dkluFmfyMBH_7kM
+      short-id: 70f75668dc5914b3
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-384ms-140
-    server: 116.213.43.43
-    port: 11105
-    type: vless
-    uuid: 31d5b95e-aff2-4ffb-8160-b5ae941b46f6
+  - name: VMESS-68ms-152
+    server: 167.88.63.47
+    port: 1270
+    type: vmess
+    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+    alterId: 0
+    cipher: auto
     tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
+    servername: xmfhlpy.com
     network: tcp
     udp: true
-  - name: VLESS-465ms-141
-    server: 201.10.91.216
-    port: 25035
-    type: vless
-    uuid: 62995b2a-8f82-41f8-ac80-dfdfc1253e76
+  - name: VMESS-69ms-153
+    server: 38.22.17.64
+    port: 1270
+    type: vmess
+    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+    alterId: 0
+    cipher: auto
     tls: true
-    servername: 96f799r.ch5.h1clayd.click
-    reality-opts:
-      public-key: m7pPQqgE5q8qOjHhn9AjNA9sWhBFQ-gXzyGcZTNihUU
-      short-id: eb63581de991f8c8
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-470ms-142
-    server: 185.71.216.177
-    port: 2090
-    type: vless
-    uuid: f131d292-d3c2-42b3-bcea-f9712c31b303
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: qBobe6KSNkFLqTPCffcJo0nXgxy-3JKru9WRqY9rkjk
-      short-id: bb472a184677af64
-    client-fingerprint: chrome
+    servername: xmfhlpy.com
     network: tcp
     udp: true
-  - name: VLESS-510ms-143
-    server: api.noneok.com
+  - name: VLESS-73ms-154
+    server: 209.200.246.148
     port: 443
     type: vless
-    uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401
+    uuid: ca52e2b6-fb9f-4dac-b6dc-49da9923f251
     tls: true
-    reality-opts:
-      public-key: S8O8R938N960cpQfIIDXsJTxeGAkbVv6PlIqP0-d30w
-      short-id: 1ea59febb8d4fc8e
-    client-fingerprint: chrome
-    network: grpc
+    servername: www.cloudflare.com
+    flow: xtls-rprx-vision
+    client-fingerprint: firefox
+    network: tcp
     udp: true
-  - name: VLESS-551ms-144
+  - name: VLESS-73ms-155
     server: 2.24.124.64
     port: 443
     type: vless
@@ -1438,633 +1676,438 @@ proxies:
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-672ms-145
-    server: www.speedtest.net
-    port: 2096
-    type: vless
-    uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7
-    tls: true
-    servername: 872ede3847653442.hozheen.ir
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-696ms-146
-    server: multipanel-production-9f1b.up.railway.app
-    port: 443
-    type: vless
-    uuid: 49f13590-b41f-900c-29a9-1dbc678af510
-    tls: true
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-715ms-147
-    server: www.speedtest.net
-    port: 80
-    type: vless
-    uuid: 81caa837-c213-4731-a02e-662380ad1e2f
-    tls: false
-    servername: cxrolvpn.freev2-edb.workers.dev
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-736ms-148
-    server: 194.76.168.133
-    port: 443
-    type: vless
-    uuid: ef5a57c7-84d5-4f86-b99c-875a16da485f
-    tls: true
-    servername: nemicro487.gangtype.com
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-749ms-149
-    server: subgift.gcorecdn.com
-    port: 443
-    type: vless
-    uuid: 740b2630-b42d-425c-bacd-37e7e30d78f1
-    tls: true
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-764ms-150
-    server: bg3.univesalsrv.com
-    port: 443
-    type: vless
-    uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be
-    tls: true
-    reality-opts:
-      public-key: XBfCioniAKXgKYBUVnvBXu80AIaIa4SpAB3w8qeF7Gk
-      short-id: 1be1bd931c98c84a
-    client-fingerprint: chrome
-    network: grpc
-    udp: true
-  - name: VLESS-798ms-151
-    server: www.zoom.us
-    port: 443
-    type: vless
-    uuid: b19c62cc-f2c2-4895-aee1-978a0f58f8c8
-    tls: true
-    servername: matrix.phonicsindia.mobi
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-838ms-152
-    server: www.gov.se
+  - name: SS-73ms-156
+    server: 98.98.79.198
     port: 8080
-    type: vless
-    uuid: 989d58b8-d2ea-4d28-b5ff-0f3cd078f2cf
-    tls: false
-    client-fingerprint: chrome
-    network: ws
+    type: ss
+    cipher: rc4-md5
+    password: 14fFPrbezE3HDZzsMOr6
     udp: true
-  - name: VMESS-871ms-153
-    server: www.shopify.com
-    port: 443
-    type: vmess
-    uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: guanwang.awsno.com
-    network: ws
-    ws-opts:
-      path: /hls/cctv5phd.m3u8
-      headers:
-        Host: guanwang.awsno.com
-    udp: true
-  - name: VLESS-881ms-154
-    server: ee.subv.ru
-    port: 443
+  - name: VLESS-75ms-157
+    server: 200.102.180.37
+    port: 8443
     type: vless
-    uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+    uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e
     tls: true
-    servername: dvizhok.su
+    servername: juniper-canyon.cdn.cachefleet.com
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-      short-id: 428ef87fd47a3a32
+      public-key: bGwVs-Re6vNB1tuKqZZ209x7l361FxZdtPHg0yZLa2Q
+      short-id: 63c4425dacae86cb
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VMESS-886ms-155
-    server: cvdgfrrtuer-production.up.railway.app
-    port: 443
+  - name: SS-75ms-158
+    server: 15.235.121.109
+    port: 8080
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 575hiopq2h28yao6
+    udp: true
+  - name: SS-75ms-159
+    server: 15.204.246.111
+    port: 5498
+    type: ss
+    cipher: aes-256-gcm
+    password: lGqs95QkFHo2NV
+    udp: true
+  - name: VMESS-77ms-160
+    server: 67.220.95.3
+    port: 18000
     type: vmess
-    uuid: 60a36dfb-d6fb-460f-b3ec-7649a69f3b51
+    uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: tcp
+    udp: true
+  - name: SS-77ms-161
+    server: 37.19.198.160
+    port: 443
+    type: ss
+    cipher: aes-128-gcm
+    password: shadowsocks
+    udp: true
+  - name: TROJAN-77ms-162
+    server: 66.163.122.46
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: searchnationwidecareerchangehelperandguidancetoday.com
+    skipCertVerify: true
+    udp: true
+  - name: SS-78ms-163
+    server: 37.19.198.236
+    port: 443
+    type: ss
+    cipher: aes-128-gcm
+    password: shadowsocks
+    udp: true
+  - name: SS-78ms-164
+    server: 15.204.247.244
+    port: 4444
+    type: ss
+    cipher: aes-256-gcm
+    password: pKEW8JPByTVTLtM
+    udp: true
+  - name: VMESS-82ms-165
+    server: 162.251.62.31
+    port: 1270
+    type: vmess
+    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
     alterId: 0
     cipher: auto
     tls: true
-    network: ws
-    ws-opts:
-      path: /api/aCUmkm
-      headers:
-        Host: cvdgfrrtuer-production.up.railway.app
+    servername: xmfhlpy.com
+    network: tcp
     udp: true
-  - name: VLESS-888ms-156
-    server: multipanel-production-f5dd.up.railway.app
+  - name: SS-82ms-166
+    server: 193.151.160.18
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    udp: true
+  - name: VLESS-82ms-167
+    server: 5.181.171.2
     port: 443
     type: vless
-    uuid: 24ea8ecb-83ee-d74c-60f0-6ba19b174bd9
+    uuid: a87bf8a2-17a4-3054-b51e-876b5f1d0f24
     tls: true
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-888ms-157
-    server: nhl.com
-    port: 443
-    type: vless
-    uuid: e818a20d-9bcd-4744-9061-ca51b9c8aeea
-    tls: true
-    servername: wallweb-4ez.pages.dev
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-912ms-158
-    server: swe1.baterium.space
-    port: 443
-    type: vless
-    uuid: 7d63243c-983e-44db-a1b8-13dc3fd6f7a2
-    tls: true
-    servername: cdnjs.com
+    servername: speed.cloudflare.com
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: mg2MoLpb8B51aZiko_nW2SBRoaudv-O6HLHx8VYP7Do
+      public-key: YNGotlyAx3ELUmi4lxOUjiEDmibqf1pPUTE9o3YYT2Y
       short-id: ''
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-914ms-159
-    server: xnforo.ir
+  - name: VMESS-82ms-168
+    server: 162.251.62.35
+    port: 1270
+    type: vmess
+    uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: xmfhlpy.com
+    network: tcp
+    udp: true
+  - name: SS-83ms-169
+    server: 136.148.77.250
+    port: 8388
+    type: ss
+    cipher: aes-256-gcm
+    password: itzvpn@321
+    udp: true
+  - name: SS-85ms-170
+    server: 84.20.27.183
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+    udp: true
+  - name: VLESS-86ms-171
+    server: 159.65.165.75
     port: 8443
     type: vless
-    uuid: d85711cf-c5f5-4166-8000-25958322b13f
+    uuid: 2cd6ed0f-636e-4e6c-9449-5a263d7a0fa5
     tls: true
-    servername: sausage.esmbegudota.ir
-    client-fingerprint: chrome
-    network: xhttp
+    servername: cfed.tgzdyz2.top
+    client-fingerprint: random
+    network: ws
     udp: true
-  - name: VLESS-936ms-160
-    server: ipfast.kingmna.com
+  - name: VLESS-90ms-172
+    server: 45.91.138.179
     port: 443
     type: vless
-    uuid: 99d05f08-3192-4fdb-9796-59c689e0ff54
+    uuid: 11f21602-47aa-42e2-9149-69120f2e6df6
     tls: true
-    servername: cdn.akamai.steamstatic.com
+    servername: us05.shifor01.life
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: 36sTeaLdaAjQQxxzh492XihoPi2YxmttQyncmLuxYHE
+      short-id: 169fc2df88419465
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: SS-93ms-173
+    server: 137.184.174.93
+    port: 8080
+    type: ss
+    cipher: rc4-md5
+    password: 14fFPrbezE3HDZzsMOr6
+    udp: true
+  - name: VLESS-95ms-174
+    server: 46.250.250.149
+    port: 2053
+    type: vless
+    uuid: b4caaf57-ad77-4948-a6f5-51b3513799bf
+    tls: true
+    servername: www.apple.com
+    reality-opts:
+      public-key: hieuCHb3HYdDYHmTDyWw2SGqyfo36AVuA-wSiZMdU1M
+      short-id: 9922313fffed1c63
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: VLESS-99ms-175
+    server: 149.28.29.156
+    port: 443
+    type: vless
+    uuid: aa1a9052-720f-4bb0-92be-21b6baf9f386
+    tls: true
+    servername: itunes.apple.com
+    reality-opts:
+      public-key: qgCGmxD1lyAEIGZVEk4buAMGcvGvHLl9wGxPQlHCYX0
+      short-id: e535df57
     client-fingerprint: chrome
     network: ws
     udp: true
-  - name: VMESS-937ms-161
-    server: economic.ip-static.com
-    port: 5009
+  - name: VLESS-100ms-176
+    server: 45.61.186.3
+    port: 443
+    type: vless
+    uuid: 140d6fc9-2c6d-41bd-a487-182b52c0184f
+    tls: true
+    servername: caissuers.microsoft.com
+    flow: xtls-rprx-vision
+    reality-opts:
+      public-key: rA1BaV8FUcTMs25jXCZkUV3DG0-NQEFmvVHdPlUXAHI
+      short-id: d898752d58acbfe0
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: SS-112ms-177
+    server: 51.222.141.125
+    port: 445
+    type: ss
+    cipher: aes-256-gcm
+    password: zDNVedRFPQexG9v
+    udp: true
+  - name: VMESS-119ms-178
+    server: 54.229.151.97
+    port: 59236
     type: vmess
-    uuid: 8eadd43d-388c-4436-a9d7-c6a1c5fd9ddb
+    uuid: 2387bfbc-10a6-4bd7-dc55-7cba954ce6e8
     alterId: 0
     cipher: auto
     tls: false
     network: tcp
     udp: true
-  - name: VLESS-977ms-162
-    server: leviko-tr1836.shopingggg.ir
-    port: 2194
+  - name: VLESS-133ms-179
+    server: 93.183.127.54
+    port: 24447
     type: vless
-    uuid: 128bd8ad-4f6c-4d70-af13-15a2cec331d2
+    uuid: 549766c3-fa5f-471e-8031-ffc1f8d5064f
+    tls: true
+    servername: lakes.blog-forme.ru
+    reality-opts:
+      public-key: mbi4BZAuiq_L6pfhG2xxWmtosq0Z1Pzf18fvNSWKMxY
+      short-id: 3258252d44113e23
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: SS-135ms-180
+    server: 107.161.160.28
+    port: 8388
+    type: ss
+    cipher: aes-256-gcm
+    password: itzvpn@321
+    udp: true
+  - name: SS-135ms-181
+    server: 130.185.144.4
+    port: 995
+    type: ss
+    cipher: aes-256-gcm
+    password: ZmE0NzA5MjAyNDUzYzY2ZTZhZmMyMmEzMzE0NmQy
+    udp: true
+  - name: VLESS-135ms-182
+    server: 151.101.56.7
+    port: 443
+    type: vless
+    uuid: d2299018-601d-488e-afd6-8f55b3f7439f
+    tls: true
+    servername: ssl.fastly.com
+    client-fingerprint: chrome
+    network: ws
+    udp: true
+  - name: VLESS-136ms-183
+    server: 94.241.172.107
+    port: 443
+    type: vless
+    uuid: 4777d90d-265b-4927-a0d1-63f36ed1421c
+    tls: true
+    client-fingerprint: chrome
+    network: xhttp
+    udp: true
+  - name: SS-137ms-184
+    server: 8.211.57.86
+    port: 443
+    type: ss
+    cipher: 2022-blake3-chacha20-poly1305
+    password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=
+    udp: true
+  - name: VMESS-138ms-185
+    server: 66.163.117.58
+    port: 22324
+    type: vmess
+    uuid: 04621bae-ab36-11ec-b909-0242ac120002
+    alterId: 0
+    cipher: auto
+    tls: false
+    network: tcp
+    udp: true
+  - name: VLESS-138ms-186
+    server: 31.57.250.65
+    port: 443
+    type: vless
+    uuid: id_telegram_MimiTdL
+    tls: true
+    servername: play.google.com
+    reality-opts:
+      public-key: awJWCmY2Ba9kY_dZj7nSylvtzAP1I5unwa_xp6qrvGA
+      short-id: 5b409d9a2b5b8dbf
+    client-fingerprint: chrome
+    network: grpc
+    udp: true
+  - name: VLESS-138ms-187
+    server: 136.176.68.34
+    port: 443
+    type: vless
+    uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
     tls: true
     servername: www.apple.com
     flow: xtls-rprx-vision
-    reality-opts:
-      public-key: jHtC6ayzhkd_GVNF5TIGPu9iVpqUltBAQj1dpGJHwxs
-      short-id: 55986a94e2228791
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-982ms-163
-    server: free-amsterdam-node-1.cloudwidecdn.com
+  - name: VLESS-140ms-188
+    server: 13.211.155.89
     port: 443
     type: vless
-    uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a
+    uuid: e3a1c7f2-9b4d-4e8a-a6c5-1f2d3b4a5e6f
     tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU
-      short-id: 1d86d17709852910
+    servername: www.microsoft.com
     client-fingerprint: chrome
-    network: tcp
+    network: ws
     udp: true
-  - name: VLESS-1037ms-164
-    server: s1.berluno.ir
-    port: 1155
-    type: vless
-    uuid: b8fccb51-7355-44f6-b410-0ac4ea335c5b
-    tls: true
-    servername: tgju.org
-    reality-opts:
-      public-key: o6UTWdONnTOvDOWmhfxXUoeOEtlw7VUkoAWkmOk_FWI
-      short-id: 4e4aaad65cc07da8
-    client-fingerprint: chrome
-    network: tcp
+  - name: SS-140ms-189
+    server: 193.108.119.83
+    port: 19999
+    type: ss
+    cipher: aes-256-gcm
+    password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
     udp: true
-  - name: VLESS-1042ms-165
-    server: Ge3.mamad.web.tr
-    port: 20829
+  - name: VLESS-141ms-190
+    server: 195.216.168.74
+    port: 8080
     type: vless
-    uuid: f6a0f6d7-ce86-444d-92c3-c63e1b79d473
+    uuid: 51e031fc-2145-45b8-9d0d-304d8288fc8e
     tls: false
-    flow: xtls-rprx-vision
+    servername: digikala.com
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-1062ms-166
-    server: o685y.save-node.com
+  - name: VLESS-142ms-191
+    server: 45.133.73.167
     port: 443
     type: vless
-    uuid: 88e79aa6-f431-4453-8dcc-652a0c747198
+    uuid: 0fc0ded7-32b3-4e36-a623-6e7670225247
     tls: true
+    servername: zmxoo.de5.net
     client-fingerprint: chrome
     network: ws
     udp: true
-  - name: VLESS-1063ms-167
-    server: nln8.mobileemdad.top
+  - name: TROJAN-142ms-192
+    server: 66.163.127.154
     port: 443
-    type: vless
-    uuid: b1ea01b5-2902-4ff6-a64d-fafd20aea9f1
-    tls: true
-    servername: delivery.mp.microsoft.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: PjR-SM4fOm2fY4mTqWoqZDRyxontvpailM0gBqUxlUQ
-      short-id: 377d
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1063ms-168
-    server: freev2.cloudflare.182682.xyz
-    port: 443
-    type: vless
-    uuid: 12d32e9b-d41f-4677-aa51-83e21d2837f2
-    tls: true
-    servername: ap-south.862400.xyz
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1074ms-169
-    server: adambarfi.up.railway.app
-    port: 443
-    type: vless
-    uuid: b3be45af-c907-4320-9532-614c8cef5953
-    tls: true
-    client-fingerprint: chrome
-    network: httpupgrade
-    udp: true
-  - name: VMESS-1098ms-170
-    server: 500.outline-vpn.cloud
-    port: 443
-    type: vmess
-    uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-    alterId: 0
-    cipher: auto
-    tls: true
-    servername: janett.click
-    network: ws
-    ws-opts:
-      path: /linkvws
-      headers:
-        Host: janett.click
-    udp: true
-  - name: VLESS-1102ms-171
-    server: 166.0.25.92
-    port: 443
-    type: vless
-    uuid: ea240abb-cbff-4250-a7e2-81fead273be4
-    tls: true
-    servername: www.amazon.com
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1116ms-172
-    server: 48.103.231.82
-    port: 443
-    type: vless
-    uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839
-    tls: true
-    servername: 80cb66x.nl13.h1clayd.click
-    reality-opts:
-      public-key: jhVdP7NFUaEXGfrmOqJlMCHTvqn3fymbzPfPT6NO4i0
-      short-id: f72d4a2c7cbbacb1
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-1130ms-173
-    server: ov-france1.09vpn.com
-    port: 80
-    type: vless
-    uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0
-    tls: false
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1131ms-174
-    server: perplexity.ai
-    port: 443
-    type: vless
-    uuid: f7a9b27c-fd3c-4177-9f66-8be4dd726d0b
-    tls: true
-    servername: dexter.googoosh.bond
-    flow: xtls-rprx-vision
-    client-fingerprint: unsafe
-    network: ws
-    udp: true
-  - name: VMESS-1161ms-175
-    server: dog-hk.kunlun01dns.com
-    port: 21041
-    type: vmess
-    uuid: 9464ca40-dd75-3742-a628-d931a9f413b2
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: raw
-    udp: true
-  - name: VLESS-1176ms-176
-    server: ipfast.kingmna.com
-    port: 443
-    type: vless
-    uuid: 414b00e3-cc5e-4378-a895-04242f27a757
-    tls: true
-    servername: community.fastly.steamstatic.com
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1185ms-177
-    server: du5g.altheora.ir
-    port: 27181
-    type: vless
-    uuid: 39aa059a-f489-44f4-9697-9be96438b1ac
-    tls: true
-    servername: login.zanjanphone.ir
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1189ms-178
-    server: lodizu.hagrid-connected.com
-    port: 443
-    type: vless
-    uuid: beda6bd0-7ce4-477a-91f1-860d018dbfcb
-    tls: true
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1202ms-179
-    server: multipanel-production-c545.up.railway.app
-    port: 443
-    type: vless
-    uuid: d42a92ef-291e-b30a-477c-ed118cae889a
-    tls: true
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1206ms-180
-    server: ov-france1.09vpn.com
-    port: 80
-    type: vless
-    uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1
-    tls: false
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1217ms-181
-    server: uk.extra-solutions.ru
-    port: 443
-    type: vless
-    uuid: a8b95dc3-1589-4f8a-ac76-75c505c20e37
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s
-      short-id: a1b2c3d4b5
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1232ms-182
-    server: barbered-mattocks.video-streams.org
-    port: 443
-    type: vless
-    uuid: cbd0ff6d-2dff-4ceb-a049-388d9a8079fc
-    tls: true
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1234ms-183
-    server: du5g.altheora.ir
-    port: 3924
-    type: vless
-    uuid: 39aa059a-f489-44f4-9697-9be96438b1ac
-    tls: true
-    servername: login.zanjanphone.ir
-    flow: xtls-rprx-vision
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1250ms-184
-    server: sajed.kdns.fr
-    port: 443
-    type: vless
-    uuid: 5f0476bc-d42b-46a0-bdfb-5354a8de347c
-    tls: false
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VMESS-1262ms-185
-    server: zfd-hkv2.kunlun01dns.com
-    port: 16116
-    type: vmess
-    uuid: 0802ac03-7973-39ef-a019-ba02de6c01e1
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: tcp
-    udp: true
-  - name: VLESS-1269ms-186
-    server: gizmodo.com
-    port: 443
-    type: vless
-    uuid: e818a20d-9bcd-4744-9061-ca51b9c8aeea
-    tls: true
-    servername: wallweb-4ez.pages.dev
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VLESS-1300ms-187
-    server: neko5.deeyopi.none5.mobileahmadreza.ir
-    port: 2099
-    type: vless
-    uuid: 55dee480-0522-4a72-afea-deb6384eb4a3
-    tls: false
-    servername: dynu.com
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1305ms-188
-    server: Afra2.moneyjnb.shop
-    port: 31112
-    type: vless
-    uuid: 94daa499-5f0f-43d4-84bc-a09303e2a384
-    tls: true
-    servername: Www.aparat.com
-    reality-opts:
-      public-key: 7fAqmU5W3Dv6CjqMC_FYXJvziU4ovkGQnaEp3hh3eSs
-      short-id: 0f941224dc7b5ffb
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-1310ms-189
-    server: mojif.fusetea.ir
-    port: 1080
-    type: vless
-    uuid: 0949f413-fbc5-4c14-a3cf-472b5558fbcb
-    tls: true
-    servername: www.aparat.com
-    reality-opts:
-      public-key: u3EnhSlPtnsjoA4OQwRa8Pk5mQCnBXHYWSP1bfdjYm8
-      short-id: a17c76d6a2f35aaf
-    client-fingerprint: chrome
-    network: xhttp
-    udp: true
-  - name: VLESS-1336ms-190
-    server: 185.71.216.95
-    port: 2195
-    type: vless
-    uuid: 9654f1a9-8dbc-4897-85ea-c077a52b3857
-    tls: true
-    servername: www.apple.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI
-      short-id: 3869d49a9a79e06a
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VMESS-1346ms-191
-    server: sr-vip7.arwandping.com
-    port: 20052
-    type: vmess
-    uuid: 9b084287-6612-487b-aded-f1a724d96f3b
-    alterId: 0
-    cipher: auto
-    tls: false
-    network: tcp
-    udp: true
-  - name: VLESS-1370ms-192
-    server: auth.figmafound.org
-    port: 443
-    type: vless
-    uuid: 71b91642-93ed-4923-8cab-877e19bfc2d6
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: H5CXI4RvEWW0TFPvFrnF1iX-05Y57ZYMMngjmkMfv24
-      short-id: 711ad7f475c35e5e
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: VLESS-1375ms-193
-    server: freev2.cloudflare.182682.xyz
-    port: 443
-    type: vless
-    uuid: f520bd45-8e26-4a23-a227-2f91acb67928
-    tls: true
-    servername: eu-central.862400.xyz
-    client-fingerprint: chrome
-    network: ws
-    udp: true
-  - name: VMESS-1380ms-194
-    server: 5uF8VWjSdRbqQWiu.v.3dns.vip
-    port: 443
-    type: vmess
-    uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-    alterId: 0
-    cipher: auto
-    tls: true
-    network: ws
-    ws-opts:
-      path: /ws-vmess
-      headers:
-        Host: 5uF8VWjSdRbqQWiu.v.3dns.vip
-    udp: true
-  - name: VLESS-1391ms-195
-    server: sg.fasti.win
-    port: 443
-    type: vless
-    uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065
-    tls: true
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs
-      short-id: feedbacc
-    client-fingerprint: chrome
-    network: tcp
-    udp: true
-  - name: TROJAN-1397ms-196
-    server: sclass-00.catcat321.com
-    port: 20123
     type: trojan
-    password: d9064589-74af-432a-9390-5d8a9da281bf
-    sni: hk.catxstar.com
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: www.indyourperfectremotetechjobfromthecomfortofhome.com
     skipCertVerify: true
     udp: true
-  - name: VLESS-1397ms-197
-    server: prvtch.titun.su
+  - name: TROJAN-143ms-193
+    server: 66.163.127.107
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: blog.indyourperfectremotetechjobfromthecomfortofhome.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-143ms-194
+    server: 5.180.181.113
     port: 443
     type: vless
-    uuid: 90157e25-cee1-4217-921e-91f300bc1a24
+    uuid: b1da2601-ff93-46d6-af87-04af3f541fde
     tls: true
-    servername: perevodchiki.su
+    servername: sun1-19.userapi.com
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: 1vSZjvhZO01oAEH3b7eebR1qF5dLU1Dq2E7xu8pwGSs
-      short-id: 428ef87fd47a3a32
+      public-key: wY_MYPJUx849su3BlowuxnwnUaj25iLfRw2LooQfPAY
+      short-id: ''
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-1399ms-198
-    server: midjourney.com
+  - name: VLESS-143ms-195
+    server: 51.15.16.68
+    port: 2053
+    type: vless
+    uuid: 2e7c6265-6933-4a91-bd43-b4fd2e9566c8
+    tls: true
+    servername: www.apple.com
+    reality-opts:
+      public-key: nyBUWOwOLHOrVSomGfHaPjt-lgbSGk-XSv89voR6T3o
+      short-id: e9272cf492b43a48
+    client-fingerprint: chrome
+    network: tcp
+    udp: true
+  - name: TROJAN-143ms-196
+    server: 66.163.127.155
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: 66.163.127.155
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-143ms-197
+    server: 3.168.217.190
     port: 443
     type: vless
-    uuid: 5988b269-9ed5-4061-97b0-9123a9062876
+    uuid: 67cd3349-f789-4cbb-8b91-4b6b1654ce7c
     tls: true
-    servername: googoosh.subgift.cyou
-    flow: xtls-rprx-vision
+    servername: d2ex4nxd2e01ub.cloudfront.net
     client-fingerprint: chrome
     network: ws
     udp: true
-  - name: VLESS-1403ms-199
-    server: alb.rvpn.online
+  - name: TROJAN-143ms-198
+    server: 66.163.127.225
+    port: 443
+    type: trojan
+    password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+    sni: cdn.indyourperfectremotetechjobfromthecomfortofhome.com
+    skipCertVerify: true
+    udp: true
+  - name: VLESS-143ms-199
+    server: 5.253.86.3
     port: 443
     type: vless
-    uuid: 89JvSXAa4rpktO
+    uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3
     tls: true
-    servername: www.heise.de
+    servername: nl3.gofizz.in
     flow: xtls-rprx-vision
     reality-opts:
-      public-key: XMvZvBbY8rIlWFNGB6IDzDOf-xBPm4737KN9weKltBc
-      short-id: f5bce2ac
+      public-key: 51ZCyVOxvcD_smARtd9mV-3Rh_WurOzMGRFxk9u2Kgo
+      short-id: fa1754221e4c5f9e
     client-fingerprint: chrome
     network: tcp
     udp: true
-  - name: VLESS-1405ms-200
-    server: webdisk.jaggyslawa.org
-    port: 443
-    type: vless
-    uuid: b62e3646-b84d-443c-9c94-718b646502e0
-    tls: true
-    servername: www.foxsports.com
-    flow: xtls-rprx-vision
-    reality-opts:
-      public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s
-      short-id: dda5f542d835
-    client-fingerprint: chrome
-    network: tcp
+  - name: SS-144ms-200
+    server: 194.87.233.93
+    port: 46190
+    type: ss
+    cipher: chacha20-ietf-poly1305
+    password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
     udp: true
 proxy-groups:
   - name: 自动选择
@@ -2073,410 +2116,410 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - VLESS-71ms-001
-      - VLESS-80ms-002
-      - VMESS-88ms-003
-      - VLESS-274ms-004
-      - VMESS-278ms-005
-      - TROJAN-316ms-006
-      - TROJAN-320ms-007
-      - VLESS-354ms-008
-      - VMESS-386ms-009
-      - VLESS-404ms-010
-      - VLESS-417ms-011
-      - VLESS-439ms-012
-      - VLESS-471ms-013
-      - VLESS-503ms-014
-      - VLESS-555ms-015
-      - VLESS-604ms-016
-      - VLESS-608ms-017
-      - VLESS-665ms-018
-      - VLESS-686ms-019
-      - VMESS-1071ms-020
-      - TROJAN-1124ms-021
-      - VLESS-1215ms-022
-      - VLESS-1245ms-023
-      - TROJAN-2118ms-024
-      - VLESS-2349ms-025
-      - VLESS-2636ms-026
-      - VLESS-2677ms-027
-      - VMESS-2823ms-028
-      - TROJAN-3065ms-029
-      - VLESS-3125ms-030
-      - VLESS-3729ms-031
-      - VLESS-4551ms-032
-      - VLESS-5272ms-033
-      - TROJAN-5292ms-034
-      - VLESS-5566ms-035
-      - TROJAN-6702ms-036
-      - VLESS-7748ms-037
-      - VLESS-8359ms-038
-      - TROJAN-13642ms-039
-      - VLESS-14697ms-040
-      - SS-2ms-041
-      - SS-3ms-042
-      - SS-7ms-043
-      - SS-8ms-044
-      - SS-16ms-045
-      - SS-16ms-046
-      - SS-16ms-047
-      - SS-17ms-048
-      - SS-18ms-049
-      - SS-19ms-050
-      - SS-20ms-051
-      - SS-22ms-052
-      - SS-32ms-053
-      - SS-57ms-054
-      - SS-57ms-055
-      - SS-69ms-056
-      - SS-81ms-057
-      - SS-81ms-058
-      - SS-81ms-059
-      - SS-83ms-060
-      - SS-84ms-061
-      - SS-86ms-062
-      - SS-86ms-063
-      - SS-87ms-064
-      - SS-88ms-065
-      - SS-88ms-066
-      - SS-89ms-067
-      - SS-89ms-068
-      - SS-89ms-069
-      - SS-89ms-070
-      - SS-89ms-071
-      - SS-89ms-072
-      - SS-90ms-073
-      - SS-91ms-074
-      - SS-92ms-075
-      - SS-93ms-076
-      - SS-93ms-077
-      - SS-95ms-078
-      - SS-95ms-079
-      - SS-97ms-080
-      - SS-98ms-081
-      - SS-104ms-082
-      - SS-106ms-083
-      - SS-108ms-084
-      - SS-109ms-085
-      - SS-109ms-086
-      - SS-116ms-087
-      - SS-121ms-088
-      - SS-126ms-089
-      - SS-126ms-090
-      - SS-157ms-091
-      - SS-163ms-092
-      - SS-164ms-093
-      - SS-190ms-094
-      - SS-233ms-095
-      - SS-234ms-096
-      - SS-235ms-097
-      - SS-1281ms-098
-      - SS-1376ms-099
-      - SS-1449ms-100
-      - SS-1759ms-101
-      - SS-2279ms-102
-      - SS-3200ms-103
-      - VMESS-128ms-104
-      - VLESS-128ms-105
-      - VLESS-129ms-106
-      - VLESS-129ms-107
-      - VLESS-131ms-108
-      - VLESS-131ms-109
-      - VLESS-134ms-110
-      - VLESS-134ms-111
-      - VLESS-136ms-112
-      - VLESS-138ms-113
-      - VLESS-142ms-114
-      - VLESS-149ms-115
-      - VLESS-154ms-116
-      - VLESS-156ms-117
-      - VLESS-156ms-118
-      - VLESS-159ms-119
-      - VLESS-160ms-120
-      - VLESS-161ms-121
-      - VLESS-167ms-122
-      - VLESS-172ms-123
-      - VMESS-174ms-124
-      - VMESS-180ms-125
-      - TROJAN-211ms-126
-      - VLESS-212ms-127
-      - VLESS-232ms-128
-      - VMESS-234ms-129
-      - VLESS-236ms-130
-      - VLESS-238ms-131
-      - VLESS-261ms-132
-      - VLESS-263ms-133
-      - VLESS-264ms-134
-      - VLESS-271ms-135
-      - VLESS-283ms-136
-      - VLESS-289ms-137
-      - TROJAN-370ms-138
-      - VLESS-375ms-139
-      - VLESS-384ms-140
-      - VLESS-465ms-141
-      - VLESS-470ms-142
-      - VLESS-510ms-143
-      - VLESS-551ms-144
-      - VLESS-672ms-145
-      - VLESS-696ms-146
-      - VLESS-715ms-147
-      - VLESS-736ms-148
-      - VLESS-749ms-149
-      - VLESS-764ms-150
-      - VLESS-798ms-151
-      - VLESS-838ms-152
-      - VMESS-871ms-153
-      - VLESS-881ms-154
-      - VMESS-886ms-155
-      - VLESS-888ms-156
-      - VLESS-888ms-157
-      - VLESS-912ms-158
-      - VLESS-914ms-159
-      - VLESS-936ms-160
-      - VMESS-937ms-161
-      - VLESS-977ms-162
-      - VLESS-982ms-163
-      - VLESS-1037ms-164
-      - VLESS-1042ms-165
-      - VLESS-1062ms-166
-      - VLESS-1063ms-167
-      - VLESS-1063ms-168
-      - VLESS-1074ms-169
-      - VMESS-1098ms-170
-      - VLESS-1102ms-171
-      - VLESS-1116ms-172
-      - VLESS-1130ms-173
-      - VLESS-1131ms-174
-      - VMESS-1161ms-175
-      - VLESS-1176ms-176
-      - VLESS-1185ms-177
-      - VLESS-1189ms-178
-      - VLESS-1202ms-179
-      - VLESS-1206ms-180
-      - VLESS-1217ms-181
-      - VLESS-1232ms-182
-      - VLESS-1234ms-183
-      - VLESS-1250ms-184
-      - VMESS-1262ms-185
-      - VLESS-1269ms-186
-      - VLESS-1300ms-187
-      - VLESS-1305ms-188
-      - VLESS-1310ms-189
-      - VLESS-1336ms-190
-      - VMESS-1346ms-191
-      - VLESS-1370ms-192
-      - VLESS-1375ms-193
-      - VMESS-1380ms-194
-      - VLESS-1391ms-195
-      - TROJAN-1397ms-196
-      - VLESS-1397ms-197
-      - VLESS-1399ms-198
-      - VLESS-1403ms-199
-      - VLESS-1405ms-200
+      - VMESS-6ms-001
+      - VLESS-6ms-002
+      - VLESS-6ms-003
+      - VLESS-6ms-004
+      - VLESS-6ms-005
+      - VLESS-6ms-006
+      - VLESS-6ms-007
+      - VLESS-6ms-008
+      - VLESS-6ms-009
+      - VMESS-6ms-010
+      - VMESS-6ms-011
+      - VLESS-6ms-012
+      - VLESS-6ms-013
+      - VLESS-6ms-014
+      - VLESS-6ms-015
+      - VLESS-7ms-016
+      - VLESS-7ms-017
+      - VLESS-7ms-018
+      - VMESS-7ms-019
+      - VLESS-7ms-020
+      - VLESS-7ms-021
+      - VLESS-7ms-022
+      - VLESS-7ms-023
+      - VLESS-7ms-024
+      - VLESS-7ms-025
+      - VLESS-7ms-026
+      - VMESS-7ms-027
+      - VLESS-7ms-028
+      - VMESS-7ms-029
+      - VLESS-7ms-030
+      - VLESS-7ms-031
+      - VMESS-7ms-032
+      - VLESS-7ms-033
+      - VLESS-7ms-034
+      - VLESS-7ms-035
+      - VLESS-7ms-036
+      - VLESS-7ms-037
+      - VLESS-7ms-038
+      - VLESS-7ms-039
+      - VMESS-7ms-040
+      - VLESS-7ms-041
+      - VMESS-7ms-042
+      - VLESS-7ms-043
+      - VLESS-7ms-044
+      - VLESS-7ms-045
+      - VLESS-7ms-046
+      - VLESS-7ms-047
+      - VLESS-7ms-048
+      - VLESS-7ms-049
+      - VLESS-7ms-050
+      - VLESS-7ms-051
+      - VMESS-7ms-052
+      - VLESS-7ms-053
+      - VMESS-7ms-054
+      - VLESS-7ms-055
+      - VLESS-7ms-056
+      - VLESS-7ms-057
+      - VLESS-7ms-058
+      - VLESS-7ms-059
+      - TROJAN-7ms-060
+      - VLESS-7ms-061
+      - VLESS-7ms-062
+      - VLESS-7ms-063
+      - TROJAN-7ms-064
+      - VLESS-7ms-065
+      - VLESS-7ms-066
+      - VLESS-7ms-067
+      - VMESS-7ms-068
+      - VLESS-7ms-069
+      - VLESS-7ms-070
+      - TROJAN-7ms-071
+      - VLESS-7ms-072
+      - VLESS-7ms-073
+      - VLESS-7ms-074
+      - VLESS-7ms-075
+      - VLESS-7ms-076
+      - VMESS-7ms-077
+      - VLESS-7ms-078
+      - VLESS-7ms-079
+      - VLESS-7ms-080
+      - VMESS-7ms-081
+      - VLESS-7ms-082
+      - VLESS-7ms-083
+      - VMESS-7ms-084
+      - VLESS-7ms-085
+      - VLESS-7ms-086
+      - VLESS-8ms-087
+      - VLESS-8ms-088
+      - VLESS-8ms-089
+      - VLESS-8ms-090
+      - VLESS-8ms-091
+      - VLESS-8ms-092
+      - TROJAN-8ms-093
+      - VMESS-8ms-094
+      - VLESS-8ms-095
+      - TROJAN-8ms-096
+      - VLESS-8ms-097
+      - VLESS-8ms-098
+      - VLESS-8ms-099
+      - VLESS-8ms-100
+      - VLESS-8ms-101
+      - VLESS-8ms-102
+      - VMESS-9ms-103
+      - VLESS-9ms-104
+      - VMESS-9ms-105
+      - VLESS-9ms-106
+      - VMESS-9ms-107
+      - VLESS-9ms-108
+      - VLESS-9ms-109
+      - VLESS-10ms-110
+      - TROJAN-11ms-111
+      - VMESS-13ms-112
+      - VLESS-14ms-113
+      - TROJAN-20ms-114
+      - VMESS-23ms-115
+      - VLESS-25ms-116
+      - VLESS-26ms-117
+      - VLESS-26ms-118
+      - VLESS-26ms-119
+      - VMESS-26ms-120
+      - VLESS-27ms-121
+      - VLESS-27ms-122
+      - VLESS-28ms-123
+      - VLESS-28ms-124
+      - VLESS-28ms-125
+      - VLESS-30ms-126
+      - VLESS-31ms-127
+      - VLESS-32ms-128
+      - VLESS-35ms-129
+      - VMESS-40ms-130
+      - VLESS-45ms-131
+      - VLESS-50ms-132
+      - VLESS-50ms-133
+      - TROJAN-52ms-134
+      - TROJAN-52ms-135
+      - VLESS-55ms-136
+      - VMESS-56ms-137
+      - SS-56ms-138
+      - SS-57ms-139
+      - TROJAN-58ms-140
+      - SS-59ms-141
+      - VLESS-61ms-142
+      - VLESS-61ms-143
+      - TROJAN-61ms-144
+      - VLESS-61ms-145
+      - VLESS-62ms-146
+      - VMESS-62ms-147
+      - VLESS-62ms-148
+      - SS-63ms-149
+      - SS-66ms-150
+      - VLESS-67ms-151
+      - VMESS-68ms-152
+      - VMESS-69ms-153
+      - VLESS-73ms-154
+      - VLESS-73ms-155
+      - SS-73ms-156
+      - VLESS-75ms-157
+      - SS-75ms-158
+      - SS-75ms-159
+      - VMESS-77ms-160
+      - SS-77ms-161
+      - TROJAN-77ms-162
+      - SS-78ms-163
+      - SS-78ms-164
+      - VMESS-82ms-165
+      - SS-82ms-166
+      - VLESS-82ms-167
+      - VMESS-82ms-168
+      - SS-83ms-169
+      - SS-85ms-170
+      - VLESS-86ms-171
+      - VLESS-90ms-172
+      - SS-93ms-173
+      - VLESS-95ms-174
+      - VLESS-99ms-175
+      - VLESS-100ms-176
+      - SS-112ms-177
+      - VMESS-119ms-178
+      - VLESS-133ms-179
+      - SS-135ms-180
+      - SS-135ms-181
+      - VLESS-135ms-182
+      - VLESS-136ms-183
+      - SS-137ms-184
+      - VMESS-138ms-185
+      - VLESS-138ms-186
+      - VLESS-138ms-187
+      - VLESS-140ms-188
+      - SS-140ms-189
+      - VLESS-141ms-190
+      - VLESS-142ms-191
+      - TROJAN-142ms-192
+      - TROJAN-143ms-193
+      - VLESS-143ms-194
+      - VLESS-143ms-195
+      - TROJAN-143ms-196
+      - VLESS-143ms-197
+      - TROJAN-143ms-198
+      - VLESS-143ms-199
+      - SS-144ms-200
   - name: 手动选择
     type: select
     proxies:
       - 自动选择
-      - VLESS-71ms-001
-      - VLESS-80ms-002
-      - VMESS-88ms-003
-      - VLESS-274ms-004
-      - VMESS-278ms-005
-      - TROJAN-316ms-006
-      - TROJAN-320ms-007
-      - VLESS-354ms-008
-      - VMESS-386ms-009
-      - VLESS-404ms-010
-      - VLESS-417ms-011
-      - VLESS-439ms-012
-      - VLESS-471ms-013
-      - VLESS-503ms-014
-      - VLESS-555ms-015
-      - VLESS-604ms-016
-      - VLESS-608ms-017
-      - VLESS-665ms-018
-      - VLESS-686ms-019
-      - VMESS-1071ms-020
-      - TROJAN-1124ms-021
-      - VLESS-1215ms-022
-      - VLESS-1245ms-023
-      - TROJAN-2118ms-024
-      - VLESS-2349ms-025
-      - VLESS-2636ms-026
-      - VLESS-2677ms-027
-      - VMESS-2823ms-028
-      - TROJAN-3065ms-029
-      - VLESS-3125ms-030
-      - VLESS-3729ms-031
-      - VLESS-4551ms-032
-      - VLESS-5272ms-033
-      - TROJAN-5292ms-034
-      - VLESS-5566ms-035
-      - TROJAN-6702ms-036
-      - VLESS-7748ms-037
-      - VLESS-8359ms-038
-      - TROJAN-13642ms-039
-      - VLESS-14697ms-040
-      - SS-2ms-041
-      - SS-3ms-042
-      - SS-7ms-043
-      - SS-8ms-044
-      - SS-16ms-045
-      - SS-16ms-046
-      - SS-16ms-047
-      - SS-17ms-048
-      - SS-18ms-049
-      - SS-19ms-050
-      - SS-20ms-051
-      - SS-22ms-052
-      - SS-32ms-053
-      - SS-57ms-054
-      - SS-57ms-055
-      - SS-69ms-056
-      - SS-81ms-057
-      - SS-81ms-058
-      - SS-81ms-059
-      - SS-83ms-060
-      - SS-84ms-061
-      - SS-86ms-062
-      - SS-86ms-063
-      - SS-87ms-064
-      - SS-88ms-065
-      - SS-88ms-066
-      - SS-89ms-067
-      - SS-89ms-068
-      - SS-89ms-069
-      - SS-89ms-070
-      - SS-89ms-071
-      - SS-89ms-072
-      - SS-90ms-073
-      - SS-91ms-074
-      - SS-92ms-075
-      - SS-93ms-076
-      - SS-93ms-077
-      - SS-95ms-078
-      - SS-95ms-079
-      - SS-97ms-080
-      - SS-98ms-081
-      - SS-104ms-082
-      - SS-106ms-083
-      - SS-108ms-084
-      - SS-109ms-085
-      - SS-109ms-086
-      - SS-116ms-087
-      - SS-121ms-088
-      - SS-126ms-089
-      - SS-126ms-090
-      - SS-157ms-091
-      - SS-163ms-092
-      - SS-164ms-093
-      - SS-190ms-094
-      - SS-233ms-095
-      - SS-234ms-096
-      - SS-235ms-097
-      - SS-1281ms-098
-      - SS-1376ms-099
-      - SS-1449ms-100
-      - SS-1759ms-101
-      - SS-2279ms-102
-      - SS-3200ms-103
-      - VMESS-128ms-104
-      - VLESS-128ms-105
-      - VLESS-129ms-106
-      - VLESS-129ms-107
-      - VLESS-131ms-108
-      - VLESS-131ms-109
-      - VLESS-134ms-110
-      - VLESS-134ms-111
-      - VLESS-136ms-112
-      - VLESS-138ms-113
-      - VLESS-142ms-114
-      - VLESS-149ms-115
-      - VLESS-154ms-116
-      - VLESS-156ms-117
-      - VLESS-156ms-118
-      - VLESS-159ms-119
-      - VLESS-160ms-120
-      - VLESS-161ms-121
-      - VLESS-167ms-122
-      - VLESS-172ms-123
-      - VMESS-174ms-124
-      - VMESS-180ms-125
-      - TROJAN-211ms-126
-      - VLESS-212ms-127
-      - VLESS-232ms-128
-      - VMESS-234ms-129
-      - VLESS-236ms-130
-      - VLESS-238ms-131
-      - VLESS-261ms-132
-      - VLESS-263ms-133
-      - VLESS-264ms-134
-      - VLESS-271ms-135
-      - VLESS-283ms-136
-      - VLESS-289ms-137
-      - TROJAN-370ms-138
-      - VLESS-375ms-139
-      - VLESS-384ms-140
-      - VLESS-465ms-141
-      - VLESS-470ms-142
-      - VLESS-510ms-143
-      - VLESS-551ms-144
-      - VLESS-672ms-145
-      - VLESS-696ms-146
-      - VLESS-715ms-147
-      - VLESS-736ms-148
-      - VLESS-749ms-149
-      - VLESS-764ms-150
-      - VLESS-798ms-151
-      - VLESS-838ms-152
-      - VMESS-871ms-153
-      - VLESS-881ms-154
-      - VMESS-886ms-155
-      - VLESS-888ms-156
-      - VLESS-888ms-157
-      - VLESS-912ms-158
-      - VLESS-914ms-159
-      - VLESS-936ms-160
-      - VMESS-937ms-161
-      - VLESS-977ms-162
-      - VLESS-982ms-163
-      - VLESS-1037ms-164
-      - VLESS-1042ms-165
-      - VLESS-1062ms-166
-      - VLESS-1063ms-167
-      - VLESS-1063ms-168
-      - VLESS-1074ms-169
-      - VMESS-1098ms-170
-      - VLESS-1102ms-171
-      - VLESS-1116ms-172
-      - VLESS-1130ms-173
-      - VLESS-1131ms-174
-      - VMESS-1161ms-175
-      - VLESS-1176ms-176
-      - VLESS-1185ms-177
-      - VLESS-1189ms-178
-      - VLESS-1202ms-179
-      - VLESS-1206ms-180
-      - VLESS-1217ms-181
-      - VLESS-1232ms-182
-      - VLESS-1234ms-183
-      - VLESS-1250ms-184
-      - VMESS-1262ms-185
-      - VLESS-1269ms-186
-      - VLESS-1300ms-187
-      - VLESS-1305ms-188
-      - VLESS-1310ms-189
-      - VLESS-1336ms-190
-      - VMESS-1346ms-191
-      - VLESS-1370ms-192
-      - VLESS-1375ms-193
-      - VMESS-1380ms-194
-      - VLESS-1391ms-195
-      - TROJAN-1397ms-196
-      - VLESS-1397ms-197
-      - VLESS-1399ms-198
-      - VLESS-1403ms-199
-      - VLESS-1405ms-200
+      - VMESS-6ms-001
+      - VLESS-6ms-002
+      - VLESS-6ms-003
+      - VLESS-6ms-004
+      - VLESS-6ms-005
+      - VLESS-6ms-006
+      - VLESS-6ms-007
+      - VLESS-6ms-008
+      - VLESS-6ms-009
+      - VMESS-6ms-010
+      - VMESS-6ms-011
+      - VLESS-6ms-012
+      - VLESS-6ms-013
+      - VLESS-6ms-014
+      - VLESS-6ms-015
+      - VLESS-7ms-016
+      - VLESS-7ms-017
+      - VLESS-7ms-018
+      - VMESS-7ms-019
+      - VLESS-7ms-020
+      - VLESS-7ms-021
+      - VLESS-7ms-022
+      - VLESS-7ms-023
+      - VLESS-7ms-024
+      - VLESS-7ms-025
+      - VLESS-7ms-026
+      - VMESS-7ms-027
+      - VLESS-7ms-028
+      - VMESS-7ms-029
+      - VLESS-7ms-030
+      - VLESS-7ms-031
+      - VMESS-7ms-032
+      - VLESS-7ms-033
+      - VLESS-7ms-034
+      - VLESS-7ms-035
+      - VLESS-7ms-036
+      - VLESS-7ms-037
+      - VLESS-7ms-038
+      - VLESS-7ms-039
+      - VMESS-7ms-040
+      - VLESS-7ms-041
+      - VMESS-7ms-042
+      - VLESS-7ms-043
+      - VLESS-7ms-044
+      - VLESS-7ms-045
+      - VLESS-7ms-046
+      - VLESS-7ms-047
+      - VLESS-7ms-048
+      - VLESS-7ms-049
+      - VLESS-7ms-050
+      - VLESS-7ms-051
+      - VMESS-7ms-052
+      - VLESS-7ms-053
+      - VMESS-7ms-054
+      - VLESS-7ms-055
+      - VLESS-7ms-056
+      - VLESS-7ms-057
+      - VLESS-7ms-058
+      - VLESS-7ms-059
+      - TROJAN-7ms-060
+      - VLESS-7ms-061
+      - VLESS-7ms-062
+      - VLESS-7ms-063
+      - TROJAN-7ms-064
+      - VLESS-7ms-065
+      - VLESS-7ms-066
+      - VLESS-7ms-067
+      - VMESS-7ms-068
+      - VLESS-7ms-069
+      - VLESS-7ms-070
+      - TROJAN-7ms-071
+      - VLESS-7ms-072
+      - VLESS-7ms-073
+      - VLESS-7ms-074
+      - VLESS-7ms-075
+      - VLESS-7ms-076
+      - VMESS-7ms-077
+      - VLESS-7ms-078
+      - VLESS-7ms-079
+      - VLESS-7ms-080
+      - VMESS-7ms-081
+      - VLESS-7ms-082
+      - VLESS-7ms-083
+      - VMESS-7ms-084
+      - VLESS-7ms-085
+      - VLESS-7ms-086
+      - VLESS-8ms-087
+      - VLESS-8ms-088
+      - VLESS-8ms-089
+      - VLESS-8ms-090
+      - VLESS-8ms-091
+      - VLESS-8ms-092
+      - TROJAN-8ms-093
+      - VMESS-8ms-094
+      - VLESS-8ms-095
+      - TROJAN-8ms-096
+      - VLESS-8ms-097
+      - VLESS-8ms-098
+      - VLESS-8ms-099
+      - VLESS-8ms-100
+      - VLESS-8ms-101
+      - VLESS-8ms-102
+      - VMESS-9ms-103
+      - VLESS-9ms-104
+      - VMESS-9ms-105
+      - VLESS-9ms-106
+      - VMESS-9ms-107
+      - VLESS-9ms-108
+      - VLESS-9ms-109
+      - VLESS-10ms-110
+      - TROJAN-11ms-111
+      - VMESS-13ms-112
+      - VLESS-14ms-113
+      - TROJAN-20ms-114
+      - VMESS-23ms-115
+      - VLESS-25ms-116
+      - VLESS-26ms-117
+      - VLESS-26ms-118
+      - VLESS-26ms-119
+      - VMESS-26ms-120
+      - VLESS-27ms-121
+      - VLESS-27ms-122
+      - VLESS-28ms-123
+      - VLESS-28ms-124
+      - VLESS-28ms-125
+      - VLESS-30ms-126
+      - VLESS-31ms-127
+      - VLESS-32ms-128
+      - VLESS-35ms-129
+      - VMESS-40ms-130
+      - VLESS-45ms-131
+      - VLESS-50ms-132
+      - VLESS-50ms-133
+      - TROJAN-52ms-134
+      - TROJAN-52ms-135
+      - VLESS-55ms-136
+      - VMESS-56ms-137
+      - SS-56ms-138
+      - SS-57ms-139
+      - TROJAN-58ms-140
+      - SS-59ms-141
+      - VLESS-61ms-142
+      - VLESS-61ms-143
+      - TROJAN-61ms-144
+      - VLESS-61ms-145
+      - VLESS-62ms-146
+      - VMESS-62ms-147
+      - VLESS-62ms-148
+      - SS-63ms-149
+      - SS-66ms-150
+      - VLESS-67ms-151
+      - VMESS-68ms-152
+      - VMESS-69ms-153
+      - VLESS-73ms-154
+      - VLESS-73ms-155
+      - SS-73ms-156
+      - VLESS-75ms-157
+      - SS-75ms-158
+      - SS-75ms-159
+      - VMESS-77ms-160
+      - SS-77ms-161
+      - TROJAN-77ms-162
+      - SS-78ms-163
+      - SS-78ms-164
+      - VMESS-82ms-165
+      - SS-82ms-166
+      - VLESS-82ms-167
+      - VMESS-82ms-168
+      - SS-83ms-169
+      - SS-85ms-170
+      - VLESS-86ms-171
+      - VLESS-90ms-172
+      - SS-93ms-173
+      - VLESS-95ms-174
+      - VLESS-99ms-175
+      - VLESS-100ms-176
+      - SS-112ms-177
+      - VMESS-119ms-178
+      - VLESS-133ms-179
+      - SS-135ms-180
+      - SS-135ms-181
+      - VLESS-135ms-182
+      - VLESS-136ms-183
+      - SS-137ms-184
+      - VMESS-138ms-185
+      - VLESS-138ms-186
+      - VLESS-138ms-187
+      - VLESS-140ms-188
+      - SS-140ms-189
+      - VLESS-141ms-190
+      - VLESS-142ms-191
+      - TROJAN-142ms-192
+      - TROJAN-143ms-193
+      - VLESS-143ms-194
+      - VLESS-143ms-195
+      - TROJAN-143ms-196
+      - VLESS-143ms-197
+      - TROJAN-143ms-198
+      - VLESS-143ms-199
+      - SS-144ms-200
 rules:
   - GEOIP,CN,DIRECT
   - MATCH,自动选择
