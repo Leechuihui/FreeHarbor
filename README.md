@@ -57,9 +57,9 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 ### 当前节点
 
 - 节点数：**200**
-- 最快延迟：**5 ms**
-- 协议分布：vmess 24 · vless 144 · trojan 24 · ss 8
-- 更新时间：2026-11-23 15:15:25 UTC
+- 最快延迟：**1 ms**
+- 协议分布：vless 146 · vmess 30 · trojan 22 · ss 2
+- 更新时间：2026-11-23 15:32:43 UTC
 
 ### 工具
 
@@ -133,9 +133,9 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 ### Current nodes
 
 - Nodes: **200**
-- Fastest latency: **5 ms**
-- By protocol: vmess 24 · vless 144 · trojan 24 · ss 8
-- Updated: 2026-11-23 15:15:25 UTC
+- Fastest latency: **1 ms**
+- By protocol: vless 146 · vmess 30 · trojan 22 · ss 2
+- Updated: 2026-11-23 15:32:43 UTC
 
 ### Tooling
 
