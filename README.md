@@ -56,11 +56,10 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### 当前节点
 
-- 已验证出网：**134**
-- 未验证（协议不支持 / 连不通 / 超出验证名额）：**66**
-- 最快延迟：**197 ms**
-- 协议分布：vless 101 · trojan 25 · vmess 8 · ss 64 · hysteria2 2
-- 更新时间：2026-11-23 15:08:31 UTC
+- 节点数：**200**
+- 最快延迟：**5 ms**
+- 协议分布：vmess 24 · vless 144 · trojan 24 · ss 8
+- 更新时间：2026-11-23 15:15:25 UTC
 
 ### 工具
 
@@ -133,11 +132,10 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### Current nodes
 
-- Verified online: **134**
-- Unverified (unsupported protocol / unreachable / over the quota): **66**
-- Fastest latency: **197 ms**
-- By protocol: vless 101 · trojan 25 · vmess 8 · ss 64 · hysteria2 2
-- Updated: 2026-11-23 15:08:31 UTC
+- Nodes: **200**
+- Fastest latency: **5 ms**
+- By protocol: vmess 24 · vless 144 · trojan 24 · ss 8
+- Updated: 2026-11-23 15:15:25 UTC
 
 ### Tooling
 
