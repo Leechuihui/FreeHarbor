@@ -19,6 +19,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { tmpdir } from 'node:os';
 import net from 'node:net';
+import { lookup } from 'node:dns/promises';
 import { usernameOf } from './util.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -38,11 +39,18 @@ const checked = JSON.parse(await readFile(IN, 'utf8'));
 // ss 在 xray 26 里已整个移除（unknown config id: ss），只能跳过
 const supported = ['vless', 'vmess', 'trojan'];
 const supportedNodes = checked.filter((n) => supported.includes(n.proto));
-const candidates = supportedNodes.slice(0, LIMIT);
-// 超出 limit 的受支持节点也算未验证，别让它们凭空消失
+
+// checked.json 按 TCP 延迟升序：头部几乎全是 Cloudflare anycast（7ms 连上 TCP，
+// 但 WS 升级直接被拒），只取前 LIMIT 会整批 0 存活。改成全表等距抽样，
+// 让慢一些却真能出网的直连 VPS 也进得来。
+const take = Math.min(LIMIT, supportedNodes.length);
+const stride = supportedNodes.length / take;
+const candidates = Array.from({ length: take }, (_, i) => supportedNodes[Math.floor(i * stride)]);
+const chosen = new Set(candidates);
+// 没进抽样的受支持节点也算未验证，别让它们凭空消失
 const skipped = [
   ...checked.filter((n) => !supported.includes(n.proto)),
-  ...supportedNodes.slice(LIMIT),
+  ...supportedNodes.filter((n) => !chosen.has(n)),
 ];
 
 function q(raw) {
@@ -51,6 +59,26 @@ function q(raw) {
   } catch {
     return new URLSearchParams();
   }
+}
+
+const isIP = (h) => /^\d+\.\d+\.\d+\.\d+$/.test(h);
+
+/**
+ * 实际拨号地址：上游把 Cloudflare 的 IP 写死在链接里，几天就失效
+ * （同一 SNI 现在解析到别的 IP，旧 IP 直接 TLS handshake failure）。
+ * 优先用 SNI 现解析出的 IP；域名没 DNS 了（no such host）就退回链接里的 IP，
+ * 别把「域名死了但 IP 还活着」的节点整批判死。
+ */
+async function resolveDial(n) {
+  const sni = q(n.raw).get('sni') || q(n.raw).get('host') || n.sni || n.host;
+  if (!isIP(n.host) || isIP(sni)) return n.host;
+  try {
+    const [addr] = await lookup(sni, { family: 4 });
+    if (addr) return addr;
+  } catch {
+    /* 域名解析不了，退回原 IP */
+  }
+  return n.host;
 }
 
 /** 节点 → xray streamSettings（传输层 + 安全层） */
@@ -63,6 +91,7 @@ function streamOf(n) {
   const s = { network: net === 'httpupgrade' ? 'httpupgrade' : net };
 
   // REALITY 只支持 RAW / XHTTP / gRPC；ws 系组合 xray 会直接拒绝整个配置
+  // （注意返回 null，否则一条坏节点会让整批验证起不来）
   if (sec === 'reality' && (net === 'ws' || net === 'httpupgrade')) return null;
 
   // ws / httpupgrade 走 http/1.1，grpc / xhttp 走 h2；不带 ALPN 会被 Cloudflare 直接拒握手
@@ -107,7 +136,10 @@ function streamOf(n) {
 /** 节点 → xray outbound，不支持的返回 null */
 function outboundOf(n, tag) {
   const port = Number(n.port);
-  const base = { tag, protocol: n.proto, streamSettings: streamOf(n) };
+  const stream = streamOf(n);
+  if (!stream) return null; // 传输层组不出来就别进 pool，否则整批起不来
+  const address = n.dial || n.host;
+  const base = { tag, protocol: n.proto, streamSettings: stream };
   try {
     if (n.proto === 'vless') {
       const p = q(n.raw);
@@ -117,7 +149,7 @@ function outboundOf(n, tag) {
         settings: {
           vnext: [
             {
-              address: n.host,
+              address,
               port,
               users: [{ id: u.username, encryption: 'none', flow: p.get('flow') || '' }],
             },
@@ -131,7 +163,7 @@ function outboundOf(n, tag) {
         ...base,
         settings: {
           vnext: [
-            { address: n.host, port, users: [{ id: j.id, alterId: Number(j.aid || 0), security: 'auto' }] },
+            { address, port, users: [{ id: j.id, alterId: Number(j.aid || 0), security: 'auto' }] },
           ],
         },
       };
@@ -139,7 +171,7 @@ function outboundOf(n, tag) {
     if (n.proto === 'trojan') {
       return {
         ...base,
-        settings: { servers: [{ address: n.host, port, password: usernameOf(n.raw) }] },
+        settings: { servers: [{ address, port, password: usernameOf(n.raw) }] },
       };
     }
   } catch {
@@ -151,8 +183,11 @@ function outboundOf(n, tag) {
 // 只要有一条 xray 不认的配置，整个进程就起不来；先滤掉构造不出 outbound 的
 const pool = [];
 for (const n of candidates) {
-  if (outboundOf(n, 'probe')) pool.push(n);
-  else skipped.push({ ...n, verified: 'skip' }); // 构造不出配置也别丢，归入未验证
+  if (!streamOf(n)) {
+    skipped.push({ ...n, verified: 'skip' }); // 构造不出配置也别丢，归入未验证
+    continue;
+  }
+  pool.push({ ...n, dial: await resolveDial(n) });
 }
 
 if (!pool.length) {
