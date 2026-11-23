@@ -51,12 +51,13 @@ jobs:
         run: node tools/parse.mjs
 
       - name: Probe
-        run: node tools/probe.mjs --limit=900
+        run: node tools/probe.mjs --limit=1800
 
       # 先删旧结果：xray 装不上时不能让上一轮的陈旧数据冒充本轮验证
       # 验证失败不拖垮整轮；没验证结果时 export 会自动退回 checked.json
+      # 不限条数全量验，覆盖率不再被名额卡死
       - name: Verify egress
-        run: rm -f data/verified.json && node tools/verify.mjs --limit=260
+        run: rm -f data/verified.json && VERIFY_CONCURRENCY=32 node tools/verify.mjs
         continue-on-error: true
 
       - name: Export

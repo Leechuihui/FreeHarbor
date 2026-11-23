@@ -1,3 +1,2 @@
-hysteria2://p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR@130.49.161.70:443?security=tls&obfs=salamander&obfs-password=rG07s3COMIEvdnQipRyWzx_H_2xygNC3&insecure=0&sni=hy2.aspidnet.xyz#HYSTERIA2-156ms-081
-hysteria2://hAUdd15a7YGHUSgiPOUz@43.103.2.53:443?insecure=1&sni=&obfs=salamander&obfs-password=9veAh9pTbrAfDwM1fIYI#HYSTERIA2-174ms-089
-hysteria2://Telegram@179.61.138.145:443?insecure=1&sni=de2.jey.cc.cd&obfs=salamander&obfs-password=Telegram@vpnjey#HYSTERIA2-192ms-098
+hysteria2://865e271f7c97b549b024255c9d02cebe9cc0c2c070a82b1e11bb11b9cd88dd01@217.60.33.215:443?insecure=1&sni=streambox.wwwinternetvideo.click#HYSTERIA2-223ms-155
+hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?security=tls&obfs=salamander&obfs-password=uw9b2qq5rx&insecure=0&sni=fiproxy1.lockdwn.com#HYSTERIA2-273ms-181

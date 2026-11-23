@@ -7,7 +7,7 @@
  * 然后 curl 经该 socks 打 generate_204。HTTP 204 才算真能用。
  *
  * 输入 data/checked.json → 输出 data/verified.json（带 latency，按延迟升序）
- * 参数：--limit=N 最多验多少条（默认 260）
+ * 参数：--limit=N 最多验多少条（默认不限，全量验；VERIFY_MAX 可设安全上限）
  *
  * xray 26 起已移除 Shadowsocks，连同 hysteria2 / tuic / ssr 一起直接放行，
  * 标 verified:"skip"，不做假阳性也不丢节点。
@@ -33,7 +33,11 @@ const TIMEOUT_MS = Number(process.env.VERIFY_TIMEOUT_MS || 15000);
 const TEST_URL = process.env.VERIFY_URL || 'https://www.gstatic.com/generate_204';
 
 const limitArg = process.argv.find((a) => a.startsWith('--limit='));
-const LIMIT = limitArg ? Number(limitArg.split('=')[1]) : 260;
+// 默认全量验；--limit 显式限条，VERIFY_MAX 兜底防跑飞
+const LIMIT = Math.min(
+  limitArg ? Number(limitArg.split('=')[1]) : Infinity,
+  process.env.VERIFY_MAX ? Number(process.env.VERIFY_MAX) : Infinity
+);
 
 const checked = JSON.parse(await readFile(IN, 'utf8'));
 // ss 在 xray 26 里已整个移除（unknown config id: ss），只能跳过
