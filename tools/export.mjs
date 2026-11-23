@@ -38,6 +38,8 @@ try {
   checked = JSON.parse(await readFile(join(ROOT, 'data', 'verified.json'), 'utf8'));
   source = 'verified';
 } catch {
+  // 静默回退会掩盖「verify 崩了」：CI 全绿但全是未验证节点
+  console.error('警告: 没有 data/verified.json，回退到 TCP 探测结果（节点未经出网验证）');
   checked = JSON.parse(await readFile(join(ROOT, 'data', 'checked.json'), 'utf8'));
 }
 // verified.json 里 ok 的排前面（已按延迟升序），skip 的垫底

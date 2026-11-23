@@ -34,7 +34,8 @@ jobs:
       - name: Install xray
         run: |
           # 下到 RUNNER_TEMP，别落在工作树里被 git add -A 一起提交
-          curl -fsSL https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip -o "$RUNNER_TEMP/xray.zip"
+          # 锁版本：latest 会悄悄漂移，新内核拒的配置类别会变（曾整轮验证崩掉）
+          curl -fsSL https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-linux-64.zip -o "$RUNNER_TEMP/xray.zip"
           mkdir -p "$RUNNER_TEMP/bin"
           unzip -o "$RUNNER_TEMP/xray.zip" xray -d "$RUNNER_TEMP/bin"
           chmod +x "$RUNNER_TEMP/bin/xray"

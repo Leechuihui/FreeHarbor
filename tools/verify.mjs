@@ -66,6 +66,10 @@ function q(raw) {
 }
 
 const isIP = (h) => /^\d+\.\d+\.\d+\.\d+$/.test(h);
+// xray 26 起禁止「无 TLS 的 vless 指向公网 IP」，这类节点会在启动时被拒；
+// 先预滤掉，别让它们烧光剔除预算把整轮验证带崩。
+const isPrivIP = (h) =>
+  /^(10\.|127\.|192\.168\.|172\.(1[6-9]|2[0-9]|3[01])\.)/.test(h);
 
 /**
  * 实际拨号地址：上游把 Cloudflare 的 IP 写死在链接里，几天就失效
@@ -191,7 +195,13 @@ for (const n of candidates) {
     skipped.push({ ...n, verified: 'skip' }); // 构造不出配置也别丢，归入未验证
     continue;
   }
-  pool.push({ ...n, dial: await resolveDial(n) });
+  const dial = await resolveDial(n);
+  // xray 26 拒「无 TLS 的 vless 拨公网 IP」，提前归入未验证，别烧剔除预算
+  if (n.proto === 'vless' && (q(n.raw).get('security') || 'none') === 'none' && isIP(dial) && !isPrivIP(dial)) {
+    skipped.push({ ...n, verified: 'skip' });
+    continue;
+  }
+  pool.push({ ...n, dial });
 }
 
 if (!pool.length) {
@@ -258,7 +268,8 @@ const waitPort = (port, proc) =>
   });
 
 // 坏配置逐条剔除重试，最多 40 轮，避免个别畸形节点让整批验证白跑
-const MAX_DROP = 40;
+// 剔除预算跟池子成比例：新内核可能拒整类配置，固定 40 会被撑爆
+const MAX_DROP = Math.max(40, Math.ceil(pool.length * 0.25));
 let xray = null;
 let xrayErr = '';
 let ready = false;
