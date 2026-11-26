@@ -5,7 +5,7 @@
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
-**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 5 小时由 GitHub Actions 自动刷新，零服务器成本。
+**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由 GitHub Actions 自动刷新，零服务器成本。
 
 > **English below** ↓ | **英文说明在下方**
 
@@ -56,11 +56,11 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### 当前节点
 
-- 已验证出网：**129**
-- 未验证（协议不支持 / 连不通 / 超出验证名额）：**71**
-- 最快延迟：**80 ms**
-- 协议分布：vless 100 · vmess 11 · trojan 18 · ss 71
-- 更新时间：2026-11-26 12:15:08 UTC
+- 已验证出网：**120**
+- 未验证（协议不支持 / 连不通 / 超出验证名额）：**80**
+- 最快延迟：**187 ms**
+- 协议分布：vmess 11 · vless 82 · trojan 27 · ss 79 · hysteria2 1
+- 更新时间：2026-11-26 12:43:12 UTC
 
 ### 工具
 
@@ -88,7 +88,7 @@ hysteria2 / tuic / ssr 无法用 xray 验证，Shadowsocks 则是 xray 26 起整
 
 ## English
 
-**FreeHarbor / The Free Port** — a permanently free, auto-updating VPN node subscription site. Public free nodes are scraped, verified end-to-end through a real connection, sorted by latency, and published as subscriptions and QR codes. GitHub Actions refreshes everything every 5 hours at zero server cost.
+**FreeHarbor / The Free Port** — a permanently free, auto-updating VPN node subscription site. Public free nodes are scraped, verified end-to-end through a real connection, sorted by latency, and published as subscriptions and QR codes. GitHub Actions refreshes everything every 3 hours at zero server cost.
 
 **Live page:** https://leechuihui.github.io/FreeHarbor/
 
@@ -133,11 +133,11 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### Current nodes
 
-- Verified online: **129**
-- Unverified (unsupported protocol / unreachable / over the quota): **71**
-- Fastest latency: **80 ms**
-- By protocol: vless 100 · vmess 11 · trojan 18 · ss 71
-- Updated: 2026-11-26 12:15:08 UTC
+- Verified online: **120**
+- Unverified (unsupported protocol / unreachable / over the quota): **80**
+- Fastest latency: **187 ms**
+- By protocol: vmess 11 · vless 82 · trojan 27 · ss 79 · hysteria2 1
+- Updated: 2026-11-26 12:43:12 UTC
 
 ### Tooling
 

@@ -1,0 +1,40 @@
+name: self-heal
+
+# 整轮刷新失败后自动重跑，不必干等下一个 3 小时窗口。
+#
+# 关键：用 `gh run rerun`（重跑同一次运行，run_attempt 会 +1），
+# 不能用 `gh workflow run`（全新派发，run_attempt 恒为 1，
+# `run_attempt < 3` 永远成立 → 无限重跑）。
+# GitHub 单次运行最多 3 次尝试，到顶就停，失败留给告警。
+on:
+  workflow_run:
+    workflows: [update]
+    types: [completed]
+
+permissions:
+  actions: write
+  contents: read
+
+jobs:
+  retry:
+    # 只在失败、且还没用满尝试次数时补跑
+    if: |
+      github.event.workflow_run.conclusion == 'failure' &&
+      github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-latest
+    steps:
+      # 给上游一点时间恢复：源站 5xx / DNS 抖动往往几分钟就好
+      - name: Backoff
+        run: sleep 180
+
+      - name: Rerun failed attempt
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+        run: |
+          echo "第 ${ATTEMPT} 次尝试失败，自动重跑: $RUN_URL"
+          # --failed 只重跑失败的 job，成功的步骤结果保留
+          gh run rerun "$RUN_ID" --repo "$REPO" --failed

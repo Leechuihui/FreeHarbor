@@ -2,7 +2,8 @@ name: update
 
 on:
   schedule:
-    - cron: '0 */5 * * *'
+    # 每 3 小时一轮（UTC 整点）。实际耗时约 5 分钟，间隔留足余量
+    - cron: '0 */3 * * *'
   workflow_dispatch:
   # 只在工具链/工作流本身变动时跑；机器人提交的产物不触发，避免自激
   push:
@@ -14,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  issues: write # 失败时自动开/回 issue
 
 concurrency:
   group: update
@@ -35,7 +37,9 @@ jobs:
         run: |
           # 下到 RUNNER_TEMP，别落在工作树里被 git add -A 一起提交
           # 锁版本：latest 会悄悄漂移，新内核拒的配置类别会变（曾整轮验证崩掉）
-          curl -fsSL https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-linux-64.zip -o "$RUNNER_TEMP/xray.zip"
+          curl -fsSL --retry 3 --retry-delay 5 \
+            https://github.com/XTLS/Xray-core/releases/download/v26.11.9/Xray-linux-64.zip \
+            -o "$RUNNER_TEMP/xray.zip"
           mkdir -p "$RUNNER_TEMP/bin"
           unzip -o "$RUNNER_TEMP/xray.zip" xray -d "$RUNNER_TEMP/bin"
           chmod +x "$RUNNER_TEMP/bin/xray"
@@ -44,27 +48,64 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
+      # 全流程共用：重试 + 退避，把上游抽风/网络抖动吸收掉
       - name: Fetch
-        run: node tools/fetch.mjs
-        continue-on-error: true
+        run: |
+          source tools/retry.sh
+          # 上游源经常整批 5xx/超时，多试几轮；fetch 全挂才真算失败
+          retry 3 20 node tools/fetch.mjs
 
       - name: Parse
         run: node tools/parse.mjs
 
       - name: Probe
-        run: node tools/probe.mjs --limit=1800
+        run: |
+          source tools/retry.sh
+          retry 3 15 node tools/probe.mjs --limit=1800
 
-      # 先删旧结果：xray 装不上时不能让上一轮的陈旧数据冒充本轮验证
-      # 验证失败不拖垮整轮；没验证结果时 export 会自动退回 checked.json
-      # 不限条数全量验，覆盖率不再被名额卡死
+      # 先删旧结果：xray 装不上时不能让上一轮的陈旧数据冒充本轮验证。
+      # 验证失败不直接判死——退化模式仍可发布 TCP 存活节点，但闸门更严。
       - name: Verify egress
-        run: rm -f data/verified.json && VERIFY_CONCURRENCY=32 node tools/verify.mjs
-        continue-on-error: true
+        id: verify
+        run: |
+          source tools/retry.sh
+          rm -f data/verified.json
+          if retry 2 30 env VERIFY_CONCURRENCY=32 node tools/verify.mjs; then
+            echo "mode=verified" >> "$GITHUB_OUTPUT"
+          else
+            echo "::warning::真实出网验证两轮均失败，转入退化模式（仅 TCP 存活）"
+            echo "mode=degraded" >> "$GITHUB_OUTPUT"
+          fi
+
+      # 闸门卡在 export 之前：结果太差就别覆盖上一轮线上数据
+      - name: Quality gate
+        run: |
+          if [ "${{ steps.verify.outputs.mode }}" = "degraded" ]; then
+            node tools/quality-gate.mjs --degraded
+          else
+            node tools/quality-gate.mjs
+          fi
 
       - name: Export
         run: node tools/export.mjs
 
-      - name: Commit
+      # 产物侧的兜底校验：导出链路静默截断也能发现
+      - name: Verify artifacts
+        run: |
+          test -s index.html || { echo "::error::index.html 为空"; exit 1; }
+          test -s sub/all.txt || { echo "::error::sub/all.txt 为空"; exit 1; }
+          test -s clients/clash.yaml || { echo "::error::clash.yaml 为空"; exit 1; }
+          n=$(grep -c . sub/all.txt || true)
+          echo "产物节点数: $n"
+          [ "$n" -ge 10 ] || { echo "::error::产物仅 $n 条，过少"; exit 1; }
+
+      # 基线随同一个提交上线：只有真推上去，它才成为下一轮的参照。
+      # 退化模式不记，免得把「正常水位」拉低。
+      - name: Record baseline
+        if: steps.verify.outputs.mode == 'verified'
+        run: node tools/quality-gate.mjs --save
+
+      - name: Commit and push
         run: |
           git config user.name  'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -74,5 +115,41 @@ jobs:
             exit 0
           fi
           git commit -m "chore: refresh nodes $(date -u '+%Y-%m-%d %H:%M UTC')"
-          # 明确推 main，schedule 触发的 detached HEAD 也不会推错
-          git push origin HEAD:main
+          # 机器人自己也可能刚推过一轮：冲突时 rebase 重来，最多 3 次
+          for i in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "pushed (attempt $i)"
+              exit 0
+            fi
+            echo "::warning::push 失败，第 $i 次，rebase 后重试"
+            # 产物每轮全量重新生成，冲突一律以本轮为准。
+            # 注意 rebase 的 ours/theirs 与 merge 相反：theirs 才是本轮提交。
+            # rebase 失败必须 abort，否则仓库卡在 rebase 中，后面会推错。
+            if ! git pull --rebase --autostash -X theirs origin main; then
+              echo "::warning::rebase 冲突，放弃本轮合并后重试"
+              git rebase --abort 2>/dev/null || true
+            fi
+            sleep $((i * 10))
+          done
+          echo "::error::push 连续 3 次失败"
+          exit 1
+
+      # 失败时自动开 issue；已有未关闭的就在原 issue 里追加，不刷屏
+      - name: Report failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          MODE: ${{ steps.verify.outputs.mode }}
+        run: |
+          gh label create refresh-failure --force \
+            --description '自动刷新失败' --color B60205 >/dev/null 2>&1 || true
+          body=$(printf '自动刷新失败。\n\n- 运行: %s\n- 验证模式: %s\n- 时间: %s\n\n线上数据保持上一轮未动（闸门未通过则不提交）。' \
+            "$RUN_URL" "${MODE:-unknown}" "$(date -u '+%Y-%m-%d %H:%M UTC')")
+          num=$(gh issue list --label refresh-failure --state open --json number --jq '.[0].number // empty')
+          if [ -n "$num" ]; then
+            gh issue comment "$num" --body "$body"
+          else
+            gh issue create --title "自动刷新失败 $(date -u '+%Y-%m-%d')" \
+              --label refresh-failure --body "$body"
+          fi
