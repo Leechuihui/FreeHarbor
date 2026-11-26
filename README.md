@@ -5,7 +5,7 @@
 [![Verified Nodes](https://img.shields.io/badge/✅_Egress_Verified-xray_core-8b5cf6?style=for-the-badge)](#-tooling)
 [![License](https://img.shields.io/badge/📄_Use_at_your_own_risk-MIT-yellow?style=for-the-badge)](#中文--notes)
 
-**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由机器人 自动刷新，零服务器成本。
+**FreeHarbor / The Free Port** — 永久免费、自动更新的 VPN 节点订阅站。抓取公开免费节点，经真实出网验证后按延迟排序，生成订阅与二维码；每 3 小时由 GitHub Actions 自动刷新，零服务器成本。
 
 > **English below** ↓ | **英文说明在下方**
 
@@ -56,11 +56,11 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### 当前节点
 
-- 已验证出网：**112**
-- 未验证（协议不支持 / 连不通 / 超出验证名额）：**88**
-- 最快延迟：**66 ms**
-- 协议分布：trojan 18 · vmess 11 · vless 83 · ss 86 · ssr 1 · hysteria2 1
-- 更新时间：2026-11-26 12:49:59 UTC
+- 已验证出网：**120**
+- 未验证（协议不支持 / 连不通 / 超出验证名额）：**80**
+- 最快延迟：**38 ms**
+- 协议分布：trojan 27 · vmess 9 · vless 84 · ss 79 · ssr 1
+- 更新时间：2026-11-26 23:33:42 UTC
 
 ### 工具
 
@@ -133,11 +133,11 @@ https://raw.githubusercontent.com/Leechuihui/FreeHarbor/main/sub/best.txt
 
 ### Current nodes
 
-- Verified online: **112**
-- Unverified (unsupported protocol / unreachable / over the quota): **88**
-- Fastest latency: **66 ms**
-- By protocol: trojan 18 · vmess 11 · vless 83 · ss 86 · ssr 1 · hysteria2 1
-- Updated: 2026-11-26 12:49:59 UTC
+- Verified online: **120**
+- Unverified (unsupported protocol / unreachable / over the quota): **80**
+- Fastest latency: **38 ms**
+- By protocol: trojan 27 · vmess 9 · vless 84 · ss 79 · ssr 1
+- Updated: 2026-11-26 23:33:42 UTC
 
 ### Tooling
 
