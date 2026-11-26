@@ -26,9 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.dep.outputs.page_url }}
+      url: ${{ steps.dep1.outputs.page_url || steps.dep2.outputs.page_url || steps.dep3.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       # 只发布站点文件，别把 .git / tools / data 一起传上去
       - name: Stage site
@@ -41,30 +41,45 @@ jobs:
 
       # enablement: Pages 还没启用时自动建站（首次发布必走这条），
       # 省掉手动去 Settings → Pages 选 Source 的步骤
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
         with:
           enablement: true
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
-      # upload 刚结束就 deploy，产物可能还没注册完：deploy-pages 查一次
-      # 拿到 "Found 0 artifact(s)" 就整步失败（曾把一次部署打挂）。先轮询等它出现。
-      - name: Wait for artifact
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          for i in $(seq 1 30); do
-            n=$(gh api "repos/${{ github.repository }}/actions/runs/${{ github.run_id }}/artifacts" \
-                  --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length' 2>/dev/null || echo 0)
-            if [ "$n" -ge 1 ]; then
-              echo "github-pages artifact 已就绪（第 ${i} 次查询）"
-              exit 0
-            fi
-            sleep 2
-          done
-          echo "等待 github-pages artifact 超时（60s）" >&2
-          exit 1
+      # upload 结束到产物「可被部署」之间存在注册延迟。
+      # 关键点：不能用 `gh api .../artifacts` 去等。那是公开 REST 接口，
+      # 而 deploy-pages 走的是 runtime token 的内部 Twirp 接口
+      # (ArtifactService/ListArtifacts)。两套注册表不同步，REST 已能查到
+      # 产物时 Twirp 仍可能返回 0 —— 等待步瞬间通过、下一步在同一秒内
+      # 拿到 "No artifacts named github-pages" 整步失败（run 34/32/30 均如此）。
+      # 所以直接重试 deploy-pages 本身：只有它真正命中才叫就绪。
+      - id: dep1
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
 
-      - id: dep
-        uses: actions/deploy-pages@v4
+      - name: Backoff before retry 1
+        if: steps.dep1.outcome == 'failure'
+        run: sleep 10
+
+      - id: dep2
+        if: steps.dep1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Backoff before retry 2
+        if: steps.dep1.outcome == 'failure' && steps.dep2.outcome == 'failure'
+        run: sleep 30
+
+      - id: dep3
+        if: steps.dep1.outcome == 'failure' && steps.dep2.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      # 三次全挂才让 job 失败，避免竞态把一次好构建打成红的
+      - name: Assert deployment
+        if: steps.dep1.outcome != 'success' && steps.dep2.outcome != 'success' && steps.dep3.outcome != 'success'
+        run: |
+          echo "deploy-pages 连续 3 次失败，最后一次日志见上方。" >&2
+          exit 1
